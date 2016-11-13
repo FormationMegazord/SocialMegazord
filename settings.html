@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>settings</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<style>
+    #settings {
+        position: absolute;
+        width: 300px;
+        height: 200px;
+        z-index: 15;
+        top: 50%;
+        left: 50%;
+        margin: -100px 0 0 -150px;
+
+    }
+</style>
+
+<div id="profile div">
+    <ul class="profile-wrapper">
+        <li>
+            <div class="profile">
+                <a href ="#" class="name">UserExample</a>
+                <ul class="menu">
+                    <li><a href="#">My Profile</a>
+
+                    </li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Chat</a></li>
+                    <li><a href="#">Selfimprove tool</a></li>
+                    <li><a href="#">Log out</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div id="settings">
+<form class="form-horizontal">
+    <fieldset>
+        <legend>Settings</legend>
+        <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">Change Email</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+            </div>
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label for="input" class="col-lg-2 control-label">Change Username</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="input" placeholder="Username">
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="inputPassword" class="col-lg-2 control-label">Change Password</label>
+            <div class="col-lg-10">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+            </div>
+        </div>
+        <br>
+
+
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Cancel</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+</form>
+</div>
+
+
+</body>
+
+
+</html>
