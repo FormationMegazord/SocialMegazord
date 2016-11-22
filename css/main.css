@@ -1,6 +1,9 @@
 body{
-    /*background-image: url("../images/image3.jpg");*/
+    background-image: url("../images/cool-background.jpg");
+    position: relative;
+    background-color: white;
     background-size: cover;
+
 }
 
 ul, li {
@@ -117,7 +120,15 @@ a {text-decoration:none;}
 }
 
 #contents {
-    margin-top: 190px;
+    margin-top: 200px;
+}
+
+.button{
+    text-align: center;
+    display: inline-block;
+    line-height: 40px;
+    width: 30vw;
+    height: 300px;
 }
 
 .button{
@@ -129,62 +140,44 @@ a {text-decoration:none;}
 }
 
 .button1 {
-    background-color: white;
-    background-size: cover;
-    color: black;
-    border: 2px solid ;
-    font-size: larger;
-    border-radius: 70px;
-}
-.button{
-    text-align: center;
-    display: inline-block;
-    line-height: 40px;
-    width: 30vw;
-    height: 300px;
-}
-
-.button1 {
-    background-color: white;
     /*background-image: url("../images/image2.jpg");*/
     background-size: cover;
     color: black;
     border: 2px solid ;
     font-size: larger;
-    border-radius: 70px;
+    border-radius: 80%;
 }
 .button1:hover {
     background-color: #f44336;
-    color: white;
-    border-radius: 70px;
+    border-radius: 50%;
 }
 
 .button2 {
-    background-color: white;
     /*background-image: url("../images/image2.jpg");*/
     background-size: cover;
     color: black;
-    border: 2px solid limegreen;
+    border: 2px solid black;
     font-size: larger;
-    border-radius: 70px;
+    border-radius: 50%;
 }
 .button2:hover {
     background-color: limegreen;
     color: white;
-    border-radius: 70px;
+    border-radius: 50%;
 }
 
 .button3 {
-    /*background-image: url("../images/image2.jpg");*/
-    background-size: cover;
-    border: 2px solid #0088cc;
-    font-size: larger;
-    border-radius: 70px;
+/*background-image: url("../images/image2.jpg");*/
+background-size: cover;
+    color: black;
+border: 2px solid black;
+font-size: larger;
+border-radius: 50%;
 }
 .button3:hover {
     background-color: #0088cc;
     color: white;
-    border-radius: 70px;
+    border-radius: 50%;
 }
 
 .button1:active {
@@ -204,4 +197,10 @@ a {text-decoration:none;}
     right: 0;
     top: 5px;
     border-radius:1px;
+}
+.the_footer {
+    clear:both;
+    text-align: right;
+    padding: 20px;
+    margin-bottom: 15px;
 }
