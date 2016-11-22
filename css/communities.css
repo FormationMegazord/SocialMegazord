@@ -117,7 +117,7 @@ a {text-decoration:none;}
 .button2 {
     background-color: white;
     color: black;
-    border: 2px solid green;
+    border: 2px solid blue;
     padding: 10px;
 }
 .button2:hover {
@@ -129,7 +129,7 @@ a {text-decoration:none;}
 .button3 {
     background-color: white;
     color: black;
-    border: 2px solid blue;
+    border: 2px solid limegreen;
     padding: 10px;
 }
 .button3:hover {
