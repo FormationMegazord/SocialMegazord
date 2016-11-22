@@ -1,3 +1,8 @@
+body{
+    /*background-image: url("../images/image3.jpg");*/
+    background-size: cover;
+}
+
 ul, li {
     list-style:none;
     padding:0;
@@ -11,6 +16,7 @@ a {text-decoration:none;}
     margin:-190px auto;
     padding-left: 86%;
 }
+
 .profile-wrapper::after {
     content: '';
     position: absolute;
@@ -20,6 +26,7 @@ a {text-decoration:none;}
     border-width: 6px;
     border-style: solid;
 }
+
 .profile-wrapper::before {
     content: '';
     position: absolute;
@@ -29,6 +36,7 @@ a {text-decoration:none;}
     border-width: 6px;
     border-style: solid;
 }
+
 .profile-wrapper:hover::after {
     border-color: #111 transparent transparent;
 }
@@ -39,7 +47,6 @@ a {text-decoration:none;}
     border-radius:3px;
     box-shadow:0 1px 0 #555 inset, 0 1px 7px #111;
     background:-webkit-linear-gradient(#222, #111);
-
 }
 
 .profile:hover {
@@ -100,56 +107,83 @@ a {text-decoration:none;}
     display:block;
 }
 
+.city {
+    float: left;
+    margin: 5px;
+    padding: 15px;
+    max-width: 300px;
+    height: 300px;
+    border: 1px solid black;
+}
+
 #contents {
     margin-top: 190px;
 }
 
+.button{
+    text-align: center;
+    display: inline-block;
+    line-height: 40px;
+    width: 30vw;
+    height: 300px;
+}
 
 .button1 {
     background-color: white;
+    background-size: cover;
     color: black;
-    border: 2px solid #f44336;
-    padding: 5%;
-    margin-left: 12%;
-    margin-right: 1%;
+    border: 2px solid ;
+    font-size: larger;
+    border-radius: 70px;
+}
+.button{
+    text-align: center;
+    display: inline-block;
+    line-height: 40px;
+    width: 30vw;
+    height: 300px;
+}
+
+.button1 {
+    background-color: white;
+    /*background-image: url("../images/image2.jpg");*/
+    background-size: cover;
+    color: black;
+    border: 2px solid ;
     font-size: larger;
     border-radius: 70px;
 }
 .button1:hover {
     background-color: #f44336;
     color: white;
-    padding: 5.3%;
     border-radius: 70px;
 }
 
 .button2 {
     background-color: white;
+    /*background-image: url("../images/image2.jpg");*/
+    background-size: cover;
     color: black;
     border: 2px solid limegreen;
-    padding: 5%;
     font-size: larger;
     border-radius: 70px;
 }
 .button2:hover {
     background-color: limegreen;
     color: white;
-    padding: 5.3%;
     border-radius: 70px;
 }
 
 .button3 {
-    background-color: white;
-    color: black;
+    /*background-image: url("../images/image2.jpg");*/
+    background-size: cover;
     border: 2px solid #0088cc;
     font-size: larger;
-    padding: 5%;
     border-radius: 70px;
-    margin-right: 1%;
 }
 .button3:hover {
     background-color: #0088cc;
     color: white;
-    padding: 5.3%;
     border-radius: 70px;
 }
 
@@ -164,4 +198,10 @@ a {text-decoration:none;}
 .button3:active {
     font-size: 80%;
 }
-
+.btn {
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    border-radius:1px;
+}
