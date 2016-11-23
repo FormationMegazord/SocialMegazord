@@ -7,7 +7,7 @@ a {text-decoration:none;}
 
 .profile-wrapper {
     width:200px;
-    position: relative;
+    position: fixed;
     margin:-190px auto;
     padding-left: 86%;
 }
