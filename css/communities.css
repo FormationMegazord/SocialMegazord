@@ -1,5 +1,5 @@
 body{
-    /*background-image: url("../images/cool-background.jpg");*/
+    background-image: url("../images/cool-background.jpg");
     position: relative;
     background-color: white;
     background-size: cover;
@@ -133,7 +133,6 @@ a {text-decoration:none;}
 }
 
 .button3 {
-
     color: black;
     border: 2px solid blue;
     padding: 10px;
@@ -205,4 +204,17 @@ a {text-decoration:none;}
     background:-webkit-radial-gradient(center, circle, #0088cc 95%,black 110%);
     -webkit-border-radius:50%;
     -webkit-box-shadow:rgb(110,110,110) 0px 0px 20px;
+}
+.btn {
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    border-radius:1px;
+}
+.the_footer {
+    clear:both;
+    text-align: right;
+    padding: 20px;
+    margin-bottom: 15px;
 }
