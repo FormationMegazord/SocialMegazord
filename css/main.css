@@ -3,7 +3,6 @@ body{
     position: relative;
     background-color: white;
     background-size: cover;
-
 }
 
 ul, li {
@@ -131,14 +130,6 @@ a {text-decoration:none;}
     height: 300px;
 }
 
-.button{
-    text-align: center;
-    display: inline-block;
-    line-height: 40px;
-    width: 30vw;
-    height: 300px;
-}
-
 .button1 {
     /*background-image: url("../images/image2.jpg");*/
     background-size: cover;
@@ -169,7 +160,6 @@ a {text-decoration:none;}
 .button3 {
 /*background-image: url("../images/image2.jpg");*/
 background-size: cover;
-    color: black;
 border: 2px solid black;
 font-size: larger;
 border-radius: 50%;
@@ -204,3 +194,4 @@ border-radius: 50%;
     padding: 20px;
     margin-bottom: 15px;
 }
+.w3-btn {margin-bottom:10px;}
