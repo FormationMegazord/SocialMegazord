@@ -12,3 +12,4 @@
 -Датабазите
 -Футър
 -Background-color
+Notes: Трябва да се направят views на : post/details, create new post, view my posts !!!
