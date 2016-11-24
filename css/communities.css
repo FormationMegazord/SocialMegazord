@@ -162,7 +162,8 @@ a {text-decoration:none;}
     width: 240px;
     height: 200px;
     z-index: 15;
-    margin: 0 auto;
+    margin-right: 50px;
+    margin-left: 460px;
 }
 
 .navUL {
@@ -326,4 +327,8 @@ table a:not(.btn),
 
     /* "transparent" only works here because == rgba(0,0,0,0) */
     background-image: linear-gradient(to bottom, transparent, black);
+}
+.centered {
+    display: flex;
+    position: relative;
 }
