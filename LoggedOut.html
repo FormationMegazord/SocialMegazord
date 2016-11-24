@@ -3,60 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/communities.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <title>Login</title>
+    <title>Mutual Help</title>
 </head>
 
 <body>
-
-<script>
-    $(document).ready(function(){
-        $("#inputEmail").focus(function(){
-            $(this).css("background-color", "#cccccc");
-        });
-
-        $("#inputEmail").blur(function(){
-            $(this).css("background-color", "#ffffff");
-        });
-
-        $("#input").focus(function(){
-            $(this).css("background-color", "#cccccc");
-        });
-
-        $("#input").blur(function(){
-            $(this).css("background-color", "#ffffff");
-        });
-    });
-</script>
-
 <div id="profile_div">
     <ul class="profile-wrapper">
         <li>
             <div class="profile">
-                <a href ="index.html" class="name">UserExample</a>
+                <a href ="#" class="name">Register/Login</a>
                 <ul class="menu">
                     <li>
-                        <a href="#">My profile</a>
-                        <div class="horizontal_menu">
-                            <ul>
-                                <a href="interests.html"><li>Interests</li></a>
-                                <a href="myevents.html"><li>My events</li></a>
-                                <a href="myvideos.html"><li>My videos</li></a>
-                            </ul>
-                        </div>
+                        <a href="#">Register</a>
                     </li>
                     <li>
-                        <a id="page_settings" href="#">Settings</a>
-                        <div class="horizontal_menu" hidden>
-                            <ul>
-                                <a href="ChangePassword.html"><li>Change password</li></a>
-                                <a href="ChangeUsername.html"><li>Change username</li></a>
-                                <a href="ChangeImage.html"><li>Change image</li></a>
-                            </ul>
-                        </div>
+                        <a href="#">Login</a>
                     </li>
-                    <li><a id="page_self_improve_tool" href="SelfImprove.html">Selfimprove tool</a></li>
-                    <li><a id="page_logout" href="LoggedOut.html">Log out</a></li>
                 </ul>
             </div>
         </li>
@@ -69,47 +31,34 @@
     <a href="science.html"><button class="button button3"></button></a>
 </div>
 
-
-<div id="settings">
+<div id="navMyProfile">
     <style>
-        #settings{
-            justify-content: center;
-            width: 30vw;
-            display: flex;
-            flex-direction: row;
-            margin: 5vw auto;
-            margin-left: 31vw;
+        .navUL {
+            margin-left: 33%;
+            margin-right: 38.9%;
         }
     </style>
-    <form class="form-horizontal">
-        <fieldset>
-            <legend>Login</legend>
-            <div class="form-group">
-                <label for="inputEmail" class="col-lg-2 control-label">Username</label>
-                <div class="col-lg-10">
-                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
-                </div>
-            </div>
-            <br>
 
-            <div class="form-group">
-                <label for="input" class="col-lg-2 control-label" >Password</label>
-                <div class="col-lg-10">
-                    <input type="password" class="form-control" id="input" placeholder="Username">
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-lg-10 col-lg-offset-2">
-                    <button type="reset" class="btn btn-default">Cancel</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
 
-        </fieldset>
-    </form>
+    <div id="login">
+        <form>
+            <div id="inputForm">
+                <label>User name</label><br/><br/>
+                <input type="text" placeholder="User name"><br/><br/>
+            </div>
+            <div id="inputForm">
+                <label>Password</label><br/><br/>
+                <input type="password" placeholder="Password">
+            </div>
+            <input type="submit" value="Log in">
+        </form>
+    </div>
 </div>
-
-
+<footer >
+    <div class="the_footer">
+        <h3>© 2016 - SocialMegazord inc.</h3>
+    </div>
+</footer>
 </body>
 
 </html>
