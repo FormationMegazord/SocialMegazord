@@ -269,7 +269,7 @@ input[type=checkbox]{
 	margin-top:80px;
 	padding:10px;
 	font-size:20px;	
-	border:2px solid #9DC45F;
+	border:2px solid #222;
 	border-radius: 5px 5px 0px 0px;
 }
 #register form h2{
@@ -293,15 +293,15 @@ input[type=checkbox]{
 	padding:15px 15px 15px 15px;
 	margin:-12px -12px 15px -12px;
     color: #FFF;
-    background: #9DC45F;
+    background: #222;
     text-shadow: 1px 1px 1px #949494;
     border-radius: 5px 5px 0px 0px;
     -webkit-border-radius: 5px 5px 0px 0px;
     -moz-border-radius: 5px 5px 0px 0px;
-    border-bottom:1px solid #89AF4C;
+    border-bottom:1px solid #222;
 }
 #register .button {
-    background-color: #9DC45F;
+    background-color: #222;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-border-radius: 5px;
