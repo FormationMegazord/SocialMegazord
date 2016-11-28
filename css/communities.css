@@ -229,8 +229,7 @@ a {text-decoration:none;}
 #login{
     background-color: transparent;
     width:35%;
-    margin-left:36vw;
-    margin-top:7vw;
+    margin-left:5vw;
     padding-bottom:18vw;
     font-size:20px;
     border:1px solid white;
@@ -258,7 +257,14 @@ input[type=submit]:hover {
     background-color: brown;
 }
 
-
+.the_footer {
+    clear:both;
+    text-align: right;
+    padding: 20px;
+    margin-bottom: -15vw;
+    position: relative;
+    margin-left: 48vw;
+}
 
 
 
