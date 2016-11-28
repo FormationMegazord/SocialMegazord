@@ -181,6 +181,8 @@ a {text-decoration:none;}
     overflow: hidden;
     margin: 20px auto;
     transition: width 0.5s;
+    margin-left: 33%;
+    margin-right: 38.9%;
 }
 
 @media screen and (max-width: 800px) {
@@ -331,4 +333,46 @@ table a:not(.btn),
 .centered {
     display: flex;
     position: relative;
+}
+#login{
+    background-color: transparent;
+    width:35%;
+    margin-left:400px;
+    margin-top:80px;
+    padding-bottom:50px;
+    font-size:20px;
+    border:1px solid white;
+}
+#inputForm{
+    margin-left:40px;
+    padding-top:10px;
+}
+#login input{
+    padding:10px 200px 10px 5px;
+}
+input[type=submit]{
+    margin-left:40px;
+    margin-top:20px;
+    cursor:pointer;
+    border-radius:3px;
+    background-color: black;
+    color: white;
+    width:80%;
+    font-size:15px;
+    text-align:center;
+    border:1px solid blue;
+}
+input[type=submit]:hover {
+    background-color: brown;
+}
+.team{
+    margin-left: 10vw;
+    margin-top: 5vw;
+
+}
+.header{
+    margin-top: 2vw;
+}
+.bio{
+    margin-left: 20vw;
 }
