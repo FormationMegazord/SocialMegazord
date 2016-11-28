@@ -10,20 +10,34 @@
 </head>
 
 <body>
-<div id="profile div">
+<div id="profile_div">
     <ul class="profile-wrapper">
         <li>
-
             <div class="profile">
                 <a href ="index.html" class="name">UserExample</a>
-
                 <ul class="menu">
-                    <li><a href="MyProfile.html">My profile</a></li>
-                    <li><a href="Settings.html">Settings</a></li>
-                    <li><a href="SelfImprove.html">Selfimprove tool</a></li>
-                    <li><a href="LoggedOut.html">Log out</a></li>
+                    <li>
+                        <a href="#">My profile</a>
+                        <div class="horizontal_menu">
+                            <ul>
+                                <a href="interests.html"><li>Interests</li></a>
+                                <a href="myevents.html"><li>My events</li></a>
+                                <a href="myvideos.html"><li>My videos</li></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a id="page_settings" href="#">Settings</a>
+                        <div class="horizontal_menu" hidden>
+                            <ul>
+                                <a href="ChangePassword.html"><li>Change password</li></a>
+                                <a href="ChangeUsername.html"><li>Change username</li></a>
+                                <a href="ChangeImage.html"><li>Change image</li></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a id="page_logout" href="LoggedOut.html">Log out</a></li>
                 </ul>
-
             </div>
         </li>
     </ul>
