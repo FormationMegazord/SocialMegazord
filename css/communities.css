@@ -233,11 +233,12 @@ a {text-decoration:none;}
 #inputForm{
 	margin-left:40px;
 	padding-top:10px;
+	
 }
-	#login input{
+#login input{
 	padding:10px 200px 10px 5px;
 }
-	input[type=submit]{
+input[type=submit]{
 	margin-left:40px;
 	margin-top:20px;
 	cursor:pointer;
@@ -249,7 +250,77 @@ a {text-decoration:none;}
 	text-align:center;
 	border:1px solid blue;
 }
+#login2 {
+	padding: 0 0 0 150px;
+}
+
 input[type=submit]:hover {
 	background-color: brown;
 }
+
+input[type=checkbox]{
+		margin-top:15px;
+		margin-left:40px;
+}
+#register form{
+	background-color: transparent;
+	width:35%;
+	margin-left:400px;
+	margin-top:80px;
+	padding:10px;
+	font-size:20px;	
+	border:2px solid #9DC45F;
+	border-radius: 5px 5px 0px 0px;
+}
+#register form h2{
+	text-align:center;
+	border:1px solid white;
+}
+#otherRows input{
+	padding:10px 280px 10px 5px;
+	margin-top:20px;
+	font-weight:bold;
+	border-radius:7px;
+}
+.controls{
+	margin-top:10px;
+}
+#dob-day,#dob-month,#dob-year{
+	padding:5px 10px 5px 10px;
+}
+#register h1 {
+    font: 17px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	padding:15px 15px 15px 15px;
+	margin:-12px -12px 15px -12px;
+    color: #FFF;
+    background: #9DC45F;
+    text-shadow: 1px 1px 1px #949494;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    border-bottom:1px solid #89AF4C;
+}
+#register .button {
+    background-color: #9DC45F;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-border-radius: 5px;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #949494;
+}
+#register .button:hover {
+    background-color:#80A24A;
+	cursor:pointer;
+}
 /*********************************************/
+
+
+
+
+
+
+
+
+
