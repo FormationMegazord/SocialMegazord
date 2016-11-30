@@ -82,6 +82,7 @@ a {text-decoration:none;}
 .horizontal_menu{
     display: none;
     color: #0088cc;
+    background-color: black;
 }
 
 .menu li a:focus~.horizontal_menu,
@@ -100,8 +101,10 @@ a {text-decoration:none;}
 
 #contents {
     position: fixed;
-    width:100%;
+    width:15%;
     margin:0 auto;
+    margin-left:37.5vw;
+
 }
 
 #navMyProfile {
@@ -131,13 +134,13 @@ a {text-decoration:none;}
 .button2 {
     background-color: white;
     color: black;
-    border: 2px solid green;
+    border: 2px solid limegreen;
     padding: 10px;
     border-radius: 50%;
     position: relative;
 }
 .button2:hover {
-    background-color: green;
+    background-color: limegreen;
     color: white;
     padding: 12px;
     border-radius: 50%;
@@ -146,13 +149,13 @@ a {text-decoration:none;}
 .button3 {
     background-color: white;
     color: black;
-    border: 2px solid blue;
+    border: 2px solid #0088cc;
     padding: 10px;
     border-radius: 50%;
     position: relative;
 }
 .button3:hover {
-    background-color: blue;
+    background-color: #0088cc;
     color: white;
     padding: 12px;
     border-radius: 50%;
@@ -198,8 +201,6 @@ a {text-decoration:none;}
     transition: width 0.5s;
 }
 
-
-
 @media screen and (max-width: 800px) {
     .navUL {
         width: 90vw;
@@ -227,19 +228,24 @@ a {text-decoration:none;}
 }
 
 #login{
-    background-color: transparent;
+    margin-top: 5vw;
     width:35%;
     margin-left:5vw;
-    padding-bottom:18vw;
-    font-size:20px;
-    border:1px solid white;
+    margin-bottom: 13vw;
+    padding-bottom:1vw;
+    padding-top:3vw;
+    font-size:5px;
+    border:2px solid #222;
+    background-color: whitesmoke;
+
 }
 #inputForm{
     margin-left:40px;
     padding-top:10px;
 }
 #login input{
-    padding: 10px 90px 10px 5px;
+    padding: 10px 70px 10px 5px;
+    font-weight: 900;
 }
 input[type=submit]{
     margin-left:120px;
@@ -248,13 +254,13 @@ input[type=submit]{
     border-radius:3px;
     background-color: black;
     color: white;
-    width:10%;
+    width: 5vw;
     font-size:15px;
     text-align:center;
     border:1px solid blue;
 }
 input[type=submit]:hover {
-    background-color: brown;
+    background-color: #0088cc;
 }
 
 .the_footer {
@@ -266,13 +272,60 @@ input[type=submit]:hover {
     margin-left: 48vw;
 }
 
-
-
-
-
-
-
-
+#register form{
+    background-color: whitesmoke;
+    width:25.8%;
+    margin-left: 6.5vw;
+    margin-top:2vw;
+    padding:10px;
+    font-size:20px;
+    border:2px solid #222;
+    border-radius: 5px 5px 0px 0px;
+}
+#register form h2{
+    text-align:center;
+    border:1px solid white;
+}
+#otherRows input{
+    padding:0.3vw 4.6vw 0.5vw 1vw;
+    margin-top:2vw;
+    font-weight:bold;
+    border-radius:7px;
+}
+.controls{
+    margin-top:10px;
+}
+#dob-day,#dob-month,#dob-year{
+    padding:5px 10px 5px 10px;
+}
+#register h1 {
+    font: 17px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding:15px 15px 15px 155px;
+    margin:-1vw -0.7vw 1vw -0.7vw;
+    color: #FFF;
+    background: #222;
+    text-shadow: 1px 1px 1px #949494;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    border-bottom:1px solid #222;
+}
+#register .button {
+    margin-left: 4vw;
+    background-color: #222;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-border-radius: 5px;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #949494;
+}
+#register .button:hover {
+    background-color: #0088cc;
+    cursor:pointer;
+}
+/*********************************************/
 
 
 
