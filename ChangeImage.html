@@ -45,18 +45,13 @@
 </div>
 
 <div id="contents">
-    <a href="Entertainment.html"><h1><button class="button button1"></button></a>
+    <a href="Entertainment.html"><button class="button button1"></button></a>
     <a href="Mutual%20Help.html"><button class="button button2"></button></a>
-    <a href="science.html"><button class="button button3"></button></a></h1>
+    <a href="science.html"><button class="button button3"></button></a>
 </div>
 
 <div id="navMyProfile">
-    <style>
-        .navUL {
-            margin-left: 33%;
-            margin-right: 38.9%;
-        }
-    </style>
+
     <ul class="navUL">
         <li class="navLi"><a href="ChangeUsername.html">Change username</a></li>
         <li class="navLi"><a href="ChangePassword.html">Change password</a></li>
@@ -68,11 +63,19 @@
     <form class="form-horizontal">
         <fieldset>
             <legend>Change image</legend>
-
+            <img src="http://www.queensquinoa.com/images/default-image.png" alt="No Image View" style="width:300px;height:200px;">
+            <form action="demo_form.asp">
+                <input type="file" name="pic" accept="image/*">
+                <input type="submit">
+            </form>
         </fieldset>
     </form>
 </div>
-
+<footer >
+    <div class="the_footer">
+        <h3>© 2016 - SocialMegazord inc.</h3>
+    </div>
+</footer>
 
 </body>
 </html>
