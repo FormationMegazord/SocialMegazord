@@ -232,6 +232,14 @@ a {text-decoration:none;}
     border:2px solid #222;
     background-color: whitesmoke;
 }
+
+#login h1 {
+    padding:15px 15px 15px 155px;
+    background: #222;
+    margin:-4vw -0.1vw 1vw -0.1vw;
+    border-radius: 50%;
+}
+
 #inputForm{
     margin-left:40px;
     padding-top:10px;
@@ -241,7 +249,7 @@ a {text-decoration:none;}
     font-weight: 900;
 }
 input[type=submit]{
-    margin-left:120px;
+    margin-left:135px;
     margin-top:20px;
     cursor:pointer;
     border-radius:3px;
@@ -302,7 +310,7 @@ footer {
     border-bottom:1px solid #222;
 }
 #register .button {
-    margin-left: 4vw;
+    margin-left: 5vw;
     background-color: #222;
     border-radius: 5px;
     -webkit-border-radius: 5px;
