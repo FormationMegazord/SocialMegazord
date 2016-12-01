@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/communities.css">
-    <style>
-        .w3-btn {margin-bottom:10px;}
-    </style>
-    <title>Science</title>
+    <title>Create new event</title>
+
 </head>
 
 <body>
+
+
 <div id="profile_div">
     <ul class="profile-wrapper">
         <li>
@@ -49,7 +49,57 @@
     <a href="Mutual%20Help.html"><button class="button button2"></button></a>
 </div>
 
+<div id="navMyProfile">
+    <style>
+        .navUL {
+            width: 109%;
+            left: 29%;
+        }
+    </style>
+    <ul class="navUL">
+        <li class="navLi"><a href="interests.html">Interests</a></li>
+        <li class="navLi"><a href="myevents.html">My Events</a></li>
+        <li class="navLi"><a href="myvideos.html">My videos</a></li>
+    </ul>
+</div>
+
+
+<form class="formEvent">
+    <div class="eventType" >
+        <label class="lable">Choose Type: </label>
+        <select name="type" class="content">
+            <option value="patrol">Patrol</option>
+            <option value="meeting">Meeting</option>
+            <option value="gathering">Gathering</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <label class="lable">Event Description: </label><input class="content" type="text" name="disc" placeholder="Example: Clubing">
+    </div>
+    <br>
+    <div>
+        <label class="lable">Date: </label>
+        <input class="content" type="datetime-local" placeholder="Select a date for your Event">
+    </div>
+    <br>
+    <div>
+        <label class="lable">Place Of Event: </label>
+        <input class="content" type="text" placeholder="Choose a place">
+    </div>
+    <br>
+    <div>
+        <label class="lable">Additional Content:</label>
+    </div>
+    <div>
+        <textarea class="content" name="addContent" cols="40" rows="7" placeholder="Specify Your Event"></textarea>
+    </div>
+    <br>
+    <button class="submitButtons" type="submit">Submit</button>
+</form>
+
+
 
 </body>
-
 </html>
+
