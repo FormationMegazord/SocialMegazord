@@ -229,7 +229,7 @@ a {text-decoration:none;}
 
 #login{
     margin-top: 5vw;
-    width:35%;
+    width:23vw;
     margin-left:5vw;
     margin-bottom: 13vw;
     padding-bottom:1vw;
@@ -237,7 +237,6 @@ a {text-decoration:none;}
     font-size:5px;
     border:2px solid #222;
     background-color: whitesmoke;
-
 }
 #inputForm{
     margin-left:40px;
@@ -263,18 +262,16 @@ input[type=submit]:hover {
     background-color: #0088cc;
 }
 
-.the_footer {
-    clear:both;
-    text-align: right;
-    padding: 20px;
-    margin-bottom: -15vw;
-    position: relative;
-    margin-left: 48vw;
+footer {
+    background-color: #0088cc;
+    margin-top: 32vw;
+    padding-bottom:10px;
+
 }
 
 #register form{
     background-color: whitesmoke;
-    width:25.8%;
+    width:17vw;
     margin-left: 6.5vw;
     margin-top:2vw;
     padding:10px;
@@ -326,6 +323,86 @@ input[type=submit]:hover {
     cursor:pointer;
 }
 /*********************************************/
+
+/* EVENT MENU */
+
+.newEvent{
+    margin-top: 120px;
+    display: inline-block;
+    float: right;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 12px;
+    background-color: black;
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow:0 1px 0 #555 inset, 0 1px 7px #111;
+}
+
+.newEvent:hover {
+    color: #0088cc;
+}
+
+
+
+.formEvent {
+    position: absolute;
+    display: inline-block;
+    margin-top: 12vw;
+    margin-left: 36.5vw;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 15px;
+    align-content: center;
+    box-shadow:0 1px 0 #555 inset, 0 1px 7px #111;
+
+}
+
+
+.lable {
+    display: inline-block;
+    color: white;
+    background-color: black;
+    padding: 4px;
+    border-radius: 3px;
+    box-shadow:0 1px 0 #555 inset, 0 1px 7px #111;
+    margin-right: 5px;
+}
+
+.content {
+    float: right;
+    display: inline-block;
+    margin-left: 1vw;
+    margin-top: 0.3vw;
+    padding: 4px;
+    border-color: #1b6d85;
+}
+
+.content:hover {
+    color: #0088cc;
+    background-color: #c0c0c0;
+}
+
+.submitButtons {
+    display: inline-block;
+    background-color: black;
+    border-color: black;
+    padding: 12px;
+    color: white;
+    border-radius: 3px;
+    box-shadow:0 1px 0 #555 inset, 0 1px 7px #111;
+    margin-top: 1vw;
+    margin-left: 15vw;
+}
+
+.submitButtons:hover {
+    color: #0088cc;
+}
+
+
+
+
 
 
 
