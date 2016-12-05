@@ -401,10 +401,20 @@ footer {
 .submitButtons:hover {
     color: #0088cc;
 }
-
-
-
-
+.textbox{
+    margin-top: 20px;
+    resize: none;
+}
+.textbox2{
+    margin-right: 5vw;
+}
+.textbox3{
+    margin-left: 2vw;
+}
+.edit{
+    font-size: larger;
+    font-family: "Rage Italic";
+}
 
 
 
