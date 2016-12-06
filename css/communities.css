@@ -347,16 +347,14 @@ footer {
 }
 
 
-
 .formEvent {
     position: absolute;
     display: inline-block;
     margin-top: 12vw;
-    margin-left: 36.5vw;
+    margin-left: 30vw;
     background-color: lightgray;
     border-radius: 5px;
     padding: 15px;
-    align-content: center;
     box-shadow:0 1px 0 #555 inset, 0 1px 7px #111;
 
 }
@@ -376,9 +374,9 @@ footer {
     float: right;
     display: inline-block;
     margin-left: 1vw;
-    margin-top: 0.3vw;
     padding: 4px;
     border-color: #1b6d85;
+    resize: none;
 }
 
 .content:hover {
@@ -395,12 +393,14 @@ footer {
     border-radius: 3px;
     box-shadow:0 1px 0 #555 inset, 0 1px 7px #111;
     margin-top: 1vw;
-    margin-left: 15vw;
 }
 
 .submitButtons:hover {
     color: #0088cc;
 }
+
+/* POST VIEW*/
+
 .textbox{
     margin-top: 20px;
     resize: none;
@@ -411,14 +411,20 @@ footer {
 .textbox3{
     margin-left: 2vw;
 }
+
 .edit{
     font-size: larger;
     font-family: "Rage Italic";
 }
 
 
-
-
+/* EVENT VIEW */
+.eventView {
+    display: inline-block;
+    margin-left: 10vw;
+    margin-top: 15vw;
+    box-shadow:0 1px 0 #555 inset, 0 1px 7px #111;
+}
 
 
 
