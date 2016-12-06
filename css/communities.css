@@ -416,9 +416,36 @@ footer {
     font-family: "Rage Italic";
 }
 
+.row1 {
+    margin-top: 2%;
+    margin-left: 24%;
+    /* margin-right: 1500px; */
+}
 
-
-
+.article_position{
+    position: relative;
+    padding: 10px;
+    left: 5%;
+    right: 1%;
+    width: 70%;
+    height: 50%;
+    overflow: hidden;
+}
+article .author {
+    margin-bottom: 0;
+}
+article .author  {
+    display: block;
+    font-size: 100%;
+    line-height: 1.42857143;
+    color: #b4bcc2;
+}
+article .author  {
+    content: '\2014 \00A0';
+}
+.top{
+    margin-top: 15vw;
+}
 
 
 
