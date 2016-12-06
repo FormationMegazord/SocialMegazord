@@ -326,7 +326,7 @@ footer {
 }
 /*********************************************/
 
-/* EVENT MENU */
+/* EVENT/POST MENU */
 
 .newEvent{
     margin-top: 120px;
@@ -368,6 +368,7 @@ footer {
     border-radius: 3px;
     box-shadow:0 1px 0 #555 inset, 0 1px 7px #111;
     margin-right: 5px;
+    font-size: larger;
 }
 
 .content {
@@ -400,12 +401,26 @@ footer {
 }
 
 
+
+.edit{
+    font-size: larger;
+    font-family: "Rage Italic";
+}
+
+.row1 {
+    margin-top: 2%;
+    margin-left: 24%;
+    /* margin-right: 1500px; */
+}
+
 /* EVENT VIEW */
 .eventView {
     display: inline-block;
     margin-left: 10vw;
     margin-top: 15vw;
     box-shadow:0 1px 0 #555 inset, 0 1px 7px #111;
+
+
 
 /* POST VIEW*/
 .article_position{
@@ -429,30 +444,12 @@ article .author  {
 article .author  {
     content: '\2014 \00A0';
 }
+
 .top{
     margin-top: 15vw;
+
 }
 
-.textbox{
-    margin-top: 20px;
-    resize: none;
-}
-.textbox2{
-    margin-right: 5vw;
-}
-.textbox3{
-    margin-left: 2vw;
-}
 
-.edit{
-    font-size: larger;
-    font-family: "Rage Italic";
-}
-
-.row1 {
-    margin-top: 2%;
-    margin-left: 24%;
-    /* margin-right: 1500px; */
-}
 
 
