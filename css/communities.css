@@ -198,7 +198,7 @@ a {text-decoration:none;}
     width: 100%;
 }
 .navUL {
-    width: 30vw;
+    width: 35vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -209,7 +209,7 @@ a {text-decoration:none;}
     box-shadow:rgb(110,110,33) 0px 0px 13px;
     position: relative;
     overflow: hidden;
-    margin: 20px auto;
+    margin: 15px auto;
     transition: width 0.5s;
 }
 
@@ -471,7 +471,7 @@ input[type=submit]:hover {
 }
 
 #register form{
-    background-color: transparent;
+    background-color: white;
     width:35%;
     margin-left:30vw;
     margin-top:5vw;
@@ -520,7 +520,7 @@ input[type=submit]:hover {
     text-shadow: 1px 1px 1px #949494;
 }
 #register .button:hover {
-    background-color:#80A24A;
+    background-color:gray;
     cursor:pointer;
 }
 
@@ -606,4 +606,8 @@ article{
     right: 0;
     bottom: 0;
     font-family: footer;
+}
+
+#login{
+    margin-top: 15vw;
 }
