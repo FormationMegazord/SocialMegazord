@@ -1,5 +1,5 @@
 body{
-    /*background-image: url("../images/cool-background.jpg");*/
+    background-image: url("../images/GHP_12a_2016 (268).jpg");
     position: relative;
     background-color: white;
     background-size: cover;
@@ -131,7 +131,7 @@ a {text-decoration:none;}
 }
 
 .button1 {
-    /*background-image: url("../images/image2.jpg");*/
+    background-image: url("../images/cool-background.jpg");
     background-size: cover;
     color: black;
     border: 2px solid ;

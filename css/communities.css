@@ -221,7 +221,6 @@ a {text-decoration:none;}
     clear:both;
     text-align: right;
     padding: 20px;
-    margin-bottom: 15px;
     position: relative;
 }
 .navUL {
@@ -375,4 +374,136 @@ input[type=submit]:hover {
 }
 .bio{
     margin-left: 20vw;
+}
+.submitButtons {
+    display: inline-block;
+    background-color: black;
+    border-color: black;
+    padding: 12px;
+    color: white;
+    border-radius: 3px;
+    box-shadow:0 1px 0 #555 inset, 0 1px 7px #111;
+
+}
+
+.submitButtons:hover {
+    color: #0088cc;
+}
+.lable {
+    display: inline-block;
+    color: white;
+    background-color: black;
+    padding: 4px;
+    border-radius: 3px;
+    box-shadow:0 1px 0 #555 inset, 0 1px 7px #111;
+    margin-right: 5px;
+}
+/* EVENT MENU */
+
+.newEvent{
+    margin-top: 120px;
+    display: inline-block;
+    float: right;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 12px;
+    background-color: black;
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow:0 1px 0 #555 inset, 0 1px 7px #111;
+}
+
+.newEvent:hover {
+    color: #0088cc;
+}
+
+
+
+.formEvent {
+    position: fixed;
+    display: inline-block;
+    margin-top: 3vw;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 15px;
+    align-content: center;
+    margin-left: 33vw;
+    box-shadow:0 1px 0 #555 inset, 0 1px 7px #111;
+    float: right;
+    margin-right: 33vw;
+}
+.text {
+    margin-top: 20vw;
+}
+
+#register form{
+    background-color: transparent;
+    width:35%;
+    margin-left:30vw;
+    margin-top:5vw;
+    padding:10px;
+    font-size:20px;
+    border:2px solid #222;
+    border-radius: 5px 5px 0px 0px;
+}
+#register form h2{
+    text-align:center;
+    border:1px solid white;
+}
+
+#otherRows input{
+    padding:10px 280px 10px 5px;
+    margin-top:20px;
+    font-weight:bold;
+    border-radius:1vw;
+}
+.controls{
+    margin-top:2vw;
+}
+#dob-day,#dob-month,#dob-year{
+    padding:5px 10px 5px 10px;
+}
+#register h1 {
+    font: 17px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding:15px 15px 15px 15px;
+    margin:-12px -12px 15px -12px;
+    color: #FFF;
+    background: #222;
+    text-shadow: 1px 1px 1px #949494;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    border-bottom:1px solid #222;
+}
+#register .button {
+    background-color: #222;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-border-radius: 5px;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #949494;
+}
+#register .button:hover {
+    background-color:#80A24A;
+    cursor:pointer;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-button{
+    margin: 0 auto;
+}
+.textbox{
+   margin-top: 10vw;
+    resize: none;
+}
+#contents {
+    position: fixed;
+    width:100%;
+    margin:0 auto;
 }

@@ -48,7 +48,7 @@
 
 
             <div id="otherRows">
-                <input type="text" placeholder="Nickname" required="true" title="Enter login name">
+                <input class="textbox" type="text" placeholder="Nickname" required="true" title="Enter login name">
                 <input type="email" pattern="[a-zA-Z0-9_]{3,}@[a-zA-Z0-9_]{3,}.[a-zA-Z0-9_]{2,4}"
                        placeholder="sample@email.com"	title="Please enter a valid email address">
                 <input type="email" placeholder="Password" required="true" title="Enter password"><br/><br/>
@@ -229,13 +229,12 @@
                 <!-- Birthday Form ends here -->
 
                 <input type="radio" name="radioBut">Male
-                <input type="radio" name="radioBut">Female
-                <input type="radio" name="radioBut">Pederast<br/>
-
+                <input type="radio" name="radioBut">Female<br>
+                <div class="flex">
                 <label>
-                    <span>&nbsp;</span>
-                    <input type="button" class="button" value="Send" />
+                    <input type="button" class="button flex-button" value="Send" />
                 </label>
+                    </div>
             </div>
         </form>
     </div>
