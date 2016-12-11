@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/communities.css">
+    <title>Create New Event</title>
+</head>
+
+<body>
+
+<div id="profile_div">
+    <ul class="profile-wrapper">
+        <li>
+            <div class="profile">
+                <a href ="index.html" class="name">UserExample</a>
+                <ul class="menu">
+                    <li>
+                        <a href="#">My profile</a>
+                        <div class="horizontal_menu">
+                            <ul>
+                                <a href="interests.html"><li>Interests</li></a>
+                                <a href="myEvents.html"><li>My events</li></a>
+                                <a href="myVideos.html"><li>My videos</li></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a id="page_settings" href="#">Settings</a>
+                        <div class="horizontal_menu" hidden>
+                            <ul>
+                                <a href="ChangePassword.html"><li>Change password</li></a>
+                                <a href="ChangeUsername.html"><li>Change username</li></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a id="page_logout" href="#">Log out</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+<div id="contents">
+    <a href="Entertainment.html"><button class="button button1"></button></a>
+    <a href="Mutual%20Help.html"><button class="button button2"></button></a>
+    <a href="science.html"><button class="button button3"></button></a>
+</div>
+
+<div id="navMyProfile">
+    <ul class="navUL">
+        <li class="navLi"><a href="interests.html">Interests</a></li>
+        <li class="navLi"><a href="myevents.html">My Events</a></li>
+        <li class="navLi"><a href="myvideos.html">My videos</a></li>
+    </ul>
+</div>
+
+<form class="formEvent">
+    <div class="eventType" >
+        <label class="lable">Choose Type: </label>
+        <select name="type" class="content">
+            <option value="patrol">Patrol</option>
+            <option value="meeting">Meeting</option>
+            <option value="gathering">Gathering</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <label class="lable">Event Description: </label><input class="content" type="text" name="disc" placeholder="Example: Clubing">
+    </div>
+    <br>
+    <div>
+        <label class="lable">Date: </label>
+        <input class="content" type="datetime-local" placeholder="Select a date for your Event">
+    </div>
+    <br>
+    <div>
+        <label class="lable">Place Of Event: </label>
+        <input class="content" type="text" placeholder="Choose a place">
+    </div>
+    <br>
+    <div>
+        <label class="lable">Additional Content:</label>
+    </div>
+    <div>
+        <textarea class="content textbox" name="addContent" cols="50" rows="10" placeholder="Specify Your Event"></textarea>
+    </div>
+    <br>
+        <button class="submitButtons" type="reset">Cancel</button>
+        <button class="submitButtons" type="submit">Submit</button>
+</form>
+
+<footer >
+    <div class="the_footer">
+        <h3>© 2016 - SocialMegazord inc.</h3>
+    </div>
+</footer>
+</body>
+</html>

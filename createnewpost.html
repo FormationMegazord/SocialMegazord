@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create New Post</title>
+    <link rel="stylesheet" type="text/css" href="css/communities.css">
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+
+
+<div id="profile_div">
+    <ul class="profile-wrapper">
+        <li>
+            <div class="profile">
+                <a href ="index.html" class="name">UserExample</a>
+                <ul class="menu">
+                    <li>
+                        <a href="#">My profile</a>
+                        <div class="horizontal_menu">
+                            <ul>
+                                <a href="interests.html"><li>Interests</li></a>
+                                <a href="myevents.html"><li>My events</li></a>
+                                <a href="myvideos.html"><li>My videos</li></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a id="page_settings" href="#">Settings</a>
+                        <div class="horizontal_menu" hidden>
+                            <ul>
+                                <a href="ChangePassword.html"><li>Change password</li></a>
+                                <a href="ChangeUsername.html"><li>Change username</li></a>
+                                <a href="ChangeImage.html"><li>Change image</li></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a id="page_logout" href="Login.html">Log out</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div id="contents">
+    <a href="Entertainment.html"><button id="button1" class="button button1"></button></a>
+    <a href="science.html"><button id="button3" class="button button3"></button></a>
+    <a href="Mutual%20Help.html"><button id="button2" class="button button2"></button></a>
+</div>
+
+<div id="navMyProfile">
+    <ul class="navUL">
+        <li class="navLi"><a href="createnewpost.html">Create New Post</a></li>
+        <li class="navLi"><a href="createNewEvent.html">Create New Event</a></li>
+        <li class="navLi"><a href="#">My Posts</a></li>
+    </ul>
+</div>
+<form class="formEvent">
+    <div>
+        <label class="lable">Title: </label>
+        <input class="content" type="text" placeholder="Choose a title">
+    </div>
+    <br>
+    <div class="eventType" >
+        <label class="lable">Choose Caregory: </label>
+        <select name="type " class="content">
+            <option value="patrol">Entertainment</option>
+            <option value="meeting">Mutual Help</option>
+            <option value="gathering">Science</option>
+        </select>
+    </div>
+    <br>
+    <label class="lable">Content:</label>
+    <br>
+    <div>
+        <textarea class="textbox" name="addContent" cols="55" rows="10" placeholder="Enter Content"></textarea>
+    </div>
+    <br>
+    <button class="submitButtons" type="submit" style="margin-left: 13vw;">Submit</button>
+</form>
+<script src="scripts/backgroundChange.js"></script>
+</body>
+
+</html>

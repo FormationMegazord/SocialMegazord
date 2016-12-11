@@ -188,6 +188,7 @@ a {text-decoration:none;}
     left: 35vw;
     top: 15vw;
 
+
 }
 #navMyProfile{
     z-index: 2;
@@ -301,6 +302,9 @@ a {text-decoration:none;}
     padding-left: 15px;
     padding-right: 15px;
 }
+.content2{
+    top:10px;
+}
 article .author {
     margin-bottom: 0;
 }
@@ -413,7 +417,9 @@ input[type=submit]:hover {
     box-shadow:0 1px 0 #555 inset, 0 1px 7px #111;
 
 }
+.form-group{
 
+}
 .submitButtons:hover {
     color: #0088cc;
 }
@@ -425,6 +431,7 @@ input[type=submit]:hover {
     border-radius: 3px;
     box-shadow:0 1px 0 #555 inset, 0 1px 7px #111;
     margin-right: 5px;
+    bottom:5px;
 
 }
 /* EVENT MENU */
@@ -582,7 +589,7 @@ article{
     }
 
     .settings2{
-        top: 20vw;
+        top: 20123123px;
     }
 }
 
