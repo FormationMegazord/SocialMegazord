@@ -2,12 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/communities.css">
-    <title>Mutual Help</title>
-</head>
+    <link rel="stylesheet" type="text/css" href="./css/communities.css">
+    <script src="scripts/jquery-3.1.1.min.js"></script>
 
+    <title>Mutal Help</title>
+</head>
+<style>
+    body{
+        background-image: url("images/mutualhelp.jpg");
+        position: relative;
+        background-color: white;
+        background-size: cover;
+    }
+</style>
 <body>
-<div id="profile_div">
+<header class="nav">
     <ul class="profile-wrapper">
         <li>
             <div class="profile">
@@ -29,30 +38,29 @@
                             <ul>
                                 <a href="ChangePassword.html"><li>Change password</li></a>
                                 <a href="ChangeUsername.html"><li>Change username</li></a>
+                                <a href="ChangeImage.html"><li>Change profile picture</li></a>
                             </ul>
                         </div>
                     </li>
-
                     <li><a id="page_logout" href="#">Log out</a></li>
                 </ul>
             </div>
         </li>
     </ul>
-</div>
-
-<div id="contents">
-    <a href="Entertainment.html"><button class="button button1"></button></a>
-    <a href="Mutual%20Help.html"><button class="button button2"></button></a>
-    <a href="science.html"><button class="button button3"></button></a>
-</div>
-<div id="navMyProfile">
-    <ul class="navUL">
-        <li class="navLi"><a href="#">Create New Post</a></li>
-        <li class="navLi"><a href="#">Create New Event</a></li>
-        <li class="navLi"><a href="#">My Posts</a></li>
-    </ul>
-</div>
-<main>
+    <div id="contents">
+        <a href="Entertainment.html"><button id="button1" class="button button1"></button></a>
+        <a href="science.html"><button id="button3" class="button button3"></button></a>
+        <a href="Mutual%20Help.html"><button id="button2" class="button button2"></button></a>
+    </div>
+    <div id="navMyProfile">
+        <ul class="navUL">
+            <li class="navLi"><a href="#">Create New Post</a></li>
+            <li class="navLi"><a href="createNewEvent.html">Create New Event</a></li>
+            <li class="navLi"><a href="#">My Posts</a></li>
+        </ul>
+    </div>
+</header>
+<div class="article_containter">
     <article>
         <div class="row">
             <h2>Header</h2>
@@ -92,12 +100,13 @@
             </footer>
         </div>
     </article>
-</main>
+</div>
 <footer >
     <div class="the_footer">
         <h3>© 2016 - SocialMegazord inc.</h3>
     </div>
 </footer>
+<script src="scripts/backgroundChange.js"></script>
 </body>
 
 </html>
