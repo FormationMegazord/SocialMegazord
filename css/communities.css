@@ -245,7 +245,7 @@ a {text-decoration:none;}
     padding-top:10px;
 }
 #login input{
-    padding: 10px 70px 10px 5px;
+    padding: 0.8vw 0.45vw 0.10vw 0.5vw;
     font-weight: 900;
 }
 input[type=submit]{
@@ -286,7 +286,7 @@ footer {
     border:1px solid white;
 }
 #otherRows input{
-    padding:0.3vw 4.6vw 0.5vw 1vw;
+    padding:0.8vw 0.45vw 0.10vw 0.5vw;
     margin-top:2vw;
     font-weight:bold;
     border-radius:7px;
