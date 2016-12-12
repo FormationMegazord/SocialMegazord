@@ -169,4 +169,9 @@ a {text-decoration:none;}
 #button3:active {
     font-size: 80%;
 }
-
+.the_footer {
+    clear:both;
+    text-align: right;
+    padding: 20px;
+    position: relative;
+}

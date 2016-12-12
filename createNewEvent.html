@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/communities.css">
-    <title>Create new event</title>
-
+    <title>Create New Event</title>
 </head>
 
 <body>
-
 
 <div id="profile_div">
     <ul class="profile-wrapper">
@@ -21,8 +19,8 @@
                         <div class="horizontal_menu">
                             <ul>
                                 <a href="interests.html"><li>Interests</li></a>
-                                <a href="myevents.html"><li>My events</li></a>
-                                <a href="myvideos.html"><li>My videos</li></a>
+                                <a href="myEvents.html"><li>My events</li></a>
+                                <a href="myVideos.html"><li>My videos</li></a>
                             </ul>
                         </div>
                     </li>
@@ -32,37 +30,28 @@
                             <ul>
                                 <a href="ChangePassword.html"><li>Change password</li></a>
                                 <a href="ChangeUsername.html"><li>Change username</li></a>
-                                <a href="ChangeImage.html"><li>Change image</li></a>
                             </ul>
                         </div>
                     </li>
-                    <li><a id="page_logout" href="Login.html">Log out</a></li>
+                    <li><a id="page_logout" href="#">Log out</a></li>
                 </ul>
             </div>
         </li>
     </ul>
 </div>
-
 <div id="contents">
     <a href="Entertainment.html"><button class="button button1"></button></a>
-    <a href="science.html"><button class="button button3"></button></a>
     <a href="Mutual%20Help.html"><button class="button button2"></button></a>
+    <a href="science.html"><button class="button button3"></button></a>
 </div>
 
 <div id="navMyProfile">
-    <style>
-        .navUL {
-            width: 109%;
-            left: 29%;
-        }
-    </style>
     <ul class="navUL">
         <li class="navLi"><a href="interests.html">Interests</a></li>
         <li class="navLi"><a href="myevents.html">My Events</a></li>
         <li class="navLi"><a href="myvideos.html">My videos</a></li>
     </ul>
 </div>
-
 
 <form class="formEvent">
     <div class="eventType" >
@@ -90,14 +79,19 @@
     <br>
     <div>
         <label class="lable">Additional Content:</label>
-        <textarea class="content" name="addContent" cols="40" rows="7" placeholder="Specify Your Event"></textarea>
+    </div>
+    <div>
+        <textarea class="content textbox" name="addContent" cols="50" rows="10" placeholder="Specify Your Event"></textarea>
     </div>
     <br>
-    <button class="submitButtons" type="reset" style="margin-left: 10vw;">Cancel</button>
-    <button class="submitButtons" type="submit">Submit</button>
+        <button class="submitButtons" type="reset">Cancel</button>
+        <button class="submitButtons" type="submit">Submit</button>
 </form>
 
-
+<footer >
+    <div class="the_footer">
+        <h3>© 2016 - SocialMegazord inc.</h3>
+    </div>
+</footer>
 </body>
 </html>
-
