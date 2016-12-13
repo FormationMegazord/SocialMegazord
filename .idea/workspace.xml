@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7613c98e-919e-4de4-9e30-cc31adbd198d" name="Default" comment="" />
+    <list default="true" id="7613c98e-919e-4de4-9e30-cc31adbd198d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mutual Help.html" afterPath="$PROJECT_DIR$/Mutual Help.html" />
+    </list>
     <ignored path="SocialMegazord.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -57,8 +59,8 @@
       <file leaf-file-name="Mutual Help.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Mutual Help.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-493">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="493">
+              <caret line="58" column="57" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -120,6 +122,7 @@
         <option value="$PROJECT_DIR$/interests.html" />
         <option value="$PROJECT_DIR$/Unlogged-user-pages/EditEvents.html" />
         <option value="$PROJECT_DIR$/EditEvents.html" />
+        <option value="$PROJECT_DIR$/Mutual Help.html" />
       </list>
     </option>
   </component>
@@ -638,12 +641,12 @@
       <workItem from="1481547490435" duration="1710000" />
       <workItem from="1481557536769" duration="740000" />
       <workItem from="1481622900950" duration="257000" />
-      <workItem from="1481628688116" duration="3423000" />
+      <workItem from="1481628688116" duration="3696000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11023000" />
+    <option name="totallyTimeSpent" value="11296000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1364" height="726" extended-state="1" />
@@ -1093,8 +1096,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Mutual Help.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-493">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="493">
+          <caret line="58" column="57" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
           <folding />
         </state>
       </provider>
