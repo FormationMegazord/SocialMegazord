@@ -468,7 +468,7 @@ input[type=submit]:hover {
     margin-top: 20vw;
 }
 
-#register form{
+#register {
     background-color: white;
     width:35%;
     margin-left:30vw;
