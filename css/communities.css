@@ -2,9 +2,9 @@
     font-family: footer;
     src: url(../fonts/Minecraftia-Regular.ttf);
 }
-* {
-    z-index: -5;
-}
+/** {*/
+    /*z-index: -5;*/
+/*}*/
 body {
     position: relative;
     background-color: white;
@@ -103,11 +103,6 @@ a {text-decoration:none;}
     display: none;
     color: #0088cc;
     background-color: black;
-}
-
-.username:hover .horizontal_menu,
-.horizontal_menu:hover, .username:hover{
-    display: block;
 }
 
 .horizontal_menu ul li:hover{
@@ -417,7 +412,7 @@ input[type=submit]:hover {
     color: white;
     border-radius: 3px;
     box-shadow:0 1px 0 #555 inset, 0 1px 7px #111;
-
+    margin-left: 6vw;
 }
 .form-group{
 
@@ -458,7 +453,8 @@ input[type=submit]:hover {
 
 .formEvent {
     position: relative;
-    background-color: lightgray;
+    border: 2px solid green;
+    background: rgba(222, 122, 30, 0.7);
     border-radius: 5px;
     padding: 15px;
     align-content: center;
@@ -557,7 +553,6 @@ article{
     width:60%;
     margin: 0px auto 20px auto;
     padding-bottom: 10px;
-
     border: 2px solid green;
     border-radius: 10px;
     background: rgba(222, 122, 30, 0.7);
@@ -565,7 +560,7 @@ article{
 }
 
 .article_containter{
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     justify-content: center;
     width: 100%;
@@ -593,6 +588,11 @@ article{
     .settings2{
         top: 20123123px;
     }
+
+    .formEvent {
+        margin-top: 55vw;
+        width: 80%;
+    }
 }
 
 .profile_div{
@@ -612,4 +612,11 @@ article{
 
 #login{
     margin-top: 15vw;
+}
+textarea {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: auto;
+    width: 100%;
+    resize: none;
 }

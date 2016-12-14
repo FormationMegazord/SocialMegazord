@@ -33,7 +33,7 @@
                         </div>
                     </li>
 
-                    <li><a id="page_logout" href="#">Log out</a></li>
+                    <li><a id="page_logout" href="LoggedOut.html">Log out</a></li>
                 </ul>
             </div>
         </li>
@@ -54,42 +54,27 @@
     </ul>
 </div>
 
-<div id="settings">
-    <form class="form-horizontal">
-        <fieldset>
-            <legend>Change username</legend>
-            <div class="form-group">
-                <label for="inputEmail" class="col-lg-2 control-label">Current password</label>
-                <div class="col-lg-10">
-                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
-                </div>
-            </div>
-            <br>
-
-            <div class="form-group">
-                <label for="input" class="col-lg-2 control-label">Current username</label>
-                <div class="col-lg-10">
-                    <input type="text" class="form-control" id="input" placeholder="Username">
-                </div>
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="inputPassword" class="col-lg-2 control-label">New username</label>
-                <div class="col-lg-10">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                </div>
-            </div>
-            <br>
-            <div class="form-group">
-                <div class="col-lg-10 col-lg-offset-2">
-                    <button type="reset" class="btn btn-default">Cancel</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
-        </fieldset>
+<div>
+    <form class="formEvent">
+        <div><label class="lable">Current Password: </label>
+            <input type="password" class="content2" placeholder="">
+        </div>
+        <br>
+        <div><label class="lable">Current Username: </label>
+            <input type="text" placeholder="">
+        </div>
+        <br>
+        <div><label class="lable">Desirable Username: </label>
+            <input type="text" placeholder="">
+        </div>
+        <br>
+        <div>
+            <a href="Settings.html"><button type="button" class="submitButtons">Cancel</button></a>
+            <button class="submitButtons" type="submit">Update</button>
+        </div>
     </form>
 </div>
-
+<script src="scripts/backgroundChange.js"></script>
 <footer>
     <div class="the_footer">
         <h3>© 2016 - SocialMegazord inc.</h3>
