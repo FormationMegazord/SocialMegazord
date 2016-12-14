@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+</head>
+<body>
+        @Html.Partial("_LoginPartial")
+        @RenderBody()
+    <footer class="the_footer">
+        <p>&copy; @DateTime.Now.Year - Social Megazord</p>
+    </footer>  
+</body>
+</html>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/coolchange")
+}
+
+@RenderSection("Scripts", required: false)

@@ -1,0 +1,73 @@
+﻿@model SocialMegazord2._0.Models.LoginViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body>
+    @*@using (Html.BeginForm("Register", "Account", FormMethod.Post))
+        {*@
+    @Html.AntiForgeryToken()
+    <div id="profile_div">
+        <ul class="profile-wrapper">
+            <li>
+                <div class="profile">
+                    <a href="#" class="name">Register/Login</a>
+                    <ul class="menu">
+                        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                        <li>@Html.ActionLink("Login", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <div id="contents">
+        @Html.ActionLink(" ", "Entertainment", "Comunities", null, new { @id = "button1", @class = "button button1" })
+        @Html.ActionLink(" ", "Comunities", null, new { @id = "button3", @class = "button button3" })
+        @Html.ActionLink(" ", "Comunities", null, new { @id = "button2", @class = "button button2" })
+    </div>
+
+    <footer class="the_footer">
+        <p>&copy; @DateTime.Now.Year - Social Megazord</p>
+    </footer>
+
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div id="navMyProfile">
+            <div id="register">
+                <form>
+                    <h1>
+                        <span>@Html.ValidationSummary("")</span>
+                    </h1>
+
+
+                    <div id="otherRows">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "username", @title = "Please enter a valid email address", @placeholder = "Please enter a valid email address" })
+                        @Html.PasswordFor(m => m.Password, new { @class = "password", @title = "Enter password", @placeholder = "Enter password" })
+                        <input type="submit" value="Log in">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    }
+
+
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/coolchange")
+    @*// @RenderSection("scripts", required: false)*@
+</body>
+</html>
