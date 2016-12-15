@@ -64,7 +64,7 @@
                 <ul class="navUL">
                     <li class="navLi"><a href="createnewpost.html">Create New Post</a></li>
                     <li class="navLi"><a href="createNewEvent.html">Create New Event</a></li>
-                    <li class="navLi"><a href="myevents.html">Events</a></li>
+                    <li class="navLi">@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink"})</li>
                 </ul>
             </div>
         }

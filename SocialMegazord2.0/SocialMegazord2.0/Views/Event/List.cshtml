@@ -1,0 +1,97 @@
+﻿@using Microsoft.AspNet.Identity;
+@model List<SocialMegazord2._0.Models.Event>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <title>Events</title>
+</head>
+<body>
+        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "profile_div" }))
+        {
+        @Html.AntiForgeryToken()
+        <div id="profile_div">
+            <ul class="profile-wrapper">
+                <li>
+                    <div class="profile">
+                        @Html.ActionLink(User.Identity.GetUserName(), "Index", "Home", new { area = "" }, new { @class = "name" })
+                        <ul class="menu">
+                            <li>
+                                <a id="page_settings" href="#">My Profile</a>
+                                <div class="horizontal_menu">
+                                    <ul>
+                                        <li>@Html.ActionLink("Interests", "Interests", "Manage", new { area = "", value = "Interests" })</li>
+                                        <li>@Html.ActionLink("My Events", "Events", "Manage", new { area = "", value = "My Events" })</li>
+                                        <li>@Html.ActionLink("My Videos", "Videos", "Manage", new { area = "", value = "My Videos" })</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a id="page_settings" href="#">Settings</a>
+                                <div class="horizontal_menu" hidden>
+                                    <ul>
+                                        <li>@Html.ActionLink("Change Password", "Change Password", "Manage", new { area = "" })</li>
+                                        <li>@Html.ActionLink("Change Username", "Change Username", "Manage", new { area = "" })</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post))
+                            {
+                                <li><a href="javascript:document.getElementById('profile_div').submit()">Log Off</a></li>
+                            }
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        }
+        <div id="contents">
+            <a href="Entertainment.html"><button id="button1" class="button button1"></button></a>
+            <a href="science.html"><button id="button3" class="button button3"></button></a>
+            <a href="Mutual%20Help.html"><button id="button2" class="button button2"></button></a>
+        </div>
+        <div id="navMyProfile">
+            <ul class="navUL">
+                <li class="navLi"><a href="createnewpost.html">Create New Post</a></li>
+                <li class="navLi"><a href="createNewEvent.html">Create New Event</a></li>
+                <li class="navLi"><a href="index.html">Posts</a></li>
+            </ul>
+        </div>
+    @using (Html.BeginForm("List", "Event", FormMethod.Post))
+    {
+        <div class="article_containter">
+            @foreach (var item in Model)
+            {
+                <article>
+                    <div class="row">
+                        <h2>@item.Title</h2>
+                        <small class="author">@item.Author.Name</small>
+                        <small class="author">@item.Type</small>
+                        <small class="author">@item.Place</small>
+                        <small class="author">@item.Date</small>
+                        <div class="article_position" style="color: black">
+                            @item.AdditionalContent
+                        </div>
+                        <footer>
+                            @*<a href="eventOptions.html"><button class="submitButtons">Options &raquo;</button></a>*@
+                           @Html.ActionLink("Options", "Options", "Event", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })
+                        </footer>
+                    </div>
+                </article>
+            }
+
+        </div>
+    }
+   
+        <footer>
+            <div class="the_footer">
+                <h3>© 2016 - SocialMegazord inc.</h3>
+            </div>
+        </footer>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/coolchange")
+</body>
+
+</html>

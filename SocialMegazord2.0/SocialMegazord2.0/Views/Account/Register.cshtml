@@ -53,6 +53,7 @@
                     <div id="otherRows">
                         @*<input class=username type="text" placeholder="Username" required="true" title="Enter login name">*@
                         @Html.TextBoxFor(m => m.Email, new { @class = "username", @title = "Please enter a valid email address", @placeholder = "Please enter a valid email address" })
+                        @Html.TextBoxFor(m => m.Name, new { @class = "username", @title = "Please enter a valid username", @placeholder = "Please enter a valid username" })
                         @Html.PasswordFor(m => m.Password, new { @class = "password", @title = "Enter password", @placeholder = "Enter password" })
                         @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "password", @title = "Confirm password", @placeholder = "Confirm password" })
                         <label>
