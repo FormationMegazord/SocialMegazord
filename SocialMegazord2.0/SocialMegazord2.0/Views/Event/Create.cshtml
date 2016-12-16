@@ -68,8 +68,8 @@
     {
             @Html.AntiForgeryToken()
             @Html.ValidationSummary("")
-
-    }< div class="eventType">
+    <div class="eventType">
+        @*<label class="lable">Choose Type: </label>*@
         @Html.LabelFor(m => m.Type, new { @class = "lable", @value = "Choose type" })
         @Html.TextBoxFor(m => m.Type, new { @class="content", @type="text", @name="disc", placeholder="Example: Meeting"  })
         <div>
@@ -95,8 +95,11 @@
             @Html.TextAreaFor(m => m.AdditionalContent, new { @rows="20", cols="50", @class="content", @value="Content"})
         </div>
         <br>
+
+        
+        </div>
             @Html.ActionLink("Cancel", "Manage" , "List", new { @class="submitButtons"})
-        <input class="submitButtons" type="submit" value="Create"/>Submit
+        <input class="submitButtons" type="submit" value="Create"/>
         }
 
 

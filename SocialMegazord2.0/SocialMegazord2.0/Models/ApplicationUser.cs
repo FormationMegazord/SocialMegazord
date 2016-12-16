@@ -16,6 +16,7 @@ namespace SocialMegazord2._0.Models
         [Required]
         public string Name { get; set; }
 
+        public string Interests { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

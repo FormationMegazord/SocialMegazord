@@ -30,8 +30,8 @@
                                 <div class="horizontal_menu">
                                     <ul>
                                         <li>@Html.ActionLink("Interests", "Interests", "Manage", new { area = "", value = "Interests" })</li>
-                                        <li>@Html.ActionLink("My Events", "Events", "Manage", new { area = "", value = "My Events" })</li>
                                         <li>@Html.ActionLink("Posts", "Posts", "Post", new { area = "", value = "My Videos" })</li>
+                                        <li>@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
                                     </ul>
                                 </div>
                             </li>
