@@ -30,7 +30,7 @@
                                 <div class="horizontal_menu">
                                     <ul>
                                         <li>@Html.ActionLink("Interests", "Interests", "Manage", new { area = "", value = "Interests" })</li>
-                                        <li class="navLi">@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
+                                        <li>@Html.ActionLink("My Events", "Events", "Manage", new { area = "", value = "My Events" })</li>
                                         <li>@Html.ActionLink("My Videos", "Videos", "Manage", new { area = "", value = "My Videos" })</li>
                                     </ul>
                                 </div>
@@ -39,7 +39,7 @@
                                 <a id="page_settings" href="#">Settings</a>
                                 <div class="horizontal_menu" hidden>
                                     <ul>
-                                        <li>@Html.ActionLink("Change Password", "Change Password", "Manage", new { area = "" })</li>
+                                        <li>@Html.ActionLink("Change Password", "Manage", "ChangePassword")</li>
                                         <li>@Html.ActionLink("Change Username", "Change Username", "Manage", new { area = "" })</li>
                                     </ul>
                                 </div>

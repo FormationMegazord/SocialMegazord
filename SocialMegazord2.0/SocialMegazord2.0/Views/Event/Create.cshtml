@@ -1,5 +1,8 @@
 ﻿@model SocialMegazord2._0.Models.Event
 @using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Create";
+}
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -61,12 +64,12 @@
             <li class="navLi"><a href="index.html">Posts</a></li>
         </ul>
     </div>
-    @Html.BeginForm("Create", "Event", FormMethod.Post, new { @class = "formEvent"})
-    {
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary("")
+    @using (Html.BeginForm("Create", "Event", FormMethod.Post, new { @class = "formEvent" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary("")
 
-    <div class="eventType">
+    < div class="eventType">
         @*<label class="lable">Choose Type: </label>*@
         @Html.LabelFor(m => m.Type, new { @class = "lable", @value = "Choose type" })
         @Html.TextBoxFor(m => m.Type, new { @class="content", @type="text", @name="disc", placeholder="Example: Meeting"  })
@@ -80,23 +83,24 @@
             @*<label class="lable">Date: </label>*@
             @Html.LabelFor(m => m.Date, new { @class = "lable", @value = "Date:" })
             @*<input class="content" type="datetime-local" placeholder="Select a date for your Event">*@
-            @Html.EditorFor(model => model.Date.ToString("MM/dd/yyyy"))
+            @Html.TextBoxFor(model => model.Date, new { @class="content", @type="date", @name="Date"})
         </div>
         <br>
         <div>
-            <label class="lable">Place Of Event: </label>
-            <input class="content" type="text" placeholder="Choose a place">
+            @Html.LabelFor(m => m.Date, new { @class = "lable", @value = "Place of Event" })
+            @Html.TextBoxFor(m => m.Place, new { @class = "content", @value="Place", @placeholder="Some City"})
         </div>
         <br>
         <div>
-            <label class="lable">Additional Content:</label>
+            @Html.LabelFor(m => m.AdditionalContent, new { @class = "lable", @value = "Additional Content" })
         </div>
+        <br><br>
         <div>
-            <textarea class="content textbox" name="addContent" cols="50" rows="10" placeholder="Specify Your Event"></textarea>
+            @Html.TextAreaFor(m => m.AdditionalContent, new { @rows="20", cols="50", @class="content", @value="Content"})
         </div>
         <br>
-        <a href="myevents.html"><button class="submitButtons" type="reset">Cancel</button></a>
-        <button class="submitButtons" type="submit">Submit</button>
+            @Html.ActionLink("Cancel", "Manage" , "List", new { @class="submitButtons"})
+        <input class="submitButtons" type="submit" value="Create"/>Submit
         }
 
 
