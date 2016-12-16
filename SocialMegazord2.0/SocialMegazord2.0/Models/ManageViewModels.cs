@@ -12,6 +12,16 @@ namespace SocialMegazord2._0.Models
         public string PhoneNumber { get; set; }
         public bool TwoFactor { get; set; }
         public bool BrowserRemembered { get; set; }
+        public string Interests { get; set; }
+        
+
+        [EmailAddress]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
+
+        [StringLength(20)]
+        [Display(Name = "Name")]
+        public string Name { get; set; }
     }
 
     public class ManageLoginsViewModel

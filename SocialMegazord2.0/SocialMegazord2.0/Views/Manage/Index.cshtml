@@ -1,87 +1,105 @@
 ﻿@model SocialMegazord2._0.Models.IndexViewModel
-@{
-    ViewBag.Title = "Manage";
-}
 
-<h2>@ViewBag.Title.</h2>
+@using Microsoft.AspNet.Identity 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <title>My profile</title>
+</head>
 
-<p class="text-success">@ViewBag.StatusMessage</p>
-<div>
-    <h4>Change your account settings</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>Password:</dt>
-        <dd>
-            [
-            @if (Model.HasPassword)
-            {
-                @Html.ActionLink("Change your password", "ChangePassword")
-            }
-            else
-            {
-                @Html.ActionLink("Create", "SetPassword")
-            }
-            ]
-        </dd>
-        <dt>External Logins:</dt>
-        <dd>
-            @Model.Logins.Count [
-            @Html.ActionLink("Manage", "ManageLogins") ]
-        </dd>
-        @*
-            Phone Numbers can used as a second factor of verification in a two-factor authentication system.
-             
-             See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
-                for details on setting up this ASP.NET application to support two-factor authentication using SMS.
-             
-             Uncomment the following block after you have set up two-factor authentication
-        *@
-        @*  
-            <dt>Phone Number:</dt>
-            <dd>
-                @(Model.PhoneNumber ?? "None")
-                @if (Model.PhoneNumber != null)
-                {
-                    <br />
-                    <text>[&nbsp;&nbsp;@Html.ActionLink("Change", "AddPhoneNumber")&nbsp;&nbsp;]</text>
-                    using (Html.BeginForm("RemovePhoneNumber", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+<body>
+
+    @if (Request.IsAuthenticated)
+    {
+        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "profile_div" }))
+        {
+            @Html.AntiForgeryToken()
+            <div id="profile_div">
+                <ul class="profile-wrapper">
+                    <li>
+                        <div class="profile">
+                            @Html.ActionLink(User.Identity.GetUserName(), "Index", "Home", new { area = "" }, new { @class = "name" })
+                            <ul class="menu">
+                                <li>
+                                    <a id="page_settings" href="#">My Profile</a>
+                                    <div class="horizontal_menu">
+                                        <ul>
+                                            <li>@Html.ActionLink("Interests", "Interests", "Manage", new { area = "", value = "Interests" })</li>
+                                            <li>@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
+                                            <li>@Html.ActionLink("My Videos", "Videos", "Manage", new { area = "", value = "My Videos" })</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a id="page_settings" href="#">Settings</a>
+                                    <div class="horizontal_menu" hidden>
+                                        <ul>
+                                            <li>@Html.ActionLink("Change Password", "ChangePassword", "Manage", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
+                                            <li>@Html.ActionLink("Change Username", "Change Username", "Manage", new { area = "" })</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post))
+                                {
+                                    <li><a href="javascript:document.getElementById('profile_div').submit()">Log Off</a></li>
+                                }
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        }
+    }
+
+    <div id="contents">
+        @Html.ActionLink(" ", "Entertainment", "Comunities", null, new { @id = "button1", @class = "button button1" })
+        @Html.ActionLink(" ", "Science", "Comunities", null, new { @id = "button3", @class = "button button3" })
+        @Html.ActionLink(" ", "MutualHelp", "Comunities", null, new { @id = "button2", @class = "button button2" })
+    </div>
+
+    <div id="navMyProfile">
+        <ul class="navUL">
+            <li class="navLi"><a href="interests.html">Interests</a></li>
+            <li class="navLi">@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
+        </ul>
+    </div>
+    @using (Html.BeginForm("Index", "Manage", FormMethod.Post))
+    {
+        <div class="formEvent">
+            <div class="row">
+                @*<label class="lable">Username: Bogdan Alov</label>*@
+                @Html.LabelFor(m => m.Name, new { @class = "lable", @value = "Name::" })
+                @Model.Name
+                <br><br>
+                @*<label class="lable">Email: alov@abv.bg</label>*@
+                @Html.LabelFor(m => m.Email, new { @class = "lable", @value = "Email::" })
+                @Model.Email
+                <br><br>
+                @Html.LabelFor(m=>m.Interests, new { @class = "lable", @value = "Interests::" })
+
+                @*<label class="lable">Interests: </label>*@
+
+                <p>
+                    @*@if (Model.Interests.IsEmpty())
                     {
-                        @Html.AntiForgeryToken()
-                        <text>[<input type="submit" value="Remove" class="btn-link" />]</text>
-                    }
-                }
-                else
-                {
-                    <text>[&nbsp;&nbsp;@Html.ActionLink("Add", "AddPhoneNumber")
-                }
-            </dd>
-        *@
-        <dt>Two-Factor Authentication:</dt>
-        <dd>
-            <p>
-                There are no two-factor authentication providers configured. See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
-                for details on setting up this ASP.NET application to support two-factor authentication.
-            </p>
-            @*@if (Model.TwoFactor)
-                {
-                    using (Html.BeginForm("DisableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-                    {
-                        @Html.AntiForgeryToken()
-                        <text>Enabled
-                        <input type="submit" value="Disable" class="btn btn-link" />
-                        </text>
-                    }
-                }
-                else
-                {
-                    using (Html.BeginForm("EnableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-                    {
-                        @Html.AntiForgeryToken()
-                        <text>Disabled
-                        <input type="submit" value="Enable" class="btn btn-link" />
-                        </text>
-                    }
-                }*@
-        </dd>
-    </dl>
-</div>
+                        Model.Interests = "No data";
+
+                    }*@
+
+                </p>
+            </div>
+        </div>
+    }
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/coolchange")
+    <footer>
+        <div class="the_footer">
+            <h3>© 2016 - SocialMegazord inc.</h3>
+        </div>
+    </footer>
+</body>
+</html>

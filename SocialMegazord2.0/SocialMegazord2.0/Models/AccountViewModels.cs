@@ -84,7 +84,12 @@ namespace SocialMegazord2._0.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+        
+        [Display(Name = "Interests")]
+        public string Interests { get; set; }
     }
+
+
 
     public class ResetPasswordViewModel
     {
