@@ -230,7 +230,6 @@ namespace SocialMegazord2._0.Controllers
             {
                 return View(model);
             }
-
             var result = await UserManager.ChangePasswordAsync(User.Identity.GetUserId(), model.OldPassword, model.NewPassword);
             if (result.Succeeded)
             {

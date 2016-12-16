@@ -1,6 +1,7 @@
 ﻿@model SocialMegazord2._0.Models.Event
+@using Microsoft.AspNet.Identity
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     @Styles.Render("~/Content/css")
@@ -9,47 +10,54 @@
 
 <body>
 
-    <div id="profile_div">
-        <ul class="profile-wrapper">
-            <li>
-                <div class="profile">
-                    <a href="index.html" class="name">UserExample</a>
-                    <ul class="menu">
-                        <li>
-                            <a href="MyProfile.html">My profile</a>
-                            <div class="horizontal_menu">
-                                <ul>
-                                    <a href="interests.html"><li>Interests</li></a>
-                                    <a href="myEvents.html"><li>My events</li></a>
-                                    <a href="myVideos.html"><li>My videos</li></a>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a id="page_settings" href="#">Settings</a>
-                            <div class="horizontal_menu" hidden>
-                                <ul>
-                                    <a href="ChangePassword.html"><li>Change password</li></a>
-                                    <a href="ChangeUsername.html"><li>Change username</li></a>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a id="page_logout" href="#">Log out</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </div>
+    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "profile_div" }))
+    {
+        @Html.AntiForgeryToken()
+        <div id="profile_div">
+            <ul class="profile-wrapper">
+                <li>
+                    <div class="profile">
+                        @Html.ActionLink(User.Identity.GetUserName(), "Index", "Home", new { area = "" }, new { @class = "name" })
+                        <ul class="menu">
+                            <li>
+                                <a id="page_settings" href="#">My Profile</a>
+                                <div class="horizontal_menu">
+                                    <ul>
+                                        <li>@Html.ActionLink("Interests", "Interests", "Manage", new { area = "", value = "Interests" })</li>
+                                        <li>@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
+                                        <li>@Html.ActionLink("My Videos", "Videos", "Manage", new { area = "", value = "My Videos" })</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a id="page_settings" href="#">Settings</a>
+                                <div class="horizontal_menu" hidden>
+                                    <ul>
+                                        <li>@Html.ActionLink("Change Password", "Change Password", "Manage", new { area = "" })</li>
+                                        <li>@Html.ActionLink("Change Username", "Change Username", "Manage", new { area = "" })</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post))
+                            {
+                                <li><a href="javascript:document.getElementById('profile_div').submit()">Log Off</a></li>
+                            }
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    }
     <div id="contents">
-        <a href="Entertainment.html"><button class="button button1"></button></a>
-        <a href="Mutual%20Help.html"><button class="button button2"></button></a>
-        <a href="science.html"><button class="button button3"></button></a>
+        @Html.ActionLink(" ", "Entertainment", "Comunities", null, new { @id = "button1", @class = "button button1" })
+        @Html.ActionLink(" ", "Science", "Comunities", null, new { @id = "button3", @class = "button button3" })
+        @Html.ActionLink(" ", "MutualHelp", "Comunities", null, new { @id = "button2", @class = "button button2" })
     </div>
 
     <div id="navMyProfile">
         <ul class="navUL">
             <li class="navLi"><a href="interests.html">Interests</a></li>
-            <li class="navLi"><a href="myevents.html">My Events</a></li>
+            <li class="navLi">@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
             <li class="navLi"><a href="index.html">Posts</a></li>
         </ul>
     </div>

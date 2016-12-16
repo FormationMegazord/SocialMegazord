@@ -23,7 +23,7 @@
                                 <div class="horizontal_menu">
                                     <ul>
                                         <li>@Html.ActionLink("Interests", "Interests", "Manage", new { area = "", value = "Interests" })</li>
-                                        <li>@Html.ActionLink("My Events", "Events", "Manage", new { area = "", value = "My Events" })</li>
+                                        <li>@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
                                         <li>@Html.ActionLink("My Videos", "Videos", "Manage", new { area = "", value = "My Videos" })</li>
                                     </ul>
                                 </div>
@@ -47,11 +47,11 @@
             </ul>
         </div>
         }
-        <div id="contents">
-            <a href="Entertainment.html"><button id="button1" class="button button1"></button></a>
-            <a href="science.html"><button id="button3" class="button button3"></button></a>
-            <a href="Mutual%20Help.html"><button id="button2" class="button button2"></button></a>
-        </div>
+    <div id="contents">
+        @Html.ActionLink(" ", "Entertainment", "Comunities", null, new { @id = "button1", @class = "button button1" })
+        @Html.ActionLink(" ", "Science", "Comunities", null, new { @id = "button3", @class = "button button3" })
+        @Html.ActionLink(" ", "MutualHelp", "Comunities", null, new { @id = "button2", @class = "button button2" })
+    </div>
         <div id="navMyProfile">
             <ul class="navUL">
                 <li class="navLi"><a href="createnewpost.html">Create New Post</a></li>

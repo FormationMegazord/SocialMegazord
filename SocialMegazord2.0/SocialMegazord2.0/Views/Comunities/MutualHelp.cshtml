@@ -36,7 +36,7 @@
                             <div class="horizontal_menu">
                                 <ul>
                                     <li>@Html.ActionLink("Interests", "Interests", "Manage", new { area = "", value = "Interests" })</li>
-                                    <li>@Html.ActionLink("My Events", "Events", "Manage", new { area = "", value = "My Events" })</li>
+                                    <li>@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
                                     <li>@Html.ActionLink("My Videos", "Videos", "Manage", new { area = "", value = "My Videos" })</li>
                                 </ul>
                             </div>
@@ -64,7 +64,7 @@
         <ul class="navUL">
             <li class="navLi"><a href="createnewpost.html">Create New Post</a></li>
             <li class="navLi"><a href="createNewEvent.html">Create New Event</a></li>
-            <li class="navLi"><a href="myevents.html">Events</a></li>
+            <li class="navLi">@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
         </ul>
     </div>
     }
