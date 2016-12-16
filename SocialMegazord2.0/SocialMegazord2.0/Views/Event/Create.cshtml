@@ -65,24 +65,20 @@
         </ul>
     </div>
     @using (Html.BeginForm("Create", "Event", FormMethod.Post, new { @class = "formEvent" }))
-        {
+    {
             @Html.AntiForgeryToken()
             @Html.ValidationSummary("")
 
-    < div class="eventType">
-        @*<label class="lable">Choose Type: </label>*@
+    }< div class="eventType">
         @Html.LabelFor(m => m.Type, new { @class = "lable", @value = "Choose type" })
         @Html.TextBoxFor(m => m.Type, new { @class="content", @type="text", @name="disc", placeholder="Example: Meeting"  })
         <div>
-            @*<label class="lable">Event Description: </label><input class="content" type="text" name="disc" placeholder="Example: Clubing">*@
-            @Html.LabelFor(m=> m.Title, new { @class = "lable", @value = "Choose a proper title"  })
+            @Html.LabelFor(m=> m.Title, new { @class = "lable", @value = "Choose a proper title" })
             @Html.TextBoxFor(m => m.Title, new { @class = "content", @type ="text", @name = "disc", @placeholer = "Example: HARRY POTTER AT NDK, ON 12 FEBRUARY!!!" } )
         </div>
         <br>
         <div>
-            @*<label class="lable">Date: </label>*@
             @Html.LabelFor(m => m.Date, new { @class = "lable", @value = "Date:" })
-            @*<input class="content" type="datetime-local" placeholder="Select a date for your Event">*@
             @Html.TextBoxFor(model => model.Date, new { @class="content", @type="date", @name="Date"})
         </div>
         <br>

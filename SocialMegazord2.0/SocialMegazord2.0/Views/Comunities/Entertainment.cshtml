@@ -37,7 +37,7 @@
                                         <ul>
                                             <li>@Html.ActionLink("Interests", "Interests", "Manage", new { area = "", value = "Interests" })</li>
                                             <li>@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
-                                            <li>@Html.ActionLink("My Videos", "Videos", "Manage", new { area = "", value = "My Videos" })</li>
+                                            <li>@Html.ActionLink("Posts", "Posts", "Post", new { area = "", value = "Post" })</li>
                                         </ul>
                                     </div>
                                 </li>
@@ -63,8 +63,8 @@
             <div id="navMyProfile">
                 <ul class="navUL">
                     <li class="navLi"><a href="createnewpost.html">Create New Post</a></li>
-                    <li class="navLi"><a href="createNewEvent.html">Create New Event</a></li>
-                    <li class="navLi">@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink"})</li>
+                    <li class="navLi">@Html.ActionLink("Create New Event", "Create","EventController", new{area="" })</li>
+                    <li class="navLi">@Html.ActionLink("Events", "Create", "Event", new {area = ""})</li>
                 </ul>
             </div>
         }
