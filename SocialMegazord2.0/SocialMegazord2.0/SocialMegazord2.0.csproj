@@ -212,7 +212,6 @@
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\ForeigntKeyAttribute.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -287,6 +286,7 @@
     <Content Include="Views\Event\Create.cshtml" />
     <Content Include="Views\Event\List.cshtml" />
     <Content Include="Views\Event\Options.cshtml" />
+    <Content Include="Views\Manage\UpdateInterests.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

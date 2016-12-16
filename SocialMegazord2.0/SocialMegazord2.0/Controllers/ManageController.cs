@@ -50,6 +50,46 @@ namespace SocialMegazord2._0.Controllers
             }
         }
 
+        // GET: Manage/UpdateInterests
+        public ActionResult UpdateInterests()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> UpdateInterests(UpdateInterestsViewModel model)
+        {
+            var result = new IdentityResult();
+            if (ModelState.IsValid)
+            {
+                using (var database = new BlogDbContext())
+                {
+                    var authorId = database.Users.Where(u => u.Name == this.User.Identity.Name).First().Id;
+
+                    var interests = database.Users.Where(u => u.Name == this.User.Identity.Name).First().Interests;
+                    interests = model.OldInterest;
+
+                    ApplicationUser user = database.Users.Where(u => u.Id == authorId).First();
+                    user.Interests.Remove(0,interests.Length);
+                    
+                    //result = await UserManager.ChangePhoneNumberAsync(User.Identity.GetUserId(), model.OldInterest, model.NewInterest);
+                }
+            }
+
+            //if (result.Succeeded)
+            //{
+            //    var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+            //    if (user != null)
+            //    {
+            //        await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+            //    }
+            //    return RedirectToAction("Index", "Manage");
+            //}
+            //AddErrors(result);
+            return View(model);
+        }
+
+
         //
         // GET: /Manage/Index
         public async Task<ActionResult> Index(ManageMessageId? message)
@@ -75,9 +115,8 @@ namespace SocialMegazord2._0.Controllers
                 Logins = await UserManager.GetLoginsAsync(userId),
                 BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId),
                 Email = user.Email,
-                Name = user.Name
-                //Interests = user.
-
+                Name = user.Name,
+                Interests = user.Interests
             };
             return View(model);
         }

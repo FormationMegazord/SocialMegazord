@@ -68,6 +68,20 @@ namespace SocialMegazord2._0.Models
         public string ConfirmPassword { get; set; }
     }
 
+    public class UpdateInterestsViewModel
+    {
+
+        [DataType(DataType.Text)]
+        [Display(Name = "Current interests")]
+        public string OldInterest { get; set; }
+
+        [DataType(DataType.Text)]
+        [Display(Name = "New interests")]
+        public string NewInterest { get; set; }
+
+       
+    }
+
     public class AddPhoneNumberViewModel
     {
         [Required]

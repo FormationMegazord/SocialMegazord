@@ -1,0 +1,91 @@
+﻿@using Microsoft.AspNet.Identity
+@model SocialMegazord2._0.Models.IndexViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <title>My profile</title>
+</head>
+
+<body>
+
+    @if (Request.IsAuthenticated)
+    {
+        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "profile_div" }))
+        {
+            @Html.AntiForgeryToken()
+            <div id="profile_div">
+                <ul class="profile-wrapper">
+                    <li>
+                        <div class="profile">
+                            @Html.ActionLink(User.Identity.GetUserName(), "Index", "Home", new { area = "" }, new { @class = "name" })
+                            <ul class="menu">
+                                <li>
+                                    <a id="page_settings" href="#">My Profile</a>
+                                    <div class="horizontal_menu">
+                                        <ul>
+                                            <li>@Html.ActionLink("Interests", "Interests", "Manage", new { area = "", value = "Interests" })</li>
+                                            <li>@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
+                                            <li>@Html.ActionLink("My Videos", "Videos", "Manage", new { area = "", value = "My Videos" })</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a id="page_settings" href="#">Settings</a>
+                                    <div class="horizontal_menu" hidden>
+                                        <ul>
+                                            <li>@Html.ActionLink("Change Password", "ChangePassword", "Manage", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
+                                            <li>@Html.ActionLink("Change Username", "Change Username", "Manage", new { area = "" })</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post))
+                                {
+                                    <li><a href="javascript:document.getElementById('profile_div').submit()">Log Off</a></li>
+                                }
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        }
+    }
+    <div id="contents">
+        @Html.ActionLink(" ", "Entertainment", "Comunities", null, new { @id = "button1", @class = "button button1" })
+        @Html.ActionLink(" ", "Science", "Comunities", null, new { @id = "button3", @class = "button button3" })
+        @Html.ActionLink(" ", "MutualHelp", "Comunities", null, new { @id = "button2", @class = "button button2" })
+    </div>
+    <div id="navMyProfile">
+        <ul class="navUL">
+            <li class="navLi">>@Html.ActionLink("Back", "Index", "Manage", routeValues: null, htmlAttributes: new { id = "interestLink" })</li>
+            <li class="navLi">@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
+            <li class="navLi"><a href="myvideos.html">My videos</a></li>
+        </ul>
+    </div>
+    <div class="formEvent">
+        <div>
+            <label class="lable">What are your Interests: </label>
+        </div>
+        <br>
+        <div>
+            @*<textarea name="edinInterests" id="" cols="30" rows="10">tyska she sedi neshto ako ima</textarea>*@
+            @Html.TextAreaFor(m=> m.Interests, new { @class = "content", @cols = "30" , @rows = "10" })
+        </div>
+        <br>
+        <div>
+            <a href="interests.html"><button class="submitButtons">Cancel</button></a>
+            <input type="submit" class="submitButtons" value="Chora Mante" />
+        </div>
+
+    </div>
+    <footer>
+        <div class="the_footer">
+            <h3>© 2016 - SocialMegazord inc.</h3>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/coolchange")
+</body>
+</html>

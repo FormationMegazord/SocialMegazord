@@ -83,13 +83,13 @@
                 @*<label class="lable">Interests: </label>*@
 
                 <p>
-                    @*@if (Model.Interests.IsEmpty())
+                    @if (Model.Interests == null)
                     {
-                        Model.Interests = "No data";
-
-                    }*@
-
+                        Model.Interests = "No content";
+                    }
+                 @Model.Interests
                 </p>
+                @Html.ActionLink("Update Interests", "UpdateInterests", "Manage", routeValues: null, htmlAttributes: new { id = "interestsLink" , @class = "submitButtons" })
             </div>
         </div>
     }

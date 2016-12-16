@@ -26,7 +26,8 @@
                         @Html.ActionLink(User.Identity.GetUserName(), "Index", "Home", new { area = "" }, new { @class = "name" })
                         <ul class="menu">
                             <li>
-                                <a id="page_settings" href="#">My Profile</a>
+                                
+                                @Html.ActionLink("My Profile", "Index", "Manage", routeValues: null, htmlAttributes: new { id = "profileLink" })
                                 <div class="horizontal_menu">
                                     <ul>
                                         <li>@Html.ActionLink("Interests", "Interests", "Manage", new { area = "", value = "Interests" })</li>
