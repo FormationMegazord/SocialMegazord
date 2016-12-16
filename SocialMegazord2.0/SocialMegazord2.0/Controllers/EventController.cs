@@ -46,10 +46,27 @@ namespace SocialMegazord2._0.Controllers
                 return View(events);
             }
         }
-
-        public ActionResult Create()
+        [HttpPost]
+        public ActionResult Create(Event Event)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                using (var database = new BlogDbContext())
+                {
+                    var authorId = database.Users
+                        .Where(u => u.UserName == this.User.Identity.Name)
+                        .First()
+                        .Id;
+
+                    Event.AuthorId = authorId;
+
+                    database.Events.Add(Event);
+                    database.SaveChanges();
+
+                    return RedirectToAction("Index");
+                }
+            }
+            return View(Event);
         }
     }
 }
