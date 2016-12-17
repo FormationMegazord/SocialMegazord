@@ -37,10 +37,7 @@
                                         <ul>
                                             <li>@Html.ActionLink("Interests", "Interests", "Manage", new { area = "", value = "Interests" })</li>
                                             <li>@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
-<<<<<<< HEAD
-=======
                                             <li>@Html.ActionLink("Posts", "Posts", "Post", new { area = "", value = "Post" })</li>
->>>>>>> dcfcf0f53b2ff5a5536d464fa80d2a30c0d676a2
                                         </ul>
                                     </div>
                                 </li>
@@ -48,7 +45,7 @@
                                     <a id="page_settings" href="#">Settings</a>
                                     <div class="horizontal_menu" hidden>
                                         <ul>
-                                            <li>@Html.ActionLink("Change Password", "ChangePassword", "Manage", new { area = "" })</li>
+                                            <li>@Html.ActionLink("Change Password", "ChangePassword", "Manage",null, new { area = "" })</li>
                                             <li>@Html.ActionLink("Change Username", "Change Username", "Manage", new { area = "" })</li>
                                         </ul>
                                     </div>

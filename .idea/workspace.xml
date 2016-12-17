@@ -2,17 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e1d648c-c295-4b9f-b260-e54afde4c135" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/.vs/SocialMegazord2.0/v14/.suo" afterPath="$PROJECT_DIR$/SocialMegazord2.0/.vs/SocialMegazord2.0/v14/.suo" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/App_Data/aspnet-SocialMegazord2.0-20161212102405.mdf" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/App_Data/aspnet-SocialMegazord2.0-20161212102405.mdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/App_Data/aspnet-SocialMegazord2.0-20161212102405_log.ldf" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/App_Data/aspnet-SocialMegazord2.0-20161212102405_log.ldf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/bin/SocialMegazord2.0.dll" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/bin/SocialMegazord2.0.dll" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/bin/SocialMegazord2.0.pdb" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/bin/SocialMegazord2.0.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/obj/Debug/SocialMegazord2.0.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/obj/Debug/SocialMegazord2.0.csprojResolveAssemblyReference.cache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/obj/Debug/SocialMegazord2.0.dll" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/obj/Debug/SocialMegazord2.0.dll" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/obj/Debug/SocialMegazord2.0.pdb" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/obj/Debug/SocialMegazord2.0.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Models/Event.cs" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Models/Event.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Models/BlogDbContext.cs" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Models/BlogDbContext.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Models/ForeigntKeyAttribute.cs" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Models/ForeigntKeyAttribute.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/SocialMegazord2.0.csproj" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/SocialMegazord2.0.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/SocialMegazord2.0.csproj.user" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/SocialMegazord2.0.csproj.user" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Views/Comunities/Entertainment.cshtml" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Views/Comunities/Entertainment.cshtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Views/Event/Create.cshtml" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Views/Event/Create.cshtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Views/Home/Index.cshtml" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Views/Home/Index.cshtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/design/MyProfile.html" afterPath="$PROJECT_DIR$/design/MyProfile.html" />
     </list>
     <ignored path="SocialMegazord.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,12 +39,22 @@
     <favorites_list name="SocialMegazord" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="MyProfile.html" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="MyProfile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/design/MyProfile.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
               <caret line="64" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createnewpost.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/design/createnewpost.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-871">
+              <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -94,6 +109,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -133,7 +149,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -151,30 +166,31 @@
       <option name="presentableId" value="Default" />
       <updated>1481901577824</updated>
       <workItem from="1481901583358" duration="796000" />
+      <workItem from="1481991242557" duration="549000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="796000" />
+    <option name="totallyTimeSpent" value="1345000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -197,8 +213,24 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/design/MyProfile.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/MyProfile.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="64" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/createnewpost.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-871">
+          <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
           <folding />
         </state>
       </provider>
