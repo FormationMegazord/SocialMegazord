@@ -1,0 +1,126 @@
+﻿@using Microsoft.AspNet.Identity;
+@model SocialMegazord2._0.Models.ChangeUserNameViewModel
+@*<!DOCTYPE html>*@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <title>Change User's Name</title>
+</head>
+
+<body>
+    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "profile_div" }))
+    {
+        @Html.AntiForgeryToken()
+        <div id="profile_div">
+            <ul class="profile-wrapper">
+                <li>
+                    <div class="profile">
+                        @Html.ActionLink(User.Identity.GetUserName(), "Index", "Home", new { area = "" }, new { @class = "name" })
+                        <ul class="menu">
+                            <li>
+                                <a id="page_settings" href="#">My Profile</a>
+                                <div class="horizontal_menu">
+                                    <ul>
+                                        <li>@Html.ActionLink("Interests", "Interests", "Manage", null, new { area = "", value = "Interests" })</li>
+                                        <li>@Html.ActionLink("My Events", "Events", "Manage", null, new { area = "", value = "My Events" })</li>
+                                        <li>@Html.ActionLink("My Videos", "Videos", "Manage", new { area = "", value = "My Videos" })</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a id="page_settings" href="#">Settings</a>
+                                <div class="horizontal_menu" hidden>
+                                    <ul>
+                                        <li>@Html.ActionLink("Change Password", "Change Password", "Manage", new { area = "" })</li>
+                                        <li>@Html.ActionLink("Change Username", "Change Username", "Manage", new { area = "" })</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post))
+                            {
+                                <li><a href="javascript:document.getElementById('profile_div').submit()">Log Off</a></li>
+                            }
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    }
+
+    <div id="contents">
+        @Html.ActionLink(" ", "Entertainment", "Comunities", null, new { @id = "button1", @class = "button button1" })
+        @Html.ActionLink(" ", "Science", "Comunities", null, new { @id = "button3", @class = "button button3" })
+        @Html.ActionLink(" ", "MutualHelp", "Comunities", null, new { @id = "button2", @class = "button button2" })
+    </div>
+
+    <div id="navMyProfile">
+        <style>
+            .navUL {
+                margin-left: 33%;
+                margin-right: 38.9%;
+            }
+        </style>
+        <ul class="navUL">
+            <li class="navLi">@Html.ActionLink("Change Password", "ChangePassword", "Manage", routeValues: null, htmlAttributes: new { id = "changePasswordLink" })</li>
+            <li class="navLi">@Html.ActionLink("Change Username", "ChangeUserName", "Manage", routeValues: null, htmlAttributes: new { id = "changeUserNameLink" })</li>
+        </ul>
+    </div>
+
+    <div>
+        @using (Html.BeginForm("ChangeUserName", "Manage", FormMethod.Post, new { @class = "formEvent" }))
+        {
+            @Html.AntiForgeryToken()
+
+
+
+            @*<div>
+               @Html.LabelFor(m => m.OldUserName, new { @class = "lable", @value = "Name:" })
+               @Model.OldUserName
+            </div>
+            <br>
+            <div>
+                @Html.LabelFor(m => m.NewUserName, new { @class = "lable", @value = "New Username:" })
+                @Html.TextBoxFor(m => m.NewUserName, new { @type = "password", @placeholder = "" })
+            </div>
+            <br>
+            <div>
+                
+                @Html.LabelFor(m => m.Password, new { @class = "lable", @value = "Password:" })
+                @Html.TextBoxFor(m => m.Password, new { @type = "password", @placeholder = "" })
+            </div>
+            <br>
+            <div>
+                <button type="button" class="submitButtons">Cancel</button>
+                <button class="submitButtons" type="submit">Update</button>
+            </div>*@
+
+            <div>
+                <label class="lable">Current Password: </label>
+                <input type="password" class="content2" placeholder="">
+            </div>
+            <br>
+            <div>
+                <label class="lable">Current Username: </label>
+            </div>
+            <br>
+            <div>
+                <label class="lable">Desirable Username: </label>
+                <input type="text" placeholder="">
+            </div>
+            <br>
+            <div>
+                <button type="button" class="submitButtons">Cancel</button>
+                <button class="submitButtons" type="submit">Update</button>
+            </div>
+        }
+    <footer>
+        <div class="the_footer2">
+            <h3>© 2016 - SocialMegazord inc.</h3>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/coolchange")
+</body>
+</html>

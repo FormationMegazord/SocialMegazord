@@ -17,7 +17,9 @@ namespace SocialMegazord2._0.Models
         
         public virtual IDbSet<Event> Events { get; set; }
 
-        //public virtual IDbSet<Post> Posts { get; set; } 
+        public virtual IDbSet<Post> Posts { get; set; } 
+
+        public virtual IDbSet<Communities> Communities { get; set; }
 
         public static BlogDbContext Create()
         {
