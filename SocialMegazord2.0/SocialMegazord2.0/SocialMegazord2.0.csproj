@@ -275,6 +275,7 @@
     <Content Include="Views\Event\List.cshtml" />
     <Content Include="Views\Event\Options.cshtml" />
     <Content Include="Views\Manage\UpdateInterests.cshtml" />
+    <Content Include="Views\Manage\ChangeUserName.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

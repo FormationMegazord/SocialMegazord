@@ -11,8 +11,7 @@
 </head>
 
 <body>
-        @*@using (Html.BeginForm("Register", "Account", FormMethod.Post))
-        {*@
+        
             @Html.AntiForgeryToken()
         <div id="profile_div">
             <ul class="profile-wrapper">
@@ -27,7 +26,6 @@
                 </li>
             </ul>
         </div>
-
 
     <div id="contents">
         @Html.ActionLink(" ","Entertainment", "Comunities", null, new { @id = "button1", @class = "button button1" })
@@ -48,10 +46,7 @@
                     <h1>
                         <span>@Html.ValidationSummary("")</span>
                     </h1>
-
-
                     <div id="otherRows">
-                        @*<input class=username type="text" placeholder="Username" required="true" title="Enter login name">*@
                         @Html.TextBoxFor(m => m.Email, new { @class = "username", @title = "Please enter a valid email address", @placeholder = "Please enter a valid email address" })
                         @Html.TextBoxFor(m => m.Name, new { @class = "username", @title = "Please enter a valid username", @placeholder = "Please enter a valid username" })
                         @Html.PasswordFor(m => m.Password, new { @class = "password", @title = "Enter password", @placeholder = "Enter password" })
@@ -63,14 +58,7 @@
                 </form>
             </div>
         </div>
-
-       
     }
-   
-
-    
-    
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/coolchange")
     @*// @RenderSection("scripts", required: false)*@
