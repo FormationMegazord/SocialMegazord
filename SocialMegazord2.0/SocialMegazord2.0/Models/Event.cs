@@ -23,6 +23,8 @@ namespace SocialMegazord2._0.Models
         public string Type { get; set; }
 
         [Required]
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime Date { get; set; }
 
         [Required]

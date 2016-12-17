@@ -16,7 +16,7 @@
             <ul class="profile-wrapper">
                 <li>
                     <div class="profile">
-                        @Html.ActionLink(User.Identity.GetUserName(), "Index", "Home", new { area = "" }, new { @class = "name" })
+                        @Html.ActionLink(User.Identity.GetUserName(), "Index", "Home", new { area = "" , @class = "name" })
                         <ul class="menu">
                             <li>
                                 <a id="page_settings" href="#">My Profile</a>
@@ -28,7 +28,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a id="page_settings" href="#">Settings</a>
+                                <a id="page_settings" >@Html.ActionLink("Setting", "Index", "Manage")</a>
                                 <div class="horizontal_menu" hidden>
                                     <ul>
                                         <li>@Html.ActionLink("Change Password", "Change Password", "Manage", new { area = "" })</li>
