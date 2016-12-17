@@ -27,12 +27,12 @@
                         <ul class="menu">
                             <li>
                                 
-                                @Html.ActionLink("My Profile", "Index", "Manage", routeValues: null, htmlAttributes: new { id = "profileLink" })
+                                <a id="page_settings" href="#">My profile</a>
                                 <div class="horizontal_menu">
                                     <ul>
-                                        <li>@Html.ActionLink("Interests", "Interests", "Manage", new { area = "", value = "Interests" })</li>
+                                        <li>@Html.ActionLink("My Profile", "Index", "Manage", routeValues: null, htmlAttributes: new { id = "profileLink" })</li>
+                                        <li>@Html.ActionLink("Interests", "Interests", "Manage",null , new { area = "", value = "Interests" })</li>
                                         <li>@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
-                                        <li>@Html.ActionLink("My Videos", "Videos", "Manage", new { area = "", value = "My Videos" })</li>
                                     </ul>
                                 </div>
                             </li>

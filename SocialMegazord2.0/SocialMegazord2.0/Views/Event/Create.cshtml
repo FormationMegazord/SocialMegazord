@@ -28,7 +28,6 @@
                                     <ul>
                                         <li>@Html.ActionLink("Interests", "Interests", "Manage", new { area = "", value = "Interests" })</li>
                                         <li>@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
-                                        <li>@Html.ActionLink("My Videos", "Videos", "Manage", new { area = "", value = "My Videos" })</li>
                                     </ul>
                                 </div>
                             </li>
@@ -61,7 +60,6 @@
         <ul class="navUL">
             <li class="navLi"><a href="interests.html">Interests</a></li>
             <li class="navLi">@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
-            <li class="navLi"><a href="index.html">Posts</a></li>
         </ul>
     </div>
     @using (Html.BeginForm("Create", "Event", FormMethod.Post, new { @class = "formEvent" }))
@@ -105,9 +103,6 @@
             @Html.ActionLink("Cancel", "Manage" , "List", new { @class="submitButtons"})
         <input class="submitButtons" type="submit" value="Create"/>
         }
-
-
-
         <footer>
             <div class="the_footer">
                 <h3>© 2016 - SocialMegazord inc.</h3>

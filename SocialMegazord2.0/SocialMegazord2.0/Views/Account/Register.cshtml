@@ -18,7 +18,7 @@
             <ul class="profile-wrapper">
                 <li>
                     <div class="profile">
-                        <a href="#" class="name">Register/Login</a>
+                        @Html.ActionLink("Register/Login", "Index", "Home", new { area = "" }, new { @class = "name" })
                         <ul class="menu">
                             <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
                             <li>@Html.ActionLink("Login", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
