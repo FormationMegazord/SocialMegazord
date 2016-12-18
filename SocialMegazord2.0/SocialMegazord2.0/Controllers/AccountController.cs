@@ -154,6 +154,8 @@ namespace SocialMegazord2._0.Controllers
             {
                 var user = new ApplicationUser { UserName = model.Email,Name = model.Name, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
+
+                var addRoleResult = UserManager.AddToRole(user.Id, "User");
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);

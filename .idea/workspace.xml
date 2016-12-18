@@ -2,13 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e1d648c-c295-4b9f-b260-e54afde4c135" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Views/Comunities/Entertainment.cshtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Views/Comunities/MutualHelp.cshtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Views/Comunities/Science.cshtml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/.vs/SocialMegazord2.0/v14/.suo" afterPath="$PROJECT_DIR$/SocialMegazord2.0/.vs/SocialMegazord2.0/v14/.suo" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/App_Data/aspnet-SocialMegazord2.0-20161212102405.mdf" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/App_Data/aspnet-SocialMegazord2.0-20161212102405.mdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/App_Data/aspnet-SocialMegazord2.0-20161212102405_log.ldf" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/App_Data/aspnet-SocialMegazord2.0-20161212102405_log.ldf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/bin/SocialMegazord2.0.dll" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/bin/SocialMegazord2.0.dll" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/bin/SocialMegazord2.0.pdb" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/bin/SocialMegazord2.0.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/obj/Debug/SocialMegazord2.0.dll" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/obj/Debug/SocialMegazord2.0.dll" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/obj/Debug/SocialMegazord2.0.pdb" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/obj/Debug/SocialMegazord2.0.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Views/Event/List.cshtml" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Views/Event/List.cshtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Controllers/AccountController.cs" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Controllers/AccountController.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Migrations/Configuration.cs" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Migrations/Configuration.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/SocialMegazord2.0.csproj" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/SocialMegazord2.0.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Views/Home/Index.cshtml" afterPath="$PROJECT_DIR$/SocialMegazord2.0/SocialMegazord2.0/Views/Home/Index.cshtml" />
     </list>
     <ignored path="SocialMegazord.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -118,6 +127,16 @@
               <option name="myItemId" value="SocialMegazord" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SocialMegazord" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SocialMegazord" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SocialMegazord2.0" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -157,12 +176,12 @@
       <option name="presentableId" value="Default" />
       <updated>1481901577824</updated>
       <workItem from="1481901583358" duration="796000" />
-      <workItem from="1481991242557" duration="1179000" />
+      <workItem from="1481991242557" duration="1778000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1975000" />
+    <option name="totallyTimeSpent" value="2574000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />

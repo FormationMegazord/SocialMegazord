@@ -34,6 +34,12 @@ namespace SocialMegazord2._0.Models
         [StringLength(250)]
         public string AdditionalContent { get; set; }
 
+        public bool IsAuthora(string name)
+        {
+            return this.Author.UserName.Equals(name);
+        }
+
+
         [ForeignKey("Author")]
         public string AuthorId { get; set; }
         

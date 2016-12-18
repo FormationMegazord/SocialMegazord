@@ -28,6 +28,10 @@ namespace SocialMegazord2._0.Models
         [StringLength(50)]
         public string Title { get; set; }
 
+        public bool IsAuthor(string name)
+        {
+            return this.Author.UserName.Equals(name);
+        }
 
         public string Content { get; set; }
 
@@ -42,7 +46,7 @@ namespace SocialMegazord2._0.Models
         public int CommunityId { get; set; }
         public virtual Communities Communities { get; set; }
 
-        public bool IsAuthor (string name)
+        public bool IsAuthora (string name)
         {
             return this.Author.UserName.Equals(name);
         }

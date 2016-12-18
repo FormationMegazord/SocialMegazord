@@ -203,6 +203,7 @@
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\SettingsController.cs" />
+    <Compile Include="Controllers\Admin\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -216,6 +217,10 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\PostViewModel.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -227,6 +232,7 @@
     <Content Include="Content\Images\science.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Compile Include="Models\EditUserViewModel.cs" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\backgroundChange.js" />
@@ -261,7 +267,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
@@ -272,19 +277,23 @@
     <Content Include="Views\Manage\Index.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Comunities\Entertainment.cshtml" />
-    <Content Include="Views\Comunities\MutualHelp.cshtml" />
-    <Content Include="Views\Comunities\Science.cshtml" />
+    <Content Include="Views\Communities\Entertainment.cshtml" />
+    <Content Include="Views\Communities\MutualHelp.cshtml" />
+    <Content Include="Views\Communities\Science.cshtml" />
     <Content Include="Views\Event\Create.cshtml" />
     <Content Include="Views\Event\List.cshtml" />
     <Content Include="Views\Event\Options.cshtml" />
     <Content Include="Views\Manage\UpdateInterests.cshtml" />
     <Content Include="Views\Manage\ChangeUserName.cshtml" />
+    <Content Include="Views\Admin\EditUsers.cshtml" />
+    <Content Include="Views\Admin\EditEvents.cshtml" />
+    <Content Include="Views\Admin\EditPosts.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Communities\" />
     <Folder Include="Views\Post\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

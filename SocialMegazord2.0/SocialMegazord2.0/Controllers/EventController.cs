@@ -12,6 +12,14 @@ namespace SocialMegazord2._0.Controllers
 {
     public class EventController : Controller
     {
+        private bool IsUserAuthorizedToEdit(Event Event)
+        {
+            bool isAdmin = this.User.IsInRole("Admin");
+            bool isAuthor = Event.IsAuthora(User.Identity.Name);
+
+            return isAdmin || isAuthor;
+        }
+        
         // GET: Event
         public ActionResult Index()
         {
