@@ -59,9 +59,9 @@
     </div>
     <div id="navMyProfile">
         <ul class="navUL">
-            <li class="navLi">>@Html.ActionLink("Back", "Index", "Manage", routeValues: null, htmlAttributes: new { id = "interestLink" })</li>
             <li class="navLi">@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
-            <li class="navLi"><a href="myvideos.html">My videos</a></li>
+            <li class="navLi">@Html.ActionLink("Change Password", "ChangePassword", "Manage", routeValues: null, htmlAttributes: new { id = "changePasswordLink" })</li>
+            <li class="navLi">@Html.ActionLink("Change Username", "ChangeUserName", "Manage", routeValues: null, htmlAttributes: new { id = "changeUserNameLink" })</li>
         </ul>
     </div>
     <div class="formEvent">
@@ -75,8 +75,8 @@
         </div>
         <br>
         <div>
-            <a href="interests.html"><button class="submitButtons">Cancel</button></a>
-            <input type="submit" class="submitButtons" value="Chora Mante" />
+            <button type="button" class="submitButtons">Cancel</button>
+            <button class="submitButtons" type="submit">Update</button>
         </div>
 
     </div>

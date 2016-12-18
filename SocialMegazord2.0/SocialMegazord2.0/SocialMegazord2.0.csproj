@@ -200,8 +200,7 @@
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\ProfileController.cs" />
-    <Compile Include="Controllers\SettingsController.cs" />
+    <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -209,10 +208,12 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\BlogDbContext.cs" />
+    <Compile Include="Models\Communities.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\ForeigntKeyAttribute.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Post.cs" />
+    <Compile Include="Models\PostViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -276,9 +277,12 @@
     <Content Include="Views\Event\List.cshtml" />
     <Content Include="Views\Event\Options.cshtml" />
     <Content Include="Views\Manage\UpdateInterests.cshtml" />
+    <Content Include="Views\Manage\ChangeUserName.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Communities\" />
+    <Folder Include="Views\Post\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

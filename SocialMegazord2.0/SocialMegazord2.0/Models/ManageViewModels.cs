@@ -68,6 +68,24 @@ namespace SocialMegazord2._0.Models
         public string ConfirmPassword { get; set; }
     }
 
+    public class ChangeUserNameViewModel
+    {
+        [DataType(DataType.Text)]
+        [Display(Name = "Old UserName")]
+        public string OldUserName { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 1)]
+        [DataType(DataType.Text)]
+        [Display(Name = "New UserName")]
+        public string NewUserName { get; set; }
+
+        [Required]
+        [DataType(DataType.Password)]
+        [Display(Name = "Current password")]
+        public string Password { get; set; }
+    }
+
     public class UpdateInterestsViewModel
     {
 

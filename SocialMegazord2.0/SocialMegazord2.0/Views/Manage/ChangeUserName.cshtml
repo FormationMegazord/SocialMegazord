@@ -1,15 +1,12 @@
 ﻿@using Microsoft.AspNet.Identity;
-@model SocialMegazord2._0.Models.ChangePasswordViewModel
-@{
-    ViewBag.Title = "Change Password";
-}
+@model SocialMegazord2._0.Models.ChangeUserNameViewModel
 @*<!DOCTYPE html>*@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <title>Change Password</title>
+    <title>Change User's Name</title>
 </head>
 
 <body>
@@ -27,7 +24,7 @@
                                 <div class="horizontal_menu">
                                     <ul>
                                         <li>@Html.ActionLink("Interests", "Interests", "Manage", null, new { area = "", value = "Interests" })</li>
-                                        <li>@Html.ActionLink("My Events", "Events", "Manage", null , new { area = "", value = "My Events" })</li>
+                                        <li>@Html.ActionLink("My Events", "Events", "Manage", null, new { area = "", value = "My Events" })</li>
                                         <li>@Html.ActionLink("My Videos", "Videos", "Manage", new { area = "", value = "My Videos" })</li>
                                     </ul>
                                 </div>
@@ -66,52 +63,64 @@
             }
         </style>
         <ul class="navUL">
-            <li class="navLi">@Html.ActionLink("Change Username", "ChangeUsername", "Manage", routeValues: null, htmlAttributes: new { id = "changeUsernameLink" })</li>
             <li class="navLi">@Html.ActionLink("Change Password", "ChangePassword", "Manage", routeValues: null, htmlAttributes: new { id = "changePasswordLink" })</li>
+            <li class="navLi">@Html.ActionLink("Change Username", "ChangeUserName", "Manage", routeValues: null, htmlAttributes: new { id = "changeUserNameLink" })</li>
         </ul>
     </div>
 
     <div>
-        @using (Html.BeginForm("ChangePassword", "Manage", FormMethod.Post, new { @class = "formEvent" }))
+        @using (Html.BeginForm("ChangeUserName", "Manage", FormMethod.Post, new { @class = "formEvent" }))
         {
             @Html.AntiForgeryToken()
 
-            <div>
-                @*<label class="lable">Current Password: </label>*@
-                @Html.LabelFor(m => m.OldPassword, new { @class = "lable", @value = "Current Password:" })
-                @*<input type="password" class="content2" placeholder="">*@
-                @Html.TextBoxFor(m => m.OldPassword, new { @class = "content2", @type = "password", @placeholder = "" })
-            </div>
-            <br>
-            <div>
-                @*<label class="lable">New Password: </label>*@
-                @Html.LabelFor(m => m.NewPassword, new { @class = "lable", @value = "New Password:" })
-                @*<input type="password" placeholder="">*@
-                @Html.TextBoxFor(m => m.NewPassword, new { @type = "password", @placeholder = "" })
-            </div>
-            <br>
-            <div>
-                @*<label class="lable">Repeat Password: </label>*@
-                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "lable", @value = "Confirm Password:" })
-                @*<input type="password" placeholder="">*@
-                @Html.TextBoxFor(m => m.ConfirmPassword, new { @type = "password", @placeholder = "" })
-            </div>
-            <br>
-            <div>
 
+
+            @*<div>
+               @Html.LabelFor(m => m.OldUserName, new { @class = "lable", @value = "Name:" })
+               @Model.OldUserName
+            </div>
+            <br>
+            <div>
+                @Html.LabelFor(m => m.NewUserName, new { @class = "lable", @value = "New Username:" })
+                @Html.TextBoxFor(m => m.NewUserName, new { @type = "password", @placeholder = "" })
+            </div>
+            <br>
+            <div>
+                
+                @Html.LabelFor(m => m.Password, new { @class = "lable", @value = "Password:" })
+                @Html.TextBoxFor(m => m.Password, new { @type = "password", @placeholder = "" })
+            </div>
+            <br>
+            <div>
                 <button type="button" class="submitButtons">Cancel</button>
+                <button class="submitButtons" type="submit">Update</button>
+            </div>*@
 
+            <div>
+                <label class="lable">Current Password: </label>
+                <input type="password" class="content2" placeholder="">
+            </div>
+            <br>
+            <div>
+                <label class="lable">Current Username: </label>
+            </div>
+            <br>
+            <div>
+                <label class="lable">Desirable Username: </label>
+                <input type="text" placeholder="">
+            </div>
+            <br>
+            <div>
+                <button type="button" class="submitButtons">Cancel</button>
                 <button class="submitButtons" type="submit">Update</button>
             </div>
         }
+    <footer>
+        <div class="the_footer2">
+            <h3>© 2016 - SocialMegazord inc.</h3>
         </div>
-        <footer>
-            <div class="the_footer2">
-                <h3>© 2016 - SocialMegazord inc.</h3>
-            </div>
-        </footer>
+    </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/coolchange")
 </body>
 </html>
-}

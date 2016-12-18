@@ -291,6 +291,47 @@ namespace SocialMegazord2._0.Controllers
         }
 
         //
+        // GET: /Manage/ChangeUserName
+        public ActionResult ChangeUserName()
+        {
+            return View();
+        }
+
+        //
+        // POST: /Manage/ChangeUserName
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> ChangeUserName(ChangeUserNameViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            ApplicationUser userDb = new ApplicationUser();
+            using (var database = new BlogDbContext())
+            {
+                var authorId = database.Users.Where(u => u.Name == this.User.Identity.Name).First().Id;
+
+                userDb = database.Users.Where(u => u.Id == authorId).First();
+            }
+            userDb.UserName = model.OldUserName;
+            var result = await UserManager.ChangePhoneNumberAsync(User.Identity.GetUserId(), model.OldUserName, model.NewUserName);
+           
+            if (result.Succeeded)
+            {
+                var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+                if (user != null)
+                {
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                }
+                return RedirectToAction("Index", "Manage");
+            }
+            AddErrors(result);
+            return View(model);
+        }
+
+
+        //
         // GET: /Manage/SetPassword
         public ActionResult SetPassword()
         {
