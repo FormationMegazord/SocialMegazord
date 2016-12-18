@@ -36,14 +36,7 @@ namespace SocialMegazord2._0.Models
 
         public virtual ApplicationUser Author { get; set; }
 
-        [StringLength(30)]
-        public string Title { get; set; }
-        public string Content { get; set; }
-
-        [ForeignKey("Author")]
-        public string AuthorId { get; set; }
-
-        public virtual ApplicationUser Author { get; set; }
+        
 
         [ForeignKey("Communities")]
         public int CommunityId { get; set; }
