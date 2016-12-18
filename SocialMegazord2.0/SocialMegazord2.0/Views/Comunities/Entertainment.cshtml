@@ -1,4 +1,5 @@
 ﻿@using Microsoft.AspNet.Identity;
+@model SocialMegazord2._0.Models.Post
 @{
     ViewBag.Title = "Entertainment";
 }
@@ -86,8 +87,12 @@
         </div>
     }
 
+    @foreach (var item in B)
+    {
 
-    <div class="article_containter">
+    }
+
+    @*<div class="article_containter">
         <article>
             <div class="row">
                 <h2>Header</h2>
@@ -102,7 +107,7 @@
             </div>
         </article>
       
-    </div>
+    </div>*@
     <footer>
         <div class="the_footer">
             <h3>© 2016 - SocialMegazord inc.</h3>

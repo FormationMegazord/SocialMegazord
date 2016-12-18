@@ -16,7 +16,7 @@
             <ul class="profile-wrapper">
                 <li>
                     <div class="profile">
-                        @Html.ActionLink(User.Identity.GetUserName(), "Index", "Home", new { area = "" , @class = "name" })
+                        @Html.ActionLink(User.Identity.Name, "Index", "Home", null,new { area = "" , @class = "name" })
                         <ul class="menu">
                             <li>
                                 <a id="page_settings" href="#">My Profile</a>
@@ -54,7 +54,7 @@
         <div id="navMyProfile">
             <ul class="navUL">
                 <li class="navLi"><a href="createnewpost.html">Create New Post</a></li>
-                <li class="navLi"><a href="createNewEvent.html">Create New Event</a></li>
+                <li class="navLi">@Html.ActionLink("Create New Event", "Create", "Event", null , new { @area =""})</li>
             </ul>
         </div>
     @using (Html.BeginForm("List", "Event", FormMethod.Post))
