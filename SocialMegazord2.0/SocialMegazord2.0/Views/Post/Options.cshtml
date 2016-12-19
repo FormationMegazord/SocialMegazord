@@ -1,5 +1,5 @@
 ﻿@using Microsoft.AspNet.Identity;
-@model SocialMegazord2._0.Models.Event
+@model SocialMegazord2._0.Models.Post
 
 <!DOCTYPE html>
 <html lang="en">
@@ -65,16 +65,14 @@
                 <div class="row">
                     <h2>@Model.Title</h2>
                     <small class="author">@Model.Author.Name</small>
-                    <small class="author">@Model.Type</small>
-                    <small class="author">@Model.Place</small>
-                    <small class="author">@Model.Date </small>
+                    <small class="author">@Model.DateAdded</small>
                     <div class="article_position" style="color: black">
-                        @Model.AdditionalContent
+                        @Model.Content
                     </div>
                     <footer>
-                        @Html.ActionLink("Cancel", "List", "Event", null, new { @type = "button", @class = "submitButtons" })
-                        @Html.ActionLink("Delete", "List", "Event", null, new { @type = "submit", @style = "color: red", @class = "submitButtons" })
-                        @Html.ActionLink("Edit", "Edit", "Event", null, new { @type = "submit", @class = "submitButtons" })
+                        @Html.ActionLink("Cancel", "Entertainment", "Comunities", null, new { @type = "button", @class = "submitButtons" })
+                        @Html.ActionLink("Delete", "Entertainment", "Comunities", new { @id = Model.Id }, new { @type = "submit", @style = "color: red", @class = "submitButtons" })
+                        @Html.ActionLink("Edit", "Edit", "Post", new { @id = Model.Id }, new { @type = "submit", @class = "submitButtons" })
                     </footer>
                 </div>
             </article>

@@ -23,6 +23,6 @@ namespace SocialMegazord2._0.Models
         [StringLength(20)]
         public string Name { get; set; }
 
-        private ICollection<Post> Posts;
+        //private ICollection<Post> Posts;
     }
 }

@@ -13,7 +13,7 @@ namespace SocialMegazord2._0.Models
         {
         }
 
-        public Post(string authorId, string title, string content, int communityId)
+        public Post(string authorId, string title, string content, int communityId, string email)
         {
             this.Author = Author;
             this.AuthorId = authorId;
@@ -21,11 +21,15 @@ namespace SocialMegazord2._0.Models
             this.Content = content;
             this.Communities = Communities;
             this.CommunityId = communityId;
+            this.DateAdded = DateTime.Now;
+            this.AuthorEmail = email;
         }
 
         [Key]
         public int Id { get; set; }
-
+        
+        public string AuthorEmail { get; set; }
+        public DateTime DateAdded { get; set; }
         [Required]
         [StringLength(50)]
         public string Title { get; set; }

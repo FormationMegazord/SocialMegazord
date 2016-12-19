@@ -73,41 +73,19 @@
         {
             @Html.AntiForgeryToken()
 
-
-
-            @*<div>
-               @Html.LabelFor(m => m.OldUserName, new { @class = "lable", @value = "Name:" })
-               @Model.OldUserName
-            </div>
-            <br>
-            <div>
-                @Html.LabelFor(m => m.NewUserName, new { @class = "lable", @value = "New Username:" })
-                @Html.TextBoxFor(m => m.NewUserName, new { @type = "password", @placeholder = "" })
-            </div>
-            <br>
-            <div>
-                
-                @Html.LabelFor(m => m.Password, new { @class = "lable", @value = "Password:" })
-                @Html.TextBoxFor(m => m.Password, new { @type = "password", @placeholder = "" })
-            </div>
-            <br>
-            <div>
-                <button type="button" class="submitButtons">Cancel</button>
-                <button class="submitButtons" type="submit">Update</button>
-            </div>*@
-
             <div>
                 <label class="lable">Current Password: </label>
-                <input type="password" class="content2" placeholder="">
+                @Html.PasswordFor(m => m.Password, new { @type = "password", @class = "content2", @title = "Enter password", @placeholder = "Enter password" })
             </div>
             <br>
             <div>
                 <label class="lable">Current Username: </label>
+                @Model.OldUserName
             </div>
             <br>
             <div>
                 <label class="lable">Desirable Username: </label>
-                <input type="text" placeholder="">
+                @Html.TextBoxFor(m=> m.NewUserName, new { @type = "text", @title = "Enter your New User Name", @placeholder = "Enter your New User Name" })
             </div>
             <br>
             <div>

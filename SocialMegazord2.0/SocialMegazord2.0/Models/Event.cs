@@ -9,6 +9,9 @@ namespace SocialMegazord2._0.Models
 {
     public class Event
     {
+        
+
+        
         [Required]
         [Key]
         public int Id { get; set; }
@@ -17,6 +20,7 @@ namespace SocialMegazord2._0.Models
         [StringLength(100)]
         public string Title { get; set; }
 
+        public string AuthorEmail { get; set; }
 
         [Required]
         [StringLength(20)]
@@ -42,8 +46,7 @@ namespace SocialMegazord2._0.Models
         {
             return this.Author.UserName.Equals(name);
         }
-
-
+        
         [ForeignKey("Author")]
         public string AuthorId { get; set; }
         

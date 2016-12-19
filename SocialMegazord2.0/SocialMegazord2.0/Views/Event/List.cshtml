@@ -73,9 +73,13 @@
                     <div class="article_position" style="color: black">
                         @item.AdditionalContent
                     </div>
-                    <footer>     
-                        @Html.ActionLink("Options", "Options", "Event", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })
-                    </footer>
+                    @if (User.IsInRole("Admin") || User.Identity.Name.Equals(item.AuthorEmail))
+                    {
+                        <footer>
+                            @Html.ActionLink("Options", "Options", "Event", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })
+                        </footer>
+                    }
+                   
                 </div>
             </article>
             }

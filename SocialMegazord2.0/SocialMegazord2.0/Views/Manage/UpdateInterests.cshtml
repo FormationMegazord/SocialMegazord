@@ -1,5 +1,5 @@
 ﻿@using Microsoft.AspNet.Identity
-@model SocialMegazord2._0.Models.IndexViewModel
+@model SocialMegazord2._0.Models.UpdateInterestsViewModel
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,13 +70,12 @@
         </div>
         <br>
         <div>
-            @*<textarea name="edinInterests" id="" cols="30" rows="10">tyska she sedi neshto ako ima</textarea>*@
-            @Html.TextAreaFor(m=> m.Interests, new { @class = "content", @cols = "30" , @rows = "10" })
+            @Html.TextAreaFor(m=> m.NewInterest, new { @class = "content", @cols = "30" , @rows = "10" })
         </div>
         <br>
         <div>
             @Html.ActionLink("Cancel", "Index", "Manage", null, new { @type = "button", @class = "submitButtons" })
-            <button class="submitButtons" type="submit">Update</button>
+            <input type="submit" value="Update" class="submitButtons" />
         </div>
 
     </div>

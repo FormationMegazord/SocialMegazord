@@ -94,7 +94,7 @@ namespace SocialMegazord2._0.Models
         public string OldInterest { get; set; }
 
         [DataType(DataType.Text)]
-        [Display(Name = "New interests")]
+        [Display(Name = "Newinterests")]
         public string NewInterest { get; set; }
 
        

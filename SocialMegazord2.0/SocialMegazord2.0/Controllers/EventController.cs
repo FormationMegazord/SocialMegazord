@@ -60,7 +60,7 @@ namespace SocialMegazord2._0.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Event Event)
+        public ActionResult Create(Event events)
         {
             if (ModelState.IsValid)
             {
@@ -71,15 +71,23 @@ namespace SocialMegazord2._0.Controllers
                         .First()
                         .Id;
 
-                    Event.AuthorId = authorId;
+                    var authorEmail = database.Users
+                        .Where(u => u.UserName == this.User.Identity.Name)
+                        .First()
+                        .UserName;
 
-                    database.Events.Add(Event);
+                    events.AuthorId = authorId;
+                    events.AuthorEmail = authorEmail;
+
+                    database.Events.Add(events);
                     database.SaveChanges();
 
-                    return RedirectToAction("Index");
+                    return RedirectToAction("List", "Event");
+
+
                 }
             }
-            return View(Event);
+            return View("Index");
         }
     }
 }

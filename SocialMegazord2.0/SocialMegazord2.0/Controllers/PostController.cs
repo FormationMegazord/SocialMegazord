@@ -51,14 +51,13 @@ namespace SocialMegazord2._0.Controllers
                 using (var database = new BlogDbContext())
                 {
                     var authorId = database.Users.Where(u => u.UserName == this.User.Identity.Name).First().Id;
-
-                    var post = new Post(authorId, model.Title, model.Content, model.CommunityId);
-
+                    var emailAdress = database.Users.Where(u => u.UserName == this.User.Identity.Name).First().UserName;
+                    var post = new Post(authorId, model.Title, model.Content, model.CommunityId, emailAdress);
 
                     database.Posts.Add(post);
                     database.SaveChanges();
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Entertainment", "Comunities");
                 }
             }
 
@@ -150,5 +149,15 @@ namespace SocialMegazord2._0.Controllers
                 return RedirectToAction("Index");
             }
         }
+
+        public ActionResult Options(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            return View();
+        }
     }  
+
 }

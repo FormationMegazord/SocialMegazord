@@ -97,14 +97,17 @@
                     <div class="row">
                         <h2>@item.Title</h2>
                         <small class="author">@item.Author.Name</small>
+                        <small class="author">@item.DateAdded</small>
                         <div class="article_position" style="color: black">
                             @item.Content
                         </div>
+                        
                         <footer>
-                            @*<a href="eventOptions.html"><button cl
-                                <div class="article_containter">
-                                   ass="submitButtons">Options &raquo;</button></a>*@
-                            @Html.ActionLink("Options", "Options", "Event", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })
+                            @if (User.IsInRole("Admin") || User.Identity.Name.Equals(item.AuthorEmail))
+                            {
+                                @Html.ActionLink("Options", "Options", "Post", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })
+                            }
+                           
                         </footer>
                     </div>
                 </article>

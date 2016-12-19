@@ -56,25 +56,33 @@ namespace SocialMegazord2._0.Controllers
             return View();
         }
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> UpdateInterests(UpdateInterestsViewModel model)
+        public ActionResult UpdateInterests(UpdateInterestsViewModel model)
         {
-            var result = new IdentityResult();
-            if (ModelState.IsValid)
-            {
+            //var result = new IdentityResult();
+            var newInterests = "";
+
                 using (var database = new BlogDbContext())
                 {
                     var authorId = database.Users.Where(u => u.Name == this.User.Identity.Name).First().Id;
 
-                    var interests = database.Users.Where(u => u.Name == this.User.Identity.Name).First().Interests;
+                    var interests = database.Users.Where(u => u.Id == authorId).First().Interests;
                     interests = model.OldInterest;
 
                     ApplicationUser user = database.Users.Where(u => u.Id == authorId).First();
-                    user.Interests.Remove(0,interests.Length);
-                    
-                    //result = await UserManager.ChangePhoneNumberAsync(User.Identity.GetUserId(), model.OldInterest, model.NewInterest);
+                if (user.Interests == null)
+                {
+                    newInterests = model.NewInterest;
+                    user.Interests.Insert(0, newInterests);
                 }
-            }
+                else
+                {
+                    user.Interests.Remove(0, user.Interests.Length);
+                    newInterests = model.NewInterest;
+                    user.Interests.Insert(0, newInterests);
+                }
+
+                }
+            
 
             //if (result.Succeeded)
             //{
@@ -83,6 +91,12 @@ namespace SocialMegazord2._0.Controllers
             //    {
             //        await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
             //    }
+            //    //database.Events.Add(Event);
+            //    //database.SaveChanges();
+
+            //    user.Interests.Remove(0, user.Interests.Length);
+            //    user.Interests.Insert(0, model.NewInterest);
+
             //    return RedirectToAction("Index", "Manage");
             //}
             //AddErrors(result);
@@ -314,7 +328,7 @@ namespace SocialMegazord2._0.Controllers
 
                 userDb = database.Users.Where(u => u.Id == authorId).First();
             }
-            userDb.UserName = model.OldUserName;
+            model.OldUserName = userDb.Name;
             var result = await UserManager.ChangePhoneNumberAsync(User.Identity.GetUserId(), model.OldUserName, model.NewUserName);
            
             if (result.Succeeded)

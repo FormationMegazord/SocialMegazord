@@ -26,7 +26,7 @@ namespace SocialZord_project.Controllers
             using (var db = new BlogDbContext())
             {
                 var comId = com.Id;
-                comId = 2;
+                comId = 3;
                 var posts = db.Posts.Include(p => p.Author).Where(p => p.CommunityId == comId).ToList();
                 return View(posts);
             }
@@ -37,7 +37,7 @@ namespace SocialZord_project.Controllers
             using (var db = new BlogDbContext())
             {
                 var comId = com.Id;
-                comId = 3;
+                comId = 2;
                 var posts = db.Posts.Include(p => p.Author).Where(p => p.CommunityId == comId).ToList();
                 return View(posts);
             }
