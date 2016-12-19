@@ -75,7 +75,7 @@
         </div>
         <br>
         <div>
-            <button type="button" class="submitButtons">Cancel</button>
+            @Html.ActionLink("Cancel", "Index", "Manage", null, new { @type = "button", @class = "submitButtons" })
             <button class="submitButtons" type="submit">Update</button>
         </div>
 

@@ -85,8 +85,8 @@
             </div>
             <br>
         </div>
-        @Html.ActionLink("Cancel", "Manage", "List", new { @class = "submitButtons" })
-        <input class="submitButtons" type="submit" value="Create" />
+       @Html.ActionLink("Cancel", "Entertainment", "Communities", null, new { @type = "button", @class = "submitButtons" })
+        @Html.ActionLink("Create", "Entertainment", "Communities", null, new { @type = "submit", @class = "submitButtons" })
     }
     <footer>
         <div class="the_footer">

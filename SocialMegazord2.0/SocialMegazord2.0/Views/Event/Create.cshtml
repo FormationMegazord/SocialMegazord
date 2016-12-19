@@ -58,16 +58,16 @@
 
     <div id="navMyProfile">
         <ul class="navUL">
-            <li class="navLi"><a href="interests.html">Interests</a></li>
+            <li class="navLi">@Html.ActionLink("Interests", "Index", "Manage", routeValues: null, htmlAttributes: new { id = "interestsLink" })</li>
             <li class="navLi">@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
         </ul>
     </div>
     @using (Html.BeginForm("Create", "Event", FormMethod.Post, new { @class = "formEvent" }))
     {
             @Html.AntiForgeryToken()
-            @Html.ValidationSummary("")
+            
     <div class="eventType">
-        @*<label class="lable">Choose Type: </label>*@
+        @Html.ValidationSummary(true)
         @Html.LabelFor(m => m.Type, new { @class = "lable", @value = "Choose type" })
         @Html.TextBoxFor(m => m.Type, new { @class="content", @type="text", @name="disc", placeholder="Example: Meeting"  })
         <div><br>
@@ -95,11 +95,10 @@
         </div>
         <br>
 
-        
         </div>
-            @Html.ActionLink("Cancel", "Manage" , "List", new { @class="submitButtons"})
-        <input class="submitButtons" type="submit" value="Create"/>
-        }
+            @Html.ActionLink("Cancel", "List" , "Event",null , new { @type = "button", @class="submitButtons"})
+            @Html.ActionLink("Create", "List", "Event", null, new { @type = "submit", @class = "submitButtons" })
+    }
         <footer>
             <div class="the_footer">
                 <h3>© 2016 - SocialMegazord inc.</h3>

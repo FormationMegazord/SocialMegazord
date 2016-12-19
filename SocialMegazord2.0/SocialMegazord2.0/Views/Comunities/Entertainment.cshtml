@@ -63,8 +63,8 @@
 
             <div id="navMyProfile">
                 <ul class="navUL">
-                    <li class="navLi"><a href="createnewpost.html">Create New Post</a></li>
-                    <li class="navLi">@Html.ActionLink("Create New Event", "Create","Event", new{area="" })</li>
+                    <li class="navLi">@Html.ActionLink("Create New Post", "Create", "Post", null, new { area = "" })</li>
+                    <li class="navLi">@Html.ActionLink("Create New Event", "Create","Event", null ,new {area="" })</li>
                     <li class="navLi">@Html.ActionLink("Events", "List", "Event", null ,new {area = ""})</li>
                 </ul>
             </div>

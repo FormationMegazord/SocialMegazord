@@ -23,7 +23,7 @@
                                 <a id="page_settings" href="#">My Profile</a>
                                 <div class="horizontal_menu">
                                     <ul>
-                                        <li>@Html.ActionLink("Interests", "Interests", "Manage", new { area = "", value = "Interests" })</li>
+                                        <li>@Html.ActionLink("Interests", "Interests", "Manage", null,new { area = "", value = "Interests" })</li>
                                         <li>@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
                                     </ul>
                                 </div>
@@ -54,9 +54,8 @@
     </div>
     <div id="navMyProfile">
         <ul class="navUL">
-            <li class="navLi"><a href="createnewpost.html">Create New Post</a></li>
-            <li class="navLi"><a href="createNewEvent.html">Create New Event</a></li>
-            <li class="navLi"><a href="index.html">Posts</a></li>
+            <li class="navLi">@Html.ActionLink("Create New Post", "Create", "Post", null, new { @area = "" })</li>
+            <li class="navLi">@Html.ActionLink("Create New Event", "Create", "Event", null, new { @area = "" })</li>
         </ul>
     </div>
     @using (Html.BeginForm("Options", "Event", FormMethod.Post))
@@ -73,6 +72,7 @@
                         @Model.AdditionalContent
                     </div>
                     <footer>
+                        @Html.ActionLink("Cancel", "List", "Event", null, new { @type = "button", @class = "submitButtons" })
                         <a href="myevents.html"><Button class="submitButtons" style="color: red">Delete</Button></a>
                         <a href="editEventOptions.html"><button class="submitButtons">Edit &raquo;</button></a>
                     </footer>

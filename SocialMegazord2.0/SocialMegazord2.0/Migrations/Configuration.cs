@@ -31,6 +31,7 @@ namespace SocialMegazord2._0.Migrations
                 this.SetRoleToUser(context, "admin@admin.com", "Admin");
             }
 
+
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 

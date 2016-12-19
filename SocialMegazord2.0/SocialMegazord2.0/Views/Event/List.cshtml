@@ -53,14 +53,14 @@
     </div>
     <div id="navMyProfile">
         <ul class="navUL">
-            <li class="navLi"><a href="createnewpost.html">Create New Post</a></li>
+            <li class="navLi">@Html.ActionLink("Create New Post", "Create", "Post", null, new { @area = "" })</li>
             <li class="navLi">@Html.ActionLink("Create New Event", "Create", "Event", null, new { @area = "" })</li>
         </ul>
     </div>
     @using (Html.BeginForm("List", "Event", FormMethod.Post))
     {
         <div class="article_containter">
-            @foreach(var item in Model)
+            @foreach (var item in Model)
             {
 
             <article>
@@ -73,10 +73,7 @@
                     <div class="article_position" style="color: black">
                         @item.AdditionalContent
                     </div>
-                    <footer>
-                        @*<a href="eventOptions.html"><button cl
-                            <div class="article_containter">
-                               ass="submitButtons">Options &raquo;</button></a>*@
+                    <footer>     
                         @Html.ActionLink("Options", "Options", "Event", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })
                     </footer>
                 </div>
@@ -84,8 +81,7 @@
             }
             </div>
 
-            }
-
+    }
             <footer>
                 <div class="the_footer">
                     <h3>© 2016 - SocialMegazord inc.</h3>
