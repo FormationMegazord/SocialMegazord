@@ -17,6 +17,32 @@ namespace Blog.Controllers.Admin
     [Authorize(Roles = "Admin")]
     public class UserController : Controller
     {
+        public ActionResult EditUsers()
+        {
+            using (var db = new BlogDbContext())
+            {
+                var Users = db.Users.ToList();
+                return View(Users);
+            }
+            
+        }
+        public ActionResult EditPosts()
+        {
+            using (var db = new BlogDbContext())
+            {
+                var Posts = db.Posts.Include(u => u.Author).ToList();
+                return View(Posts);
+            }
+        }
+
+        public ActionResult EditEvents()
+        {
+            using (var db = new BlogDbContext())
+            {
+                var Events = db.Events.Include(a => a.Author).ToList();
+                return View(Events);
+            }
+        }
         // GET: User
         public ActionResult Index()
         {
@@ -192,16 +218,6 @@ namespace Blog.Controllers.Admin
                 database.SaveChanges();
 
                 return RedirectToAction("Index");
-            }
-        }
-
-        public ActionResult EditEvents()
-        {
-            using (var database = new BlogDbContext())
-            {
-                // Get events from database
-                var events = database.Events.Include(a => a.Author).ToList();
-                return View(events);
             }
         }
     }

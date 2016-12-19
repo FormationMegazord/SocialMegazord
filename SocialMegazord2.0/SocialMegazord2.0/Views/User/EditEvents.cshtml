@@ -1,7 +1,7 @@
 ﻿@using Microsoft.AspNet.Identity;
 @model List<SocialMegazord2._0.Models.Event>
     @{
-        ViewBag.Title = "Edit Events";
+        ViewBag.Title = "EditEvents";
      }
 <!DOCTYPE html>
 <html lang="en">
@@ -56,8 +56,8 @@
     </div>
     <div id="navMyProfile">
         <ul class="navUL">
-            <li class="navLi">@Html.ActionLink("Create New Post", "Create", "Post", null, new { @area = "" })</li>
-            <li class="navLi">@Html.ActionLink("Create New Event", "Create", "Event", null, new { @area = "" })</li>
+            <li class="navLi">@Html.ActionLink("Edit Posts", "EditPosts", "User", null, new { @area = "" })</li>
+            <li class="navLi">@Html.ActionLink("Edit Users", "EditUsers", "User", null, new { @area = "" })</li>
         </ul>
     </div>
     @using (Html.BeginForm("EditEvents", "User", FormMethod.Post))
@@ -77,10 +77,10 @@
                             @item.AdditionalContent
                         </div>
                         <footer>
-                            @*<a href="eventOptions.html"><button cl
-                                <div class="article_containter">
-                                   ass="submitButtons">Options &raquo;</button></a>*@
-                            @Html.ActionLink("Options", "Options", "Event", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })
+                            @if (User.IsInRole("Admin") || User.Identity.Name.Equals(item.AuthorEmail))
+                            {
+                                @Html.ActionLink("Options", "Options", "Post", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })
+                            }
                         </footer>
                     </div>
                 </article>

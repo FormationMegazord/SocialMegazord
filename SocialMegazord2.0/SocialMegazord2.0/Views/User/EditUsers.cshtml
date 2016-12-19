@@ -1,5 +1,5 @@
 ﻿@using Microsoft.AspNet.Identity;
-@model List<SocialMegazord2._0.Models.Event>
+@model List<SocialMegazord2._0.Models.ApplicationUser>
     @{ 
         ViewBag.Title = "EditUsers";
     }
@@ -56,34 +56,27 @@
     </div>
     <div id="navMyProfile">
         <ul class="navUL">
-            <li class="navLi"><a href="createnewpost.html">Create New Post</a></li>
-            <li class="navLi">@Html.ActionLink("Create New Event", "Create", "Event", null, new { @area = "" })</li>
+            <li class="navLi">@Html.ActionLink("Edit Events", "EditEvents", "User", null, new { @area = "" })</li>
+            <li class="navLi">@Html.ActionLink("Edit Posts", "EditPosts", "User", null, new { @area = "" })</li>
         </ul>
     </div>
-    @using (Html.BeginForm("List", "Event", FormMethod.Post))
+    @using (Html.BeginForm("List", "User", FormMethod.Post))
     {
         <div class="article_containter">
             @foreach (var item in Model)
             {
-
+ 
                 <article>
                     <div class="row">
-                        <h2>@item.Title</h2>
-                        <small class="author">@item.Author.Name</small>
-                        <small class="author">@item.Type</small>
-                        <small class="author">@item.Place</small>
-                        <small class="author">@item.Date</small>
-                        <div class="article_position" style="color: black">
-                            @item.AdditionalContent
+                        <p>@item.Name</p>
                         </div>
                         <footer>
                             @*<a href="eventOptions.html"><button cl
                                 <div class="article_containter">
                                    ass="submitButtons">Options &raquo;</button></a>*@
-                            @Html.ActionLink("Options", "Options", "Event", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })
-                        </footer>
-                    </div>
-                </article>
+                            @Html.ActionLink("Delete", "Delete", "User", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })
+                            @Html.ActionLink("Edit", "Edit", "User", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })                        </footer>
+               </article>
             }
         </div>
 
