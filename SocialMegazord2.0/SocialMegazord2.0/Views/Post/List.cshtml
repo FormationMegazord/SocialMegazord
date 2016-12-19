@@ -1,8 +1,5 @@
 ﻿@using Microsoft.AspNet.Identity;
-@model List<SocialMegazord2._0.Models.ApplicationUser>
-    @{ 
-        ViewBag.Title = "EditUsers";
-    }
+@model List<SocialMegazord2._0.Models.Post>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,22 +15,22 @@
         <div id="profile_div">
             <ul class="profile-wrapper">
                 <li>
-                    @if (User.IsInRole("Admin"))
-                    {
-                    <li>
-                        <a id="page_settings" href="#">Admin Functionalities</a>
-                        <div class="horizontal_menu">
-                            <ul>
-                                <li>@Html.ActionLink("Edit Users", "EditUsers", "User", null, htmlAttributes: new { id = "editUsersLink" })</li>
-                                <li>@Html.ActionLink("Edit Posts", "EditPosts", "User", null, new { area = "", value = "editPostsLink" })</li>
-                                <li>@Html.ActionLink("Edit Events", "EditEvents", "User", null, htmlAttributes: new { id = "editEventsLink" })</li>
-                            </ul>
-                        </div>
-                    </li>
-                    }
                     <div class="profile">
                         @Html.ActionLink(User.Identity.Name, "Index", "Home", null, new { area = "", @class = "name" })
                         <ul class="menu">
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <li>
+                                    <a id="page_settings" href="#">Admin Functionalities</a>
+                                    <div class="horizontal_menu">
+                                        <ul>
+                                            <li>@Html.ActionLink("Edit Users", "EditUsers", "User", null, htmlAttributes: new { id = "editUsersLink" })</li>
+                                            <li>@Html.ActionLink("Edit Posts", "EditPosts", "User", null, new { area = "", value = "editPostsLink" })</li>
+                                            <li>@Html.ActionLink("Edit Events", "EditEvents", "User", null, htmlAttributes: new { id = "editEventsLink" })</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            }
                             <li>
                                 <a id="page_settings" href="#">My Profile</a>
                                 <div class="horizontal_menu">
@@ -69,34 +66,38 @@
     </div>
     <div id="navMyProfile">
         <ul class="navUL">
-            <li class="navLi">@Html.ActionLink("Edit Events", "EditEvents", "User", null, new { @area = "" })</li>
-            <li class="navLi">@Html.ActionLink("Edit Posts", "EditPosts", "User", null, new { @area = "" })</li>
+            <li class="navLi">@Html.ActionLink("Create New Post", "Create", "Post", null, new { @area = "" })</li>
+            <li class="navLi">@Html.ActionLink("Create New Event", "Create", "Event", null, new { @area = "" })</li>
         </ul>
     </div>
-    @using (Html.BeginForm("List", "User", FormMethod.Post))
+    @using (Html.BeginForm("List", "Post", FormMethod.Post))
     {
         <div class="article_containter">
             @foreach (var item in Model)
             {
- 
+
                 <article>
                     <div class="row">
-                        <p>@item.Name</p>
-                        <p>@item.Email</p>
-                        <p>@item.Id</p>
+                        <h2>@item.Title</h2>
+                        <small class="author">@item.Author.Name</small>
+                        @*<small class="author">@item.Communities</small>*@
+                        <small class="author">@item.DateAdded</small>
+                        <div class="article_position" style="color: black">
+                            @item.Content
                         </div>
-                        <footer>
-                            @*<a href="eventOptions.html"><button cl
-                                <div class="article_containter">
-                                   ass="submitButtons">Options &raquo;</button></a>*@
-                            @Html.ActionLink("Delete", "Delete", "User", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })
-                            @Html.ActionLink("Edit", "Edit", "User", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })                        </footer>
-               </article>
+                        @if (User.IsInRole("Admin") || User.Identity.Name.Equals(item.AuthorEmail))
+                        {
+                            <footer>
+                                @Html.ActionLink("Options", "Options", "Post", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })
+                            </footer>
+                        }
+
+                    </div>
+                </article>
             }
         </div>
 
     }
-
     <footer>
         <div class="the_footer">
             <h3>© 2016 - SocialMegazord inc.</h3>

@@ -61,25 +61,23 @@
 
     <div id="navMyProfile">
         <ul class="navUL">
-            <li class="navLi"><a href="interests.html">Interests</a></li>
             <li class="navLi">@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
+            <li class="navLi">@Html.ActionLink("Posts", "List", "Post", routeValues: null, htmlAttributes: new { id = "postsLink" })</li>
         </ul>
     </div>
     @using (Html.BeginForm("Index", "Manage", FormMethod.Post))
     {
         <div class="formEvent">
             <div class="row">
-                @*<label class="lable">Username: Bogdan Alov</label>*@
+               
                 @Html.LabelFor(m => m.Name, new { @class = "lable", @value = "Name::" })
                 @Model.Name
                 <br><br>
-                @*<label class="lable">Email: alov@abv.bg</label>*@
+               
                 @Html.LabelFor(m => m.Email, new { @class = "lable", @value = "Email::" })
                 @Model.Email
                 <br><br>
                 @Html.LabelFor(m=>m.Interests, new { @class = "lable", @value = "Interests::" })
-
-                @*<label class="lable">Interests: </label>*@
 
                 <p>
                     @if (Model.Interests == null)

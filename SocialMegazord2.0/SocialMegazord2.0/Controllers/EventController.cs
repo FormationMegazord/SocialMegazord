@@ -21,11 +21,12 @@ namespace SocialMegazord2._0.Controllers
         }
         
         // GET: Event
+        [Authorize]
         public ActionResult Index()
         {
             return RedirectToAction("List");
         }
-
+        [Authorize]
         public ActionResult List()
         {
             using (var database = new BlogDbContext())
@@ -35,7 +36,7 @@ namespace SocialMegazord2._0.Controllers
                 return View(events);
             }
         }
-
+        [Authorize]
         public ActionResult Options(int? id)
         {
             if (id == null)
@@ -54,11 +55,13 @@ namespace SocialMegazord2._0.Controllers
                 return View(events);
             }
         }
+        [Authorize]
         public ActionResult Create ()
         {
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public ActionResult Create(Event events)
         {

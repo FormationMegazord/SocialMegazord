@@ -101,14 +101,10 @@
                             @item.Content
                         </div>
                         <footer>
-                            @*<a href="eventOptions.html"><button cl
-                                <div class="article_containter">
-                                   ass="submitButtons">Options &raquo;</button></a>*@
-                            @if (User.IsInRole("Admin") || User.IsInRole("Author"))
+                            @if (User.IsInRole("Admin") || User.Identity.Name.Equals(item.AuthorEmail))
                             {
-
+                                @Html.ActionLink("Options", "Options", "Post", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })
                             }
-                            @Html.ActionLink("Options", "Options", "Event", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })
                         </footer>
                     </div>
                 </article>

@@ -24,13 +24,7 @@ namespace SocialMegazord2._0.Controllers
         {
             return View();
         }
-
-       public ActionResult List ()
-        {
-                return View();
-        }
-
-
+        [Authorize]
         public ActionResult Create()
         {
             using (var database = new BlogDbContext())
@@ -64,6 +58,7 @@ namespace SocialMegazord2._0.Controllers
             return View(model);
         }
 
+        [Authorize]
         public ActionResult Edit (int? id)
         {
             if (id == null)
@@ -99,7 +94,7 @@ namespace SocialMegazord2._0.Controllers
                 return View(model);
             }
         }
-
+        [Authorize]
         [HttpPost]
         public ActionResult Edit (PostViewModel model)
         {
@@ -125,6 +120,7 @@ namespace SocialMegazord2._0.Controllers
             return View(model);
         }
 
+        [Authorize]
         [HttpPost]
         [ActionName("Delete")]
         public ActionResult DeleteConfirmed(int? id)
@@ -150,6 +146,7 @@ namespace SocialMegazord2._0.Controllers
             }
         }
 
+        [Authorize]
         public ActionResult Options(int? id)
         {
             if (id == null)
@@ -157,6 +154,16 @@ namespace SocialMegazord2._0.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             return View();
+        }
+        [Authorize]
+        public ActionResult List()
+        {
+            using (var database = new BlogDbContext())
+            {
+                // Get posts from database
+                var posts = database.Posts.Include(a => a.Author).ToList();
+                return View(posts);
+            }
         }
     }  
 

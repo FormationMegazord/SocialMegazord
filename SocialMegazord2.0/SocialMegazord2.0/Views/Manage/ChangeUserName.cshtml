@@ -19,6 +19,19 @@
                     <div class="profile">
                         @Html.ActionLink(User.Identity.GetUserName(), "Index", "Home", new { area = "" }, new { @class = "name" })
                         <ul class="menu">
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <li>
+                                    <a id="page_settings" href="#">Admin Functionalities</a>
+                                    <div class="horizontal_menu">
+                                        <ul>
+                                            <li>@Html.ActionLink("Edit Users", "EditUsers", "User", null, htmlAttributes: new { id = "editUsersLink" })</li>
+                                            <li>@Html.ActionLink("Edit Posts", "EditPosts", "User", null, new { area = "", value = "editPostsLink" })</li>
+                                            <li>@Html.ActionLink("Edit Events", "EditEvents", "User", null, htmlAttributes: new { id = "editEventsLink" })</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            }
                             <li>
                                 <a id="page_settings" href="#">My Profile</a>
                                 <div class="horizontal_menu">
