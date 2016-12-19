@@ -6,6 +6,7 @@ using SocialMegazord2._0;
 using SocialMegazord2._0.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -191,6 +192,16 @@ namespace Blog.Controllers.Admin
                 database.SaveChanges();
 
                 return RedirectToAction("Index");
+            }
+        }
+
+        public ActionResult EditEvents()
+        {
+            using (var database = new BlogDbContext())
+            {
+                // Get events from database
+                var events = database.Events.Include(a => a.Author).ToList();
+                return View(events);
             }
         }
     }

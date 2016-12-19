@@ -1,5 +1,8 @@
 ﻿@using Microsoft.AspNet.Identity;
 @model List<SocialMegazord2._0.Models.Event>
+    @{ 
+        ViewBag.Title = "EditUsers";
+    }
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,39 +63,39 @@
     @using (Html.BeginForm("List", "Event", FormMethod.Post))
     {
         <div class="article_containter">
-            @foreach(var item in Model)
+            @foreach (var item in Model)
             {
 
-            <article>
-                <div class="row">
-                    <h2>@item.Title</h2>
-                    <small class="author">@item.Author.Name</small>
-                    <small class="author">@item.Type</small>
-                    <small class="author">@item.Place</small>
-                    <small class="author">@item.Date</small>
-                    <div class="article_position" style="color: black">
-                        @item.AdditionalContent
+                <article>
+                    <div class="row">
+                        <h2>@item.Title</h2>
+                        <small class="author">@item.Author.Name</small>
+                        <small class="author">@item.Type</small>
+                        <small class="author">@item.Place</small>
+                        <small class="author">@item.Date</small>
+                        <div class="article_position" style="color: black">
+                            @item.AdditionalContent
+                        </div>
+                        <footer>
+                            @*<a href="eventOptions.html"><button cl
+                                <div class="article_containter">
+                                   ass="submitButtons">Options &raquo;</button></a>*@
+                            @Html.ActionLink("Options", "Options", "Event", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })
+                        </footer>
                     </div>
-                    <footer>
-                        @*<a href="eventOptions.html"><button cl
-                            <div class="article_containter">
-                               ass="submitButtons">Options &raquo;</button></a>*@
-                        @Html.ActionLink("Options", "Options", "Event", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })
-                    </footer>
-                </div>
-            </article>
+                </article>
             }
-            </div>
+        </div>
 
-            }
+    }
 
-            <footer>
-                <div class="the_footer">
-                    <h3>© 2016 - SocialMegazord inc.</h3>
-                </div>
-            </footer>
-            @Scripts.Render("~/bundles/jquery")
-            @Scripts.Render("~/bundles/coolchange")
+    <footer>
+        <div class="the_footer">
+            <h3>© 2016 - SocialMegazord inc.</h3>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/coolchange")
 </body>
 
 
