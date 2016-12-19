@@ -1,10 +1,10 @@
-﻿@model SocialMegazord2._0.Models.Event
+﻿@model SocialMegazord2._0.Models.PostViewModel
 @using Microsoft.AspNet.Identity
 @{
     ViewBag.Title = "Create";
 }
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     @Styles.Render("~/Content/css")
@@ -62,50 +62,38 @@
             <li class="navLi">@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
         </ul>
     </div>
-    @using (Html.BeginForm("Create", "Event", FormMethod.Post, new { @class = "formEvent" }))
+    @using (Html.BeginForm("Create", "Post", FormMethod.Post, new { @class = "formEvent" }))
     {
-            @Html.AntiForgeryToken()
-            @Html.ValidationSummary("")
-    <div class="eventType">
-        @*<label class="lable">Choose Type: </label>*@
-        @Html.LabelFor(m => m.Type, new { @class = "lable", @value = "Choose type" })
-        @Html.TextBoxFor(m => m.Type, new { @class="content", @type="text", @name="disc", placeholder="Example: Meeting"  })
-        <div><br>
-            @Html.LabelFor(m=> m.Title, new { @class = "lable", @value = "Choose a proper title" })
-            @Html.TextBoxFor(m => m.Title, new { @class = "content", @type ="text", @name = "disc", @placeholer = "Example: HARRY POTTER AT NDK, ON 12 FEBRUARY!!!" } )
-        </div>
-        <br>
-        <div>
-            @Html.LabelFor(m => m.Date, new { @class = "lable", @value = "Date:" })
-            @Html.TextBoxFor(model => model.Date, new { @class="content", @type="date", @name="Date"})
-            @Html.TextBoxFor(model => model.Hour, new { @class="content", @type="time"})
-        </div>
-        <br>
-        <div>
-            @Html.LabelFor(m => m.Place, new { @class = "lable", @value = "Place of Event" })
-            @Html.TextBoxFor(m => m.Place, new { @class = "content", @value="Place", @placeholder="Some City"})
-        </div>
-        <br>
-        <div>
-            @Html.LabelFor(m => m.AdditionalContent, new { @class = "lable", @value = "Additional Content" })
-        </div>
-        <br><br>
-        <div>
-            @Html.TextAreaFor(m => m.AdditionalContent, new { @rows="20", cols="50", @class="content", @value="Content"})
-        </div>
-        <br>
-
-        
-        </div>
-            @Html.ActionLink("Cancel", "Manage" , "List", new { @class="submitButtons"})
-        <input class="submitButtons" type="submit" value="Create"/>
-        }
-        <footer>
-            <div class="the_footer">
-                <h3>© 2016 - SocialMegazord inc.</h3>
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary("")
+        <div class="eventType">
+            @*<label class="lable">Choose Type: </label>*@
+            @Html.LabelFor(m => m.Title, new { @class = "lable", @value = "Choose title" })
+            @Html.TextBoxFor(m => m.Title, new { @class = "content", @type = "text", @name = "title", placeholder = "Example: Meeting" })
+            <div>
+                <br>
+                @Html.LabelFor(m => m.Communities, new { @class = "lable", @value = "Communities" })
+                @Html.DropDownListFor(m => m.CommunityId,
+               new SelectList(Model.Communities, "Id", "Name"),
+                new { @class = "content", @type = "text", @name = "disc"})
             </div>
-        </footer>
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/coolchange")
+            <br>
+            <div>
+                @Html.LabelFor(m => m.Content, new { @class = "lable", @value = "Content" })
+                <br>
+                @Html.TextAreaFor(model => model.Content, new { @class = "content",@rows="10",@cols="40", @type = "text", @name = "Content" })
+            </div>
+            <br>
+        </div>
+        @Html.ActionLink("Cancel", "Manage", "List", new { @class = "submitButtons" })
+        <input class="submitButtons" type="submit" value="Create" />
+    }
+    <footer>
+        <div class="the_footer">
+            <h3>© 2016 - SocialMegazord inc.</h3>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/coolchange")
 </body>
 </html>

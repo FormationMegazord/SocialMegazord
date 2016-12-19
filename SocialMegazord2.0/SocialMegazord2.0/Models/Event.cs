@@ -24,8 +24,12 @@ namespace SocialMegazord2._0.Models
 
         [Required]
         [DataType(DataType.Date)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime Date { get; set; }
+
+        [Required]
+        [DataType(DataType.Time)]
+        [DisplayFormat(ApplyFormatInEditMode =true,DataFormatString = "{hh-mm}")]
+        public DateTime Hour { get; set; }
 
         [Required]
         [StringLength(20)]

@@ -277,9 +277,9 @@
     <Content Include="Views\Manage\Index.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Communities\Entertainment.cshtml" />
-    <Content Include="Views\Communities\MutualHelp.cshtml" />
-    <Content Include="Views\Communities\Science.cshtml" />
+    <Content Include="Views\Comunities\Entertainment.cshtml" />
+    <Content Include="Views\Comunities\MutualHelp.cshtml" />
+    <Content Include="Views\Comunities\Science.cshtml" />
     <Content Include="Views\Event\Create.cshtml" />
     <Content Include="Views\Event\List.cshtml" />
     <Content Include="Views\Event\Options.cshtml" />
@@ -289,10 +289,10 @@
     <Content Include="Views\Admin\EditEvents.cshtml" />
     <Content Include="Views\Admin\EditPosts.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Post\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Post\" />
     <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>

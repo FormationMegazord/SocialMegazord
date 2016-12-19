@@ -54,6 +54,11 @@ namespace SocialMegazord2._0.Controllers
                 return View(events);
             }
         }
+        public ActionResult Create ()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Create(Event Event)
         {
@@ -62,7 +67,7 @@ namespace SocialMegazord2._0.Controllers
                 using (var database = new BlogDbContext())
                 {
                     var authorId = database.Users
-                        .Where(u => u.Name == this.User.Identity.Name)
+                        .Where(u => u.UserName == this.User.Identity.Name)
                         .First()
                         .Id;
 

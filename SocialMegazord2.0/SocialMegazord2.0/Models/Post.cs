@@ -15,9 +15,11 @@ namespace SocialMegazord2._0.Models
 
         public Post(string authorId, string title, string content, int communityId)
         {
+            this.Author = Author;
             this.AuthorId = authorId;
             this.Title = title;
             this.Content = content;
+            this.Communities = Communities;
             this.CommunityId = communityId;
         }
 
@@ -45,10 +47,8 @@ namespace SocialMegazord2._0.Models
         [ForeignKey("Communities")]
         public int CommunityId { get; set; }
         public virtual Communities Communities { get; set; }
+     
 
-        public bool IsAuthora (string name)
-        {
-            return this.Author.UserName.Equals(name);
-        }
+
     }
 }

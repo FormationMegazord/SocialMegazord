@@ -27,26 +27,7 @@ namespace SocialMegazord2._0.Controllers
 
        public ActionResult List ()
         {
-            using (var database = new BlogDbContext())
-            {
-                var entertainmentPost = database.Posts
-                    .Include(p => p.CommunityId
-                    .Equals(1))
-                    .ToList();
-                return View(entertainmentPost);
-            }
-
-            using (var database = new BlogDbContext())
-            {
-                var sciencePost = database.Posts
-                    .Include(p => p.CommunityId
-                    .Equals(2))
-                    .ToList();
-                return View(sciencePost);
-            }
-
-
-
+                return View();
         }
 
 
@@ -73,16 +54,16 @@ namespace SocialMegazord2._0.Controllers
 
                     var post = new Post(authorId, model.Title, model.Content, model.CommunityId);
 
+
                     database.Posts.Add(post);
                     database.SaveChanges();
 
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Index", "Home");
                 }
             }
 
             return View(model);
         }
-        // BATE SHE MINA S PRAHUSMUKASHKATA CHE TKA MAIKA MI MI OPQVA
 
         public ActionResult Edit (int? id)
         {
