@@ -84,7 +84,12 @@
                     </div>
                     <footer>
                         @Html.ActionLink("Cancel", "Entertainment", "Comunities", null, new { @type = "button", @class = "submitButtons" })
-                        @Html.ActionLink("Delete", "Entertainment", "Comunities", new { @id = Model.Id }, new { @type = "submit", @style = "color: red", @class = "submitButtons" })
+                        @using (Html.BeginForm("Delete", "User", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.Hidden("id", Model.Id)
+                            <input type="submit" value="Delete" class="submitButtons" />
+                        }
                         @Html.ActionLink("Edit", "Edit", "Post", new { @id = Model.Id }, new { @type = "submit", @class = "submitButtons" })
                     </footer>
                 </div>

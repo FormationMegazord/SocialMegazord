@@ -90,10 +90,7 @@
                     </div>
 
                     <footer>
-                        @if (User.IsInRole("Admin") || User.Identity.Name.Equals(item.AuthorEmail))
-                        {
                             @Html.ActionLink("Options", "Options", "Post", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })
-                        }
 
                     </footer>
                 </div>

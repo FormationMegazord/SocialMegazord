@@ -173,29 +173,29 @@ namespace Blog.Controllers.Admin
             }
         }
 
-        public ActionResult Delete(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
+        //public ActionResult DeleteUser(string id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
 
-            using (var database = new BlogDbContext())
-            {
-                //Get user from database
-                var user = database.Users.Where(u => u.Id.Equals(id)).First();
-                // Check if user exists
-                if (user == null)
-                {
-                    return HttpNotFound();
-                }
-                return View(user);
-            }
-        }
+        //    using (var database = new BlogDbContext())
+        //    {
+        //        //Get user from database
+        //        var user = database.Users.Where(u => u.Id.Equals(id)).First();
+        //        // Check if user exists
+        //        if (user == null)
+        //        {
+        //            return HttpNotFound();
+        //        }
+        //        return View(user);
+        //    }
+        //}
 
         [HttpPost]
         [ActionName("Delete")]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult Delete(string id)
         {
             if (id == null)
             {
@@ -207,17 +207,17 @@ namespace Blog.Controllers.Admin
                 // Get user from database 
                 var user = database.Users.Find(id);
                 // Get user articles from database
-                var userArticles = database.Posts.Where(a => a.Author.Id == user.Id);
+                var userPosts = database.Posts.Where(a => a.Author.Id == user.Id);
                 // Delete user articles 
-                foreach (var article in userArticles)
+                foreach (var posts in userPosts)
                 {
-                    database.Posts.Remove(article);
+                    database.Posts.Remove(posts);
                 }
                 // Delete user and save changes
                 database.Users.Remove(user);
                 database.SaveChanges();
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "");
             }
         }
     }

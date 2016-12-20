@@ -43,8 +43,37 @@ namespace SocialMegazord2._0.Migrations
             //      new Person { FullName = "Brice Lambson" },
             //      new Person { FullName = "Rowan Miller" }
             //    );
-            //
+            //\
+
+            if (!context.Communities.Any(c => c.Name == "Entertainment"))
+            {
+                Communities entertainment = new Communities()
+                {
+                    Name = "Entertainment"
+                };
+                context.Communities.Add(entertainment);
+                context.SaveChanges();
+            }
+            if (!context.Communities.Any(c => c.Name == "Science"))
+            {
+                Communities science = new Communities()
+                {
+                    Name = "Science"
+                };
+                context.Communities.Add(science);
+                context.SaveChanges();
+            }
+            if (!context.Communities.Any(c => c.Name == "Mutual Help"))
+            {
+                Communities mutualHelp = new Communities()
+                {
+                    Name = "Mutual Help"
+                };
+                context.Communities.Add(mutualHelp);
+                context.SaveChanges();
+            }
         }
+
 
         private void CreateRole(BlogDbContext context, string roleName)
         {

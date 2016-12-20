@@ -21,9 +21,9 @@
                     @if (User.IsInRole("Admin"))
                     {
                     <li>
-                        <a id="page_settings" href="#">Admin Functionalities</a>
                         <div class="horizontal_menu">
-                            <ul>
+                            <a id="page_settings" href="#">Admin Functionalities</a>
+                                <ul>
                                 <li>@Html.ActionLink("Edit Users", "EditUsers", "User", null, htmlAttributes: new { id = "editUsersLink" })</li>
                                 <li>@Html.ActionLink("Edit Posts", "EditPosts", "User", null, new { area = "", value = "editPostsLink" })</li>
                                 <li>@Html.ActionLink("Edit Events", "EditEvents", "User", null, htmlAttributes: new { id = "editEventsLink" })</li>
@@ -73,12 +73,10 @@
             <li class="navLi">@Html.ActionLink("Edit Posts", "EditPosts", "User", null, new { @area = "" })</li>
         </ul>
     </div>
-    @using (Html.BeginForm("List", "User", FormMethod.Post))
-    {
+   
         <div class="article_containter">
             @foreach (var item in Model)
             {
- 
                 <article>
                     <div class="row">
                         <p>@item.Name</p>
@@ -86,16 +84,19 @@
                         <p>@item.Id</p>
                         </div>
                         <footer>
-                            @*<a href="eventOptions.html"><button cl
-                                <div class="article_containter">
-                                   ass="submitButtons">Options &raquo;</button></a>*@
-                            @Html.ActionLink("Delete", "Delete", "User", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })
-                            @Html.ActionLink("Edit", "Edit", "User", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })                        </footer>
+                            @using (Html.BeginForm("Delete", "User", FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()
+                                @Html.Hidden("id", item.Id)
+                                <input type="submit" value="Delete" class="submitButtons" />
+                            }
+                            @Html.ActionLink("Edit", "Edit", "User", new { @id = item.Id }, new { @type = "button", @class = "submitButtons" })                        
+                        </footer>
                </article>
             }
         </div>
 
-    }
+    
 
     <footer>
         <div class="the_footer">
