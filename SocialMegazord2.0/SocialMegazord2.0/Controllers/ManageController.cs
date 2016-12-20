@@ -55,17 +55,6 @@ namespace SocialMegazord2._0.Controllers
         [Authorize]
         public ActionResult UpdateInterests()
         {
-            //using (var database = new BlogDbContext())
-            //{
-            //    // Get posts from database 
-            //    var userid = database.Users.Where(a => a.Id == user.Id).First();
-            //    // Create the view model
-            //    var model = new UpdateInterestsViewModel();
-            //    model.AuthorId = user.Id;
-            //    model.Interest = user.Interests;
-
-            //    // Pass the view model to view 
-
                 return View();
            
         }
@@ -81,7 +70,7 @@ namespace SocialMegazord2._0.Controllers
                     var user = database.Users.FirstOrDefault(a => a.Id == model.AuthorId);
                     var interests = user.Interests;
                     // Set post properties
-                    interests = model.Interest;
+                    model.Interest = interests;
                     // Save post state in database
                     database.Entry(interests).State = EntityState.Modified;
                     database.SaveChanges();

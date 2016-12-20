@@ -46,7 +46,6 @@
                                 <div class="horizontal_menu" hidden>
                                     <ul>
                                         <li>@Html.ActionLink("Change Password", "Change Password", "Manage", new { area = "" })</li>
-                                        <li>@Html.ActionLink("Change Username", "Change Username", "Manage", new { area = "" })</li>
                                     </ul>
                                 </div>
                             </li>
@@ -85,8 +84,8 @@
                         @Model.Content
                     </div>
                     <footer class="article_footer">
-                        @Html.ActionLink("Edit", "Edit", "Post", new { @id = Model.Id }, new { @type = "submit", @class = "submitButtons" })
                         @Html.ActionLink("Cancel", "Entertainment", "Comunities", null, new { @type = "button", @class = "submitButtons" })
+                        @Html.ActionLink("Edit", "Edit", "Post", new { @id = Model.Id }, new { @type = "submit", @class = "submitButtons" })
                         @using (Html.BeginForm("Delete", "Post", FormMethod.Post))
                         {
                             @Html.AntiForgeryToken()
