@@ -77,21 +77,25 @@
             <li class="navLi">@Html.ActionLink("Change Username", "ChangeUserName", "Manage", routeValues: null, htmlAttributes: new { id = "changeUserNameLink" })</li>
         </ul>
     </div>
-    <div class="formEvent">
+    @using (Html.BeginForm("UpdateInterests", "Manage", FormMethod.Post, new { @class = "formEvent" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary()
+        @Html.HiddenFor(m => m.Interest)
         <div>
             <label class="lable">What are your Interests: </label>
         </div>
         <br>
         <div>
-            @Html.TextAreaFor(m=> m.NewInterest, new { @class = "content", @cols = "30" , @rows = "10" })
+            @Html.TextAreaFor(m => m.Interest, new { @class = "content", @cols = "30", @rows = "10" })
         </div>
         <br>
         <div>
             @Html.ActionLink("Cancel", "Index", "Manage", null, new { @type = "button", @class = "submitButtons" })
-            <input type="submit" value="Update" class="submitButtons" />
+            @Html.ActionLink("Update", "UpdateInterests", "Manage", null, new { @type = "button", @class = "submitButtons" })
         </div>
-
-    </div>
+    }
+     
     <footer>
         <div class="the_footer">
             <h3>© 2016 - SocialMegazord inc.</h3>

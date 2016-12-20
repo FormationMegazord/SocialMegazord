@@ -1,7 +1,7 @@
 ﻿@model SocialMegazord2._0.Models.PostViewModel
 @using Microsoft.AspNet.Identity
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Edit";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +16,10 @@
     @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "profile_div" }))
     {
         @Html.AntiForgeryToken()
+        @Html.ValidationSummary()
+
+     
+
         <div id="profile_div">
             <ul class="profile-wrapper">
                 @if (User.IsInRole("Admin"))
@@ -71,34 +75,38 @@
 
     <div id="navMyProfile">
         <ul class="navUL">
-            <li class="navLi">@Html.ActionLink("Posts", "List", "Post", routeValues: null, htmlAttributes: new { id = "postsLink" })</li>
+            <li class="navLi">@Html.ActionLink("Interests", "UpdateInterests", "Manage", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
             <li class="navLi">@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
         </ul>
     </div>
-    @using (Html.BeginForm("Create", "Post", FormMethod.Post, new { @class = "formEvent" }))
+    @using (Html.BeginForm("Edit", "Post", FormMethod.Post, new { @class = "formEvent" }))
     {
         @Html.AntiForgeryToken()
-        @Html.ValidationSummary("")
+        @Html.ValidationSummary(true)
+
+        @Html.HiddenFor(m => m.Id)
+        @Html.HiddenFor(m => m.AuthorId)
+
         <div class="eventType">
             @Html.LabelFor(m => m.Title, new { @class = "lable", @value = "Choose title" })
-            @Html.TextBoxFor(m => m.Title, new { @class = "content", @type = "text", @name = "title", placeholder = "Example: Meeting" })
+            @Html.TextBoxFor(m => m.Title, new { @class = "content", @type = "text", @name = "title", placeholder = "Example: WHY PROGRAMMING IS SO ESSENTIAL FOR US" })
             <div>
                 <br>
                 @Html.LabelFor(m => m.Communities, new { @class = "lable", @value = "Communities" })
                 @Html.DropDownListFor(m => m.CommunityId,
                new SelectList(Model.Communities, "Id", "Name"),
-                new { @class = "content", @type = "text", @name = "disc"})
+                new { @class = "content", @type = "text", @name = "disc" })
             </div>
             <br>
             <div>
                 @Html.LabelFor(m => m.Content, new { @class = "lable", @value = "Content" })
-                <br><br>
-                @Html.TextAreaFor(model => model.Content, new { @class = "content",@rows="10",@cols="40", @type = "text", @name = "Content" })
+                <br>
+                @Html.TextAreaFor(model => model.Content, new { @class = "content", @rows = "10", @cols = "40", @type = "text", @name = "Content" })
             </div>
             <br>
         </div>
-       @Html.ActionLink("Cancel", "Entertainment", "Comunities", null, new { @type = "button", @class = "submitButtons" })
-        <input type="submit" value="Create" class="submitButtons"/>
+        @Html.ActionLink("Cancel", "Entertainment", "Comunities", null, new { @type = "button", @class = "submitButtons" })
+        <input type="submit" value="Edit" class="submitButtons" />
     }
     <footer>
         <div class="the_footer">

@@ -128,8 +128,6 @@
         </div>
 
     }
-      
-    </div>
     <footer>
         <div class="the_footer">
             <h3>© 2016 - SocialMegazord inc.</h3>
@@ -137,11 +135,12 @@
     </footer>
     <div id="contents">
         @Html.ActionLink(" ", "Entertainment", "Comunities", null, new { @id = "button1", @class = "button button1" })
-        @Html.ActionLink(" ", "Science", "Comunities", null, new { @id = "button3", @class = "button button3" })
         @Html.ActionLink(" ", "MutualHelp", "Comunities", null, new { @id = "button2", @class = "button button2" })
+        @Html.ActionLink(" ", "Science", "Comunities", null, new { @id = "button3", @class = "button button3" })
     </div>
 
-    <script src="scripts/backgroundChange.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/coolchange")
 </body>
 
 </html>

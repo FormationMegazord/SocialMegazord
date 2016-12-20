@@ -71,19 +71,21 @@
             <li class="navLi">@Html.ActionLink("Create New Event", "Create", "Event", null, new { @area = "" })</li>
         </ul>
     </div>
+
     @*@using (Html.BeginForm("Options", "Post", FormMethod.Post))
     {*@
         <div class="article_containter">
             <article>
                 <div class="row">
-                    <h2>@Model.Title</h2>
+                   <h2>@Model.Title</h2>
                     <small class="author">@Model.Author.Name</small>
                     <small class="author">@Model.DateAdded</small>
                     <small class="author">@Model.Communities.Name</small>
                     <div class="article_position" style="color: black">
                         @Model.Content
                     </div>
-                    <footer>
+                    <footer class="article_footer">
+                        @Html.ActionLink("Edit", "Edit", "Post", new { @id = Model.Id }, new { @type = "submit", @class = "submitButtons" })
                         @Html.ActionLink("Cancel", "Entertainment", "Comunities", null, new { @type = "button", @class = "submitButtons" })
                         @using (Html.BeginForm("Delete", "Post", FormMethod.Post))
                         {
@@ -91,7 +93,6 @@
                             @Html.Hidden("id", Model.Id)
                             <input type="submit" value="Delete" class="submitButtons" />
                         }
-                        @Html.ActionLink("Edit", "Edit", "Post", new { @id = Model.Id }, new { @type = "submit", @class = "submitButtons" })
                     </footer>
                 </div>
             </article>

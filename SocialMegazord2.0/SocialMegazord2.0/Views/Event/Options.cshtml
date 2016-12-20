@@ -18,8 +18,9 @@
                 @if (User.IsInRole("Admin"))
                 {
                     <li>
-                        <a id="page_settings" href="#">Admin Functionalities</a>
+                        
                         <div class="horizontal_menu">
+                            <a id="page_settings" href="#">Admin Functionalities</a>
                             <ul>
                                 <li>@Html.ActionLink("Edit Users", "EditUsers", "User", null, htmlAttributes: new { id = "editUsersLink" })</li>
                                 <li>@Html.ActionLink("Edit Posts", "EditPosts", "User", null, new { area = "", value = "editPostsLink" })</li>
@@ -80,19 +81,24 @@
                     <small class="author">@Model.Author.Name</small>
                     <small class="author">@Model.Type</small>
                     <small class="author">@Model.Place</small>
-                    <small class="author">@Model.Date </small>
+                    <small class="author">@Model.Date.ToShortDateString() @@ @Model.Time.TimeOfDay</small>
                     <div class="article_position" style="color: black">
                         @Model.AdditionalContent
                     </div>
                     <footer>
                         @Html.ActionLink("Cancel", "List", "Event", null, new { @type = "button", @class = "submitButtons" })
+
+                        @*<a href="myevents.html"><Button class="submitButtons" style="color: red">Delete</Button></a>*@
+
+                        @Html.ActionLink("Edit", "Edit", "Event", new { @id = Model.Id }, new { @type = "submit", @class = "submitButtons" })
+
                         @using (Html.BeginForm("Delete", "Event", FormMethod.Post))
                         {
                             @Html.AntiForgeryToken()
                             @Html.Hidden("id", Model.Id)
                             <input type="submit" value="Delete" class="submitButtons" />
                         }
-                        <a href="editEventOptions.html"><button class="submitButtons">Edit &raquo;</button></a>
+
                     </footer>
                 </div>
                 </article>

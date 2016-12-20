@@ -211,6 +211,7 @@
     <Compile Include="Models\BlogDbContext.cs" />
     <Compile Include="Models\Communities.cs" />
     <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\EventViewModel.cs" />
     <Compile Include="Models\ForeigntKeyAttribute.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Post.cs" />
@@ -294,6 +295,8 @@
     <Content Include="Views\Post\Options.cshtml" />
     <Content Include="Views\Post\List.cshtml" />
     <Content Include="Views\Home\AboutUs.cshtml" />
+    <Content Include="Views\Event\Edit.cshtml" />
+    <Content Include="Views\Post\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -11,7 +11,7 @@ namespace SocialMegazord2._0.Models
         public int Id { get; set; }
 
         public int CommunityId { get; set; }
-
+        
         public ICollection<Communities> Communities { get; set; }
 
         [Required]

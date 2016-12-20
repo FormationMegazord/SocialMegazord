@@ -108,11 +108,12 @@ namespace SocialMegazord2._0.Controllers
                     // Set post properties
                     post.Title = model.Title;
                     post.Content = model.Content;
+                    post.CommunityId = model.CommunityId;
                     // Save post state in database
                     database.Entry(post).State = EntityState.Modified;
                     database.SaveChanges();
                     // Redirect to page
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Entertainment", "Comunities");
                 }
             }
             // If model state is invalid, return the same view
@@ -142,8 +143,9 @@ namespace SocialMegazord2._0.Controllers
                 }
                 // Delete post from database
                 database.Posts.Remove(post);
+                database.SaveChanges();
                 // Redirect to some page
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Entertainment", "Comunities");
             }
         }
 
@@ -154,6 +156,10 @@ namespace SocialMegazord2._0.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            
+
+           
+               
             using (var db = new BlogDbContext())
             {
                 var post = db.Posts.Where(a => a.Id == id).Include(a => a.Author).Include(a => a.Communities).First();
@@ -170,7 +176,7 @@ namespace SocialMegazord2._0.Controllers
             using (var database = new BlogDbContext())
             {
                 // Get posts from database
-                var posts = database.Posts.Include(a => a.Author).ToList();
+                var posts = database.Posts.Include(a => a.Author).Include(a=> a.Communities).ToList();
                 return View(posts);
             }
         }

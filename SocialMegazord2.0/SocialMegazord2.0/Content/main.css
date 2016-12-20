@@ -3,6 +3,19 @@
     src: url(../fonts/Minecraftia-Regular.ttf);
 }
 
+body {
+    position: relative;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    min-height:500px;
+
+    background-size: cover;
+    background-image:url(Images/science.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 ul, li {
     list-style:none;
     padding:0;
@@ -10,22 +23,17 @@ ul, li {
 }
 a {text-decoration:none;}
 
+.profile_div {
+    position:fixed;
+}
+
 .profile-wrapper {
     width:200px;
     position: fixed;
-    margin:-190px auto;
-    padding-left: 86%;
-}
-body {
-    position: relative;
-    background-color: white;
-    margin: 0;
-    padding: 0;
-
-    background-size: cover;
-    background-image:url(Images/science.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    margin:-10px auto;
+    right: 0;
+    top:15px;
+    z-index: 5;
 }
 .profile-wrapper::after {
     content: '';
@@ -100,6 +108,7 @@ body {
 .horizontal_menu{
     display: none;
     color: #0088cc;
+    background-color: black;
 }
 
 .menu li a:focus~.horizontal_menu,
@@ -118,23 +127,30 @@ body {
 
 #contents {
     margin-top: 190px;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    width:100%;
 }
 
+.button {
+    width: 300px;
+    height:150px;
+    line-height:150px;
+    text-align:center;
+    margin: 0 20px;
+}
 
 #button1 {
     background: transparent;
     color: black;
     border: 2px solid #f44336;
-    padding: 5vw;
-    margin-left: 14vw;
-    margin-right: 1vw;
     font-size: larger;
     border-radius: 70px;
 }
 #button1:hover {
     background-color: #f44336;
     color: white;
-    padding: 5.3vw;
     border-radius: 70px;
     opacity: 0.5;
 }
@@ -144,15 +160,12 @@ body {
     background-color: transparent;
     color: black;
     border: 2px solid limegreen;
-    padding: 5vw;
     font-size: larger;
     border-radius: 70px;
-    margin-right: 21vw;
 }
 #button2:hover {
     background-color: limegreen;
     color: white;
-    padding: 5.3vw;
     opacity: 0.60;
     border-radius: 70px;
 }
@@ -162,14 +175,11 @@ body {
     color: black;
     border: 2px solid deepskyblue;
     font-size: larger;
-    padding: 5vw;
     border-radius: 70px;
-    margin-right: 1vw;
 }
 #button3:hover {
     background-color: deepskyblue;
     color: white;
-    padding: 5.3vw;
     opacity: 0.60;
     border-radius: 70px;
 }
@@ -186,10 +196,9 @@ body {
     font-size: 80%;
 }
 .the_footer {
-    clear:both;
     text-align: right;
-    padding: 20px;
     position: absolute;
-    right: 0;
+    right: 20px;
+    bottom:20px;
     font-family: footer;
 }

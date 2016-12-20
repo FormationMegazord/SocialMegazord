@@ -39,7 +39,7 @@
                                     <a id="page_settings" href="#">My Profile</a>
                                     <div class="horizontal_menu">
                                         <ul>
-                                            <li>@Html.ActionLink("Interests", "Interests", "Manage", new { area = "", value = "Interests" })</li>
+                                            <li>@Html.ActionLink("Interests", "UpdateInterests", "Manage", new { area = "", value = "Interests" })</li>
                                             <li>@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
                                         </ul>
                                     </div>
@@ -93,7 +93,7 @@
         <div>
             @Html.LabelFor(m => m.Date, new { @class = "lable", @value = "Date:" })
             @Html.TextBoxFor(model => model.Date, new { @class="content", @type="date", @name="Date"})
-            @Html.TextBoxFor(model => model.Hour, new { @class="content", @type="time"})
+            @Html.TextBoxFor(model => model.Time, new { @class="content", @type="time"})
         </div>
         <br>
         <div>

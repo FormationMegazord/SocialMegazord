@@ -2,9 +2,7 @@
     font-family: footer;
     src: url(../fonts/Minecraftia-Regular.ttf);
 }
-/** {*/
-    /*z-index: -5;*/
-/*}*/
+
 body {
     position: relative;
     background-color: white;
@@ -12,7 +10,7 @@ body {
     padding: 0;
 
     background-size: cover;
-    background-image:url(Images/mutualhelp.jpg);
+ 
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -111,6 +109,11 @@ a {text-decoration:none;}
 }
 
 /* hover profile show menu */
+.menu li a:focus~.horizontal_menu,
+.horizontal_menu:hover {
+    display:block;
+}
+
 .profile:hover .menu {
     display:block;
 }
@@ -380,13 +383,12 @@ table a:not(.btn),
     padding:10px 200px 10px 5px;
 }
 input[type=submit]{
-    margin-left:40px;
-    margin-top:20px;
     cursor:pointer;
     border-radius:3px;
     background-color: black;
     color: white;
-    width:80%;
+    width:100px;
+    height: 20px;
     font-size:15px;
     text-align:center;
     border:1px solid blue;
@@ -406,14 +408,16 @@ input[type=submit]:hover {
     margin-left: 20vw;
 }
 .submitButtons {
+    width: 100px;
     display: inline-block;
     background-color: black;
     border-color: black;
     padding: 12px;
+    text-align:center;
     color: white;
     border-radius: 3px;
     box-shadow:0 1px 0 #555 inset, 0 1px 7px #111;
-    margin-left: 6vw;
+    height: 20px;
 }
 .form-group{
 
@@ -591,14 +595,12 @@ article{
     }
 
     .formEvent {
-        margin-top: 55vw;
         width: 80%;
     }
 }
 
 .profile_div{
     position: fixed;
-
 }
 
 .the_footer2{
@@ -626,4 +628,17 @@ textarea {
 .content {
     border-radius: 3px;
     box-shadow:0 1px 0 #555 inset, 0 1px 7px #111;
+}
+
+.article_footer {
+    display:flex;
+    flex-direction:row;
+
+}
+.the_footer3{
+    text-align: right;
+    position: absolute;
+    right: 20px;
+    bottom:20px;
+    font-family: footer;
 }

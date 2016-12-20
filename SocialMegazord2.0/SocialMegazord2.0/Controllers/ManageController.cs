@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using SocialMegazord2._0.Models;
+using System.Data.Entity;
 
 namespace SocialMegazord2._0.Controllers
 {
@@ -51,55 +52,45 @@ namespace SocialMegazord2._0.Controllers
         }
 
         // GET: Manage/UpdateInterests
+        [Authorize]
         public ActionResult UpdateInterests()
         {
-            return View();
+            //using (var database = new BlogDbContext())
+            //{
+            //    // Get posts from database 
+            //    var userid = database.Users.Where(a => a.Id == user.Id).First();
+            //    // Create the view model
+            //    var model = new UpdateInterestsViewModel();
+            //    model.AuthorId = user.Id;
+            //    model.Interest = user.Interests;
+
+            //    // Pass the view model to view 
+
+                return View();
+           
         }
         [HttpPost]
         public ActionResult UpdateInterests(UpdateInterestsViewModel model)
         {
-            //var result = new IdentityResult();
-            var newInterests = "";
-
+            // Check if model is valid
+            if (ModelState.IsValid)
+            {
                 using (var database = new BlogDbContext())
                 {
-                    var authorId = database.Users.Where(u => u.Name == this.User.Identity.Name).First().Id;
-
-                    var interests = database.Users.Where(u => u.Id == authorId).First().Interests;
-                    interests = model.OldInterest;
-
-                    ApplicationUser user = database.Users.Where(u => u.Id == authorId).First();
-                if (user.Interests == null)
-                {
-                    newInterests = model.NewInterest;
-                    user.Interests.Insert(0, newInterests);
+                    // Get posts from database
+                    var user = database.Users.FirstOrDefault(a => a.Id == model.AuthorId);
+                    var interests = user.Interests;
+                    // Set post properties
+                    interests = model.Interest;
+                    // Save post state in database
+                    database.Entry(interests).State = EntityState.Modified;
+                    database.SaveChanges();
+                    // Redirect to page
+                     return View("Index", "Home");
                 }
-                else
-                {
-                    user.Interests.Remove(0, user.Interests.Length);
-                    newInterests = model.NewInterest;
-                    user.Interests.Insert(0, newInterests);
-                }
+            }
+            // If model state is invalid, return the same view
 
-                }
-            
-
-            //if (result.Succeeded)
-            //{
-            //    var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
-            //    if (user != null)
-            //    {
-            //        await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
-            //    }
-            //    //database.Events.Add(Event);
-            //    //database.SaveChanges();
-
-            //    user.Interests.Remove(0, user.Interests.Length);
-            //    user.Interests.Insert(0, model.NewInterest);
-
-            //    return RedirectToAction("Index", "Manage");
-            //}
-            //AddErrors(result);
             return View(model);
         }
 

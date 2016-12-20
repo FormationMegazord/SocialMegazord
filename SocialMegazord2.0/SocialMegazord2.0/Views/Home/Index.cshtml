@@ -92,8 +92,8 @@
     </div>
 
     <footer class="the_footer">
+        <p>@Html.ActionLink("About Us","AboutUs","Home",null,new { area="",@color="black"})</p>
         <p>&copy; @DateTime.Now.Year - Social Megazord</p>
-        <p>@Html.ActionLink("About Us","AboutUs","Home",null,new { area="",@color="black",@class="the_footer"})</p>
     </footer>
 
     @Scripts.Render("~/bundles/jquery")

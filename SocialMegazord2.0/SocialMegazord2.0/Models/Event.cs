@@ -10,8 +10,6 @@ namespace SocialMegazord2._0.Models
     public class Event
     {
         
-
-        
         [Required]
         [Key]
         public int Id { get; set; }
@@ -33,7 +31,7 @@ namespace SocialMegazord2._0.Models
         [Required]
         [DataType(DataType.Time)]
         [DisplayFormat(ApplyFormatInEditMode =true,DataFormatString = "{hh-mm}")]
-        public DateTime Hour { get; set; }
+        public DateTime Time { get; set; }
 
         [Required]
         [StringLength(20)]

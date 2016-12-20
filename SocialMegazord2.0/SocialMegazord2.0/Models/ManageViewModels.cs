@@ -88,16 +88,9 @@ namespace SocialMegazord2._0.Models
 
     public class UpdateInterestsViewModel
     {
-
-        [DataType(DataType.Text)]
-        [Display(Name = "Current interests")]
-        public string OldInterest { get; set; }
-
-        [DataType(DataType.Text)]
-        [Display(Name = "Newinterests")]
-        public string NewInterest { get; set; }
-
-       
+        public string AuthorId { get; set; }
+        [Required]
+        public string Interest { get; set; }
     }
 
     public class AddPhoneNumberViewModel
