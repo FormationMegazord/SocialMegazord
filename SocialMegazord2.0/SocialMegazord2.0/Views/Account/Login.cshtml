@@ -45,7 +45,7 @@
                     <div id="otherRows">
                         @Html.TextBoxFor(m => m.Email, new { @class = "username", @title = "Please enter a valid email address", @placeholder = "Please enter a valid email address" })
                         @Html.PasswordFor(m => m.Password, new { @class = "password", @title = "Enter password", @placeholder = "Enter password" })
-                        <input type="submit" value="Log in">
+                        <input type="submit" value="Log in" class="button">
                     </div>
                     @Html.CheckBoxFor(m => m.RememberMe)
                     @Html.LabelFor(m => m.RememberMe)
