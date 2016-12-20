@@ -224,7 +224,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\communities.css" />
+    <Content Include="Content\Images\3.jpg" />
+    <Content Include="Content\Images\aleks.jpg" />
+    <Content Include="Content\Images\annie.jpg" />
+    <Content Include="Content\Images\bogi.jpg" />
     <Content Include="Content\Images\entertainment.jpg" />
+    <Content Include="Content\Images\hristian.jpg" />
+    <Content Include="Content\Images\ivo.jpg" />
+    <Content Include="Content\Images\radost.jpg" />
     <Content Include="Content\main.css" />
     <Content Include="Content\Images\mutualhelp.jpg" />
     <Content Include="Content\Images\science.png" />
@@ -286,6 +293,7 @@
     <Content Include="Views\User\EditUsers.cshtml" />
     <Content Include="Views\Post\Options.cshtml" />
     <Content Include="Views\Post\List.cshtml" />
+    <Content Include="Views\Home\AboutUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

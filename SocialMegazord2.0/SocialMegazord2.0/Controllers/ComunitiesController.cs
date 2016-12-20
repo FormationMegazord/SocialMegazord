@@ -52,5 +52,8 @@ namespace SocialZord_project.Controllers
                 return View(communities); 
             }
         }
+        
     }
+
+    
 }
