@@ -130,6 +130,7 @@ namespace SocialMegazord2._0.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
+
             using (var database = new BlogDbContext())
             {
                 // Get post from database
@@ -142,7 +143,7 @@ namespace SocialMegazord2._0.Controllers
                 // Delete post from database
                 database.Posts.Remove(post);
                 // Redirect to some page
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Home");
             }
         }
 
@@ -153,7 +154,15 @@ namespace SocialMegazord2._0.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            return View();
+            using (var db = new BlogDbContext())
+            {
+                var post = db.Posts.Where(a => a.Id == id).Include(a => a.Author).Include(a => a.Communities).First();
+                if (post == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(post);
+            }
         }
         [Authorize]
         public ActionResult List()

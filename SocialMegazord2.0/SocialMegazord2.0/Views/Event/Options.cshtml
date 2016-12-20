@@ -71,12 +71,12 @@
             <li class="navLi">@Html.ActionLink("Create New Event", "Create", "Event", null, new { @area = "" })</li>
         </ul>
     </div>
-    @using (Html.BeginForm("Options", "Event", FormMethod.Post))
-    {
+    @*@using (Html.BeginForm("Options", "Event", FormMethod.Post))
+    {*@
         <div class="article_containter">
             <article>
                 <div class="row">
-                    <h2>@Model.Title</h2>
+                    <h2>@Model.</h2>
                     <small class="author">@Model.Author.Name</small>
                     <small class="author">@Model.Type</small>
                     <small class="author">@Model.Place</small>
@@ -86,13 +86,18 @@
                     </div>
                     <footer>
                         @Html.ActionLink("Cancel", "List", "Event", null, new { @type = "button", @class = "submitButtons" })
-                        <a href="myevents.html"><Button class="submitButtons" style="color: red">Delete</Button></a>
+                        @using (Html.BeginForm("Delete", "Event", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.Hidden("id", Model.Id)
+                            <input type="submit" value="Delete" class="submitButtons" />
+                        }
                         <a href="editEventOptions.html"><button class="submitButtons">Edit &raquo;</button></a>
                     </footer>
                 </div>
                 </article>
             </div>
-                }
+                
                         <footer>
                             <div class="the_footer">
                                 <h3>© 2016 - SocialMegazord inc.</h3>

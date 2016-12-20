@@ -71,20 +71,21 @@
             <li class="navLi">@Html.ActionLink("Create New Event", "Create", "Event", null, new { @area = "" })</li>
         </ul>
     </div>
-    @using (Html.BeginForm("Options", "Event", FormMethod.Post))
-    {
+    @*@using (Html.BeginForm("Options", "Post", FormMethod.Post))
+    {*@
         <div class="article_containter">
             <article>
                 <div class="row">
                     <h2>@Model.Title</h2>
                     <small class="author">@Model.Author.Name</small>
                     <small class="author">@Model.DateAdded</small>
+                    <small class="author">@Model.Communities.Name</small>
                     <div class="article_position" style="color: black">
                         @Model.Content
                     </div>
                     <footer>
                         @Html.ActionLink("Cancel", "Entertainment", "Comunities", null, new { @type = "button", @class = "submitButtons" })
-                        @using (Html.BeginForm("Delete", "User", FormMethod.Post))
+                        @using (Html.BeginForm("Delete", "Post", FormMethod.Post))
                         {
                             @Html.AntiForgeryToken()
                             @Html.Hidden("id", Model.Id)
@@ -95,7 +96,7 @@
                 </div>
             </article>
         </div>
-    }
+    
     <footer>
         <div class="the_footer">
             <h3>© 2016 - SocialMegazord inc.</h3>

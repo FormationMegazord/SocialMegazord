@@ -92,5 +92,30 @@ namespace SocialMegazord2._0.Controllers
             }
             return View("Index");
         }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            using (var database = new BlogDbContext())
+            {
+                // Get user from database 
+                var eventId = database.Events.Where(a => a.Id == id).Include(a => a.Author).First();
+
+                if (eventId == null)
+                {
+                    return HttpNotFound();
+                }
+                // Get user events from database
+                database.Events.Remove(eventId);
+                database.SaveChanges();               
+                return RedirectToAction("List", "Event");
+            }
+        }
     }
 }

@@ -173,26 +173,6 @@ namespace Blog.Controllers.Admin
             }
         }
 
-        //public ActionResult DeleteUser(string id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-
-        //    using (var database = new BlogDbContext())
-        //    {
-        //        //Get user from database
-        //        var user = database.Users.Where(u => u.Id.Equals(id)).First();
-        //        // Check if user exists
-        //        if (user == null)
-        //        {
-        //            return HttpNotFound();
-        //        }
-        //        return View(user);
-        //    }
-        //}
-
         [HttpPost]
         [ActionName("Delete")]
         public ActionResult Delete(string id)
