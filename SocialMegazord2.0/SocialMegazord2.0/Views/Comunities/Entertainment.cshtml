@@ -49,9 +49,9 @@
                                     <a id="page_settings" href="#">My Profile</a>
                                     <div class="horizontal_menu">
                                         <ul>
-                                            <li>@Html.ActionLink("Interests", "Interests", "Manage", new { area = "", value = "Interests" })</li>
-                                            <li>@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
-                                            <li>@Html.ActionLink("Posts", "Posts", "Post", new { area = "", value = "Post" })</li>
+                                            <li class="navLi">@Html.ActionLink("Create New Post", "Create", "Post", null, new { area = "" })</li>
+                                            <li class="navLi">@Html.ActionLink("Create New Event", "Create", "Event", null, new { area = "" })</li>
+                                            <li class="navLi">@Html.ActionLink("Events", "List", "Event", null, new { area = "" })</li>
                                         </ul>
                                     </div>
                                 </li>

@@ -9,6 +9,7 @@
     <meta charset="UTF-8">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <title>Create New Event</title>
 </head>
 
 <body>
@@ -73,7 +74,7 @@
 
     <div id="navMyProfile">
         <ul class="navUL">
-            <li class="navLi">@Html.ActionLink("Interests", "Index", "Manage", routeValues: null, htmlAttributes: new { id = "interestsLink" })</li>
+            <li class="navLi">@Html.ActionLink("Posts", "List", "Post", routeValues: null, htmlAttributes: new { id = "interestsLink" })</li>
             <li class="navLi">@Html.ActionLink("Events", "List", "Event", routeValues: null, htmlAttributes: new { id = "eventsLink" })</li>
         </ul>
     </div>

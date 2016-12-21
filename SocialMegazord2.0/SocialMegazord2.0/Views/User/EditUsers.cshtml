@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <title>Events</title>
+    <title>Admin Panel</title>
 </head>
 <body>
     @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "profile_div" }))
@@ -77,21 +77,39 @@
         <div class="article_containter">
             @foreach (var item in Model)
             {
-                <article>
-                    <div class="row">
-                        <p>@item.Name</p>
-                        <p>@item.Email</p>
-                        <p>@item.Id</p>
+
+                if (item.Name.Equals("Admin"))
+                {
+                    <article>
+                        <div class="row">
+                            <p>@item.Name</p>
+                            <p>@item.Email</p>
+                            <p>@item.Id</p>
                         </div>
                         <footer>
-                         @using (Html.BeginForm("Delete", "User", FormMethod.Post))
-                         {
-                            @Html.AntiForgeryToken()
-                            @Html.Hidden("id", item.Id)
-                            <input type="submit" value="Delete" class="submitButtons" />
-                         }                   
+                           
                         </footer>
-               </article>
+                    </article>
+                }
+                else
+                {
+                    <article>
+                        <div class="row">
+                            <p>@item.Name</p>
+                            <p>@item.Email</p>
+                            <p>@item.Id</p>
+                        </div>
+                        <footer>
+                            @using (Html.BeginForm("Delete", "User", FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()
+                                @Html.Hidden("id", item.Id)
+                                <input type="submit" value="Delete" class="submitButtons" />
+                            }
+                        </footer>
+                    </article>
+                }
+
             }
         </div>
 

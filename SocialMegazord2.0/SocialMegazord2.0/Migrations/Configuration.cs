@@ -31,20 +31,6 @@ namespace SocialMegazord2._0.Migrations
                 this.SetRoleToUser(context, "admin@admin.com", "Admin");
             }
 
-
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //\
-
             if (!context.Communities.Any(c => c.Name == "Entertainment"))
             {
                 Communities entertainment = new Communities()

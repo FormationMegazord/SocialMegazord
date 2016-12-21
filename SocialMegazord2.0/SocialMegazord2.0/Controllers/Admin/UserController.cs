@@ -30,7 +30,7 @@ namespace Blog.Controllers.Admin
         {
             using (var db = new BlogDbContext())
             {
-                var Posts = db.Posts.Include(u => u.Author).ToList();
+                var Posts = db.Posts.Include(u => u.Author).Include(c =>c.Communities).ToList();
                 return View(Posts);
             }
         }

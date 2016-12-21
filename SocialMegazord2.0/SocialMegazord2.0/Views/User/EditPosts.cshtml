@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <title>Events</title>
+    <title>Admin Panel</title>
 </head>
 <body>
     @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "profile_div" }))
@@ -84,7 +84,7 @@
                     <h2>@item.Title</h2>
                     <small class="author">@item.Author.Name</small>
                     <small class="author">@item.DateAdded.Day: @item.DateAdded.Month: @item.DateAdded.Year</small>
-                    <small class="author">@item.CommunityId</small>
+                    <small class="author">@item.Communities.Name</small>
                     <div class="article_position" style="color: black">
                         @item.Content
                     </div>
